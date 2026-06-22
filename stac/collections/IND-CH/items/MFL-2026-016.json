@@ -1,0 +1,104 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.1.0/schema.json",
+    "https://climate-data-hub.cgiar.org/stac-extensions/cgiar-cdh/v1.0.0/schema.json"
+  ],
+  "id": "MFL-2026-016",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          74.0,
+          20.0
+        ],
+        [
+          82.0,
+          20.0
+        ],
+        [
+          82.0,
+          25.5
+        ],
+        [
+          74.0,
+          25.5
+        ],
+        [
+          74.0,
+          20.0
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    74.0,
+    20.0,
+    82.0,
+    25.5
+  ],
+  "properties": {
+    "title": "Groundwater data - India",
+    "description": "",
+    "datetime": null,
+    "start_datetime": null,
+    "end_datetime": null,
+    "created": null,
+    "updated": null,
+    "cgiar-cdh:geography": [
+      "india"
+    ],
+    "cgiar-cdh:spatial_resolution": null,
+    "mosaic:living_landscape": "IND-CH",
+    "mosaic:theme": "Water / hydrology",
+    "mosaic:access_level": null,
+    "mosaic:processing_status": "Raw",
+    "mosaic:migration_status": null,
+    "mosaic:update_frequency": "Unknown",
+    "mosaic:bbox_approximate": true,
+    "mosaic:formats": [
+      "Mixed"
+    ],
+    "proj:code": null,
+    "mosaic:crs_note": "CRS not recorded in registry (missing_crs)."
+  },
+  "collection": "IND-CH",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/IND-CH/items/MFL-2026-016.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "related",
+      "href": "https://climate-data-hub.cgiar.org/",
+      "title": "CGIAR Climate Data Hub (source of truth for climate layers) [placeholder URL]"
+    }
+  ],
+  "assets": {
+    "unavailable": {
+      "href": "",
+      "title": "No download URL or location recorded",
+      "roles": [
+        "metadata"
+      ]
+    }
+  }
+}

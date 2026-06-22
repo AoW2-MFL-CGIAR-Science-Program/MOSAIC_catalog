@@ -1,0 +1,39 @@
+{
+  "_meta": {
+    "file": "bbox_lookup.json",
+    "purpose": "APPROXIMATE locator bounding boxes + centroids for each living-landscape CODE, with a country-level fallback per country. Frontend plots centroids; STAC export seeds extent.spatial.bbox.",
+    "crs": "EPSG:4326 (WGS84)",
+    "bbox_order": "[west, south, east, north]  (minLon, minLat, maxLon, maxLat)",
+    "centroid_order": "[lon, lat]",
+    "accuracy": "APPROXIMATE / coarse locator boxes only. NOT survey-grade and NOT authoritative delineations. Real delineated boundaries are a 2026 MOSAIC objective and will replace these. Safe for map locating and STAC discovery extents; do NOT use for analysis or clipping.",
+    "lookup_rule": "Engineer: look up by landscape CODE first. If code missing or = GLB-UNSPEC, fall back to country_fallback by Country. If country also unknown, use GLB-UNSPEC (world-ish box) and flag.",
+    "status": "PROVISIONAL - refine when canonical landscape geometries exist."
+  },
+  "landscapes": {
+    "MEK-3S": { "bbox": [105.5, 11.0, 109.5, 16.5], "centroid": [107.5, 13.7], "name": "3S Basins (Sekong, Sesan, Srepok)" },
+    "IND-CH": { "bbox": [74.0, 20.0, 82.0, 25.5], "centroid": [78.0, 22.7], "name": "Central India Highlands" },
+    "SEN-FK": { "bbox": [-16.9, 13.7, -15.7, 14.5], "centroid": [-16.3, 14.1], "name": "Fatick Department" },
+    "KEN-NAT": { "bbox": [33.9, -4.7, 41.9, 5.5], "centroid": [37.9, 0.4], "name": "Kenya (national)" },
+    "ZWE-MB": { "bbox": [29.8, -16.9, 31.5, -15.6], "centroid": [30.6, -16.2], "name": "Mbire / Lower Zambezi Valley" },
+    "CIV-NZ": { "bbox": [-5.6, 6.0, -3.5, 8.6], "centroid": [-4.5, 7.3], "name": "N'Zi Watershed" },
+    "TUN-NW": { "bbox": [8.2, 36.0, 9.5, 37.3], "centroid": [8.8, 36.6], "name": "Northwestern Tunisia" },
+    "ETH-OG": { "bbox": [35.0, 5.0, 38.5, 9.5], "centroid": [36.8, 7.2], "name": "Omo-Gibe Basin" },
+    "COL-NAT": { "bbox": [-79.0, -4.2, -66.9, 12.5], "centroid": [-73.0, 4.1], "name": "Colombia (national fallback - replace when COL landscape confirmed)" },
+    "PER-NAT": { "bbox": [-81.3, -18.3, -68.7, -0.1], "centroid": [-75.0, -9.2], "name": "Peru (national fallback - replace when PER landscape confirmed)" },
+    "GLB-UNSPEC": { "bbox": [-20.0, -35.0, 110.0, 40.0], "centroid": [45.0, 2.0], "name": "Unspecified - coarse programme-wide box; flag for repair" }
+  },
+  "country_fallback": {
+    "Colombia":       { "bbox": [-79.0, -4.2, -66.9, 12.5], "centroid": [-73.0, 4.1] },
+    "Côte d'Ivoire":  { "bbox": [-8.6, 4.3, -2.5, 10.7], "centroid": [-5.5, 7.5] },
+    "Ethiopia":       { "bbox": [33.0, 3.4, 48.0, 14.9], "centroid": [40.5, 9.1] },
+    "India":          { "bbox": [68.1, 6.5, 97.4, 35.5], "centroid": [82.8, 21.0] },
+    "Kenya":          { "bbox": [33.9, -4.7, 41.9, 5.5], "centroid": [37.9, 0.4] },
+    "Laos":           { "bbox": [100.1, 13.9, 107.7, 22.5], "centroid": [103.9, 18.2] },
+    "Peru":           { "bbox": [-81.3, -18.3, -68.7, -0.1], "centroid": [-75.0, -9.2] },
+    "Senegal":        { "bbox": [-17.5, 12.3, -11.3, 16.7], "centroid": [-14.4, 14.5] },
+    "Tunisia":        { "bbox": [7.5, 30.2, 11.6, 37.5], "centroid": [9.5, 33.9] },
+    "Vietnam":        { "bbox": [102.1, 8.2, 109.5, 23.4], "centroid": [105.8, 15.8] },
+    "Zimbabwe":       { "bbox": [25.2, -22.4, 33.1, -15.6], "centroid": [29.2, -19.0] },
+    "Tanzania":       { "bbox": [29.3, -11.8, 40.5, -0.9], "centroid": [34.9, -6.4] }
+  }
+}

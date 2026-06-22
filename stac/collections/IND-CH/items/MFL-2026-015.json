@@ -1,0 +1,127 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.1.0/schema.json",
+    "https://climate-data-hub.cgiar.org/stac-extensions/cgiar-cdh/v1.0.0/schema.json"
+  ],
+  "id": "MFL-2026-015",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          74.0,
+          20.0
+        ],
+        [
+          82.0,
+          20.0
+        ],
+        [
+          82.0,
+          25.5
+        ],
+        [
+          74.0,
+          25.5
+        ],
+        [
+          74.0,
+          20.0
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    74.0,
+    20.0,
+    82.0,
+    25.5
+  ],
+  "properties": {
+    "title": "Land Use and Land Cover - India",
+    "description": "Landuse and Land cover changes",
+    "datetime": null,
+    "start_datetime": "2018-01-01T00:00:00Z",
+    "end_datetime": "2025-12-31T23:59:59Z",
+    "created": null,
+    "updated": "2025",
+    "cgiar-cdh:geography": [
+      "india"
+    ],
+    "cgiar-cdh:spatial_resolution": "30m",
+    "mosaic:living_landscape": "IND-CH",
+    "mosaic:theme": "Land cover / land use",
+    "mosaic:access_level": "Open",
+    "mosaic:processing_status": "Validated",
+    "mosaic:migration_status": null,
+    "mosaic:update_frequency": "Annual",
+    "mosaic:bbox_approximate": true,
+    "mosaic:formats": [
+      "GeoTIFF"
+    ],
+    "proj:code": null,
+    "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
+    "contacts": [
+      {
+        "name": "Core Stack",
+        "emails": [
+          {
+            "value": "s.maliappan@cgiar.org"
+          }
+        ],
+        "roles": [
+          "producer",
+          "licensor"
+        ]
+      }
+    ]
+  },
+  "collection": "IND-CH",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/IND-CH/items/MFL-2026-015.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "via",
+      "href": "https://github.com/core-stack-org/QGIS-Styles/blob/main/Land/LULC0_12class.qml",
+      "title": "Primary source / download"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://github.com/core-stack-org/QGIS-Styles/blob/main/Land/LULC0_12class.qml",
+      "title": "Primary data source",
+      "roles": [
+        "data"
+      ],
+      "type": "image/tiff; application=geotiff"
+    },
+    "access-note": {
+      "href": "",
+      "title": "Access note (no resolvable URL)",
+      "description": "Current location: CoreStack: Github / Google rive",
+      "roles": [
+        "metadata"
+      ]
+    }
+  }
+}

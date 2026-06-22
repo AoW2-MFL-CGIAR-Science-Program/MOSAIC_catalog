@@ -1,0 +1,97 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.1.0/schema.json",
+    "https://climate-data-hub.cgiar.org/stac-extensions/cgiar-cdh/v1.0.0/schema.json"
+  ],
+  "id": "MEK-3S",
+  "title": "3S Basins (Sekong, Sesan, Srepok)",
+  "description": "Datasets registered under the '3S Basins (Sekong, Sesan, Srepok)' Living Landscape (3 item(s)). Spatial extent is an APPROXIMATE locator box, not a survey-grade boundary.",
+  "license": "other",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          105.5,
+          11.0,
+          109.5,
+          16.5
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "keywords": [
+    "Boundaries / admin units",
+    "Land cover / land use",
+    "Water / hydrology"
+  ],
+  "providers": [
+    {
+      "name": "IWMI",
+      "roles": [
+        "producer"
+      ]
+    }
+  ],
+  "summaries": {
+    "mosaic:access_level": [
+      "CGIAR-internal"
+    ],
+    "mosaic:theme": [
+      "Boundaries / admin units",
+      "Land cover / land use",
+      "Water / hydrology"
+    ]
+  },
+  "cgiar-cdh:geography": [
+    "lao-people-s-democratic-republic"
+  ],
+  "mosaic:living_landscape": "MEK-3S",
+  "mosaic:bbox_approximate": true,
+  "mosaic:bbox_note": "Approximate locator box from MOSAIC bbox_lookup (EPSG:4326). To be replaced by delineated boundaries (2026 objective).",
+  "mosaic:item_count": 3,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/MEK-3S/collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-050.json",
+      "type": "application/json",
+      "title": "watershed boundary"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-051.json",
+      "type": "application/json",
+      "title": "river network"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-052.json",
+      "type": "application/json",
+      "title": "LULC classification"
+    }
+  ]
+}

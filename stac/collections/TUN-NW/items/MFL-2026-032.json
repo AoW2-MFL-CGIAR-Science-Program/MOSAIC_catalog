@@ -1,0 +1,115 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.1.0/schema.json",
+    "https://climate-data-hub.cgiar.org/stac-extensions/cgiar-cdh/v1.0.0/schema.json"
+  ],
+  "id": "MFL-2026-032",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          8.2,
+          36.0
+        ],
+        [
+          9.5,
+          36.0
+        ],
+        [
+          9.5,
+          37.3
+        ],
+        [
+          8.2,
+          37.3
+        ],
+        [
+          8.2,
+          36.0
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    8.2,
+    36.0,
+    9.5,
+    37.3
+  ],
+  "properties": {
+    "title": "Tunisia LLs boundary for the six communities containing Sers, Elles, El Ahouez Sud, Hammam Biadha Sud, Chouarnia, and Kesra.",
+    "description": "Administrative boundaries for Tunisia",
+    "datetime": null,
+    "start_datetime": null,
+    "end_datetime": null,
+    "created": null,
+    "updated": null,
+    "cgiar-cdh:geography": [
+      "tunisia"
+    ],
+    "cgiar-cdh:spatial_resolution": "admin-level-3",
+    "mosaic:living_landscape": "TUN-NW",
+    "mosaic:theme": "Boundaries / admin units",
+    "mosaic:access_level": "Open",
+    "mosaic:processing_status": "Validated",
+    "mosaic:migration_status": null,
+    "mosaic:update_frequency": "Unknown",
+    "mosaic:bbox_approximate": true,
+    "mosaic:formats": [
+      "Shapefile"
+    ],
+    "proj:code": null,
+    "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
+    "mosaic:license_original": "CGIAR Open Access",
+    "contacts": [
+      {
+        "name": "Layal Atassi",
+        "emails": [
+          {
+            "value": "l.atassi@cgiar.org"
+          }
+        ],
+        "roles": [
+          "producer",
+          "licensor"
+        ]
+      }
+    ]
+  },
+  "collection": "TUN-NW",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/TUN-NW/items/MFL-2026-032.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "access-note": {
+      "href": "",
+      "title": "Access note (no resolvable URL)",
+      "description": "Current location: Drive | Source note: www.geoboundaries.org",
+      "roles": [
+        "metadata"
+      ]
+    }
+  }
+}

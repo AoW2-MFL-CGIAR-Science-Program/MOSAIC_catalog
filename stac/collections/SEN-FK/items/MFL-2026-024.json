@@ -1,0 +1,132 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.1.0/schema.json",
+    "https://climate-data-hub.cgiar.org/stac-extensions/cgiar-cdh/v1.0.0/schema.json"
+  ],
+  "id": "MFL-2026-024",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -16.9,
+          13.7
+        ],
+        [
+          -15.7,
+          13.7
+        ],
+        [
+          -15.7,
+          14.5
+        ],
+        [
+          -16.9,
+          14.5
+        ],
+        [
+          -16.9,
+          13.7
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -16.9,
+    13.7,
+    -15.7,
+    14.5
+  ],
+  "properties": {
+    "title": "Rainfall data",
+    "description": "Derived from satellite observations and climate models (reanalysis and gauge integration). Coarse spatial resolution (~0.25°–1°) and potential bias compared to ground stations; local variability may be underestimated. Related: GPM, TRMM, ERA5, meteorological station data.",
+    "datetime": null,
+    "start_datetime": "1981-01-01T00:00:00Z",
+    "end_datetime": null,
+    "created": null,
+    "updated": "2025",
+    "cgiar-cdh:geography": [
+      "senegal"
+    ],
+    "cgiar-cdh:spatial_resolution": null,
+    "mosaic:living_landscape": "SEN-FK",
+    "mosaic:theme": "Water / hydrology",
+    "mosaic:access_level": "Open",
+    "mosaic:processing_status": "Processed",
+    "mosaic:migration_status": null,
+    "mosaic:update_frequency": "Annual",
+    "mosaic:bbox_approximate": true,
+    "mosaic:formats": [
+      "CSV"
+    ],
+    "proj:code": null,
+    "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
+    "contacts": [
+      {
+        "name": "dieyemohamadou@gmail.com",
+        "emails": [
+          {
+            "value": "dieyemohamadou@gmail.com"
+          }
+        ],
+        "roles": [
+          "producer",
+          "licensor"
+        ]
+      }
+    ]
+  },
+  "collection": "SEN-FK",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/SEN-FK/items/MFL-2026-024.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "via",
+      "href": "https://power.larc.nasa.gov/data-access-viewer/",
+      "title": "Primary source / download"
+    },
+    {
+      "rel": "related",
+      "href": "https://climate-data-hub.cgiar.org/",
+      "title": "CGIAR Climate Data Hub (source of truth for climate layers) [placeholder URL]"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://power.larc.nasa.gov/data-access-viewer/",
+      "title": "Primary data source",
+      "roles": [
+        "data"
+      ],
+      "type": "text/csv"
+    },
+    "access-note": {
+      "href": "",
+      "title": "Access note (no resolvable URL)",
+      "description": "Current location: local",
+      "roles": [
+        "metadata"
+      ]
+    }
+  }
+}

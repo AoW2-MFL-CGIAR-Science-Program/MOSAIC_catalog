@@ -1,0 +1,124 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.1.0/schema.json",
+    "https://climate-data-hub.cgiar.org/stac-extensions/cgiar-cdh/v1.0.0/schema.json"
+  ],
+  "id": "MFL-2026-059",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -20.0,
+          -35.0
+        ],
+        [
+          110.0,
+          -35.0
+        ],
+        [
+          110.0,
+          40.0
+        ],
+        [
+          -20.0,
+          40.0
+        ],
+        [
+          -20.0,
+          -35.0
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -20.0,
+    -35.0,
+    110.0,
+    40.0
+  ],
+  "properties": {
+    "title": "Soil dataset (needs repair) — Soil data from SoilGrids",
+    "description": "Soil data from SoilGrids",
+    "datetime": null,
+    "start_datetime": null,
+    "end_datetime": null,
+    "created": null,
+    "updated": "2026",
+    "cgiar-cdh:geography": [],
+    "cgiar-cdh:spatial_resolution": "250 m",
+    "mosaic:living_landscape": "GLB-UNSPEC",
+    "mosaic:theme": null,
+    "mosaic:access_level": "Open",
+    "mosaic:processing_status": "Validated",
+    "mosaic:migration_status": null,
+    "mosaic:update_frequency": "Unknown",
+    "mosaic:bbox_approximate": true,
+    "mosaic:formats": [
+      "Unknown"
+    ],
+    "proj:code": null,
+    "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
+    "contacts": [
+      {
+        "name": "Louis Kouadio",
+        "emails": [
+          {
+            "value": "a.kouadio2@cgiar.org"
+          }
+        ],
+        "roles": [
+          "producer",
+          "licensor"
+        ]
+      }
+    ]
+  },
+  "collection": "GLB-UNSPEC",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/GLB-UNSPEC/items/MFL-2026-059.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "via",
+      "href": "https://soilgrids.org/",
+      "title": "Primary source / download"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://soilgrids.org/",
+      "title": "Primary data source",
+      "roles": [
+        "data"
+      ]
+    },
+    "access-note": {
+      "href": "",
+      "title": "Access note (no resolvable URL)",
+      "description": "Current location: server and drive",
+      "roles": [
+        "metadata"
+      ]
+    }
+  }
+}

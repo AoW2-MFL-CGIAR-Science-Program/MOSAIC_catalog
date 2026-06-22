@@ -1,0 +1,89 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.1.0/schema.json",
+    "https://climate-data-hub.cgiar.org/stac-extensions/cgiar-cdh/v1.0.0/schema.json"
+  ],
+  "id": "KEN-NAT",
+  "title": "Kenya (national)",
+  "description": "Datasets registered under the 'Kenya (national)' Living Landscape (2 item(s)). Spatial extent is an APPROXIMATE locator box, not a survey-grade boundary.",
+  "license": "other",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          33.9,
+          -4.7,
+          41.9,
+          5.5
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "1983-01-01T00:00:00Z",
+          "2022-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "keywords": [
+    "Decision-support outputs",
+    "Water / hydrology"
+  ],
+  "providers": [
+    {
+      "name": "Alliance Bioversity-CIAT",
+      "roles": [
+        "producer"
+      ]
+    }
+  ],
+  "summaries": {
+    "mosaic:access_level": [
+      "Open"
+    ],
+    "mosaic:theme": [
+      "Decision-support outputs",
+      "Water / hydrology"
+    ]
+  },
+  "cgiar-cdh:geography": [
+    "kenya"
+  ],
+  "mosaic:living_landscape": "KEN-NAT",
+  "mosaic:bbox_approximate": true,
+  "mosaic:bbox_note": "Approximate locator box from MOSAIC bbox_lookup (EPSG:4326). To be replaced by delineated boundaries (2026 objective).",
+  "mosaic:item_count": 2,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/KEN-NAT/collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-023-2.json",
+      "type": "application/json",
+      "title": "Tree conservation and restoration priority areas"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-043.json",
+      "type": "application/json",
+      "title": "Rainfall trends"
+    }
+  ]
+}

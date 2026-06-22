@@ -1,0 +1,123 @@
+{
+  "_meta": {
+    "file": "living_landscape_crosswalk.json",
+    "purpose": "Crosswalk from messy free-text 'Living landscape' registry values to controlled MOSAIC living-landscape CODES. Codes follow the existing frontend scheme COUNTRY3-XX (ISO3 + 2-char suffix). Feeds frontend datasets.json 'living_landscape' (CODE) and STAC 'mosaic:living_landscape'.",
+    "code_scheme": "COUNTRY3-XX. COUNTRY3 = ISO 3166-1 alpha-3. XX = short mnemonic for the sub-national landscape, or a multi-country basin prefix (MEK for Mekong 3S). UNSPEC/UNK reserved for non-landscape or unresolvable values.",
+    "status": "PROVISIONAL - awaiting Lizeth's canonical MFL living-landscape list. Do NOT publish these names as authoritative; they are interim locators. When the canonical list lands, this file is the single place to reconcile.",
+    "match_rule": "Engineer: trim whitespace and lowercase before matching free_text. Several free_text variants map to one code (see Zimbabwe Mbire). Unmatched values -> COUNTRY3-UNK if country known, else GLB-UNSPEC, and flag for review.",
+    "checked": "github.com/CGIAR-Climate-Data-Hub/metadata vocab/geography.json (UN M49) confirmed 2026-06-22; geography for Country is UN M49, but living_landscape is MOSAIC-specific (mosaic:living_landscape) with no CDH equivalent."
+  },
+  "landscapes": [
+    {
+      "free_text": "3S basins-Sekong, Sesan, and Srepok",
+      "code": "MEK-3S",
+      "name": "3S Basins (Sekong, Sesan, Srepok)",
+      "country": "Laos / Vietnam"
+    },
+    {
+      "free_text": "Central India highlands: Hot sub-humid rainfed transition zone",
+      "code": "IND-CH",
+      "name": "Central India Highlands",
+      "country": "India"
+    },
+    {
+      "free_text": "Department of Fatick",
+      "code": "SEN-FK",
+      "name": "Fatick Department",
+      "country": "Senegal"
+    },
+    {
+      "free_text": "In the Senegal region, the resolution does not allow for data at the departmental level",
+      "code": "SEN-FK",
+      "name": "Fatick Department",
+      "country": "Senegal",
+      "note": "Sentence is a resolution caveat, not a place. Treated as the Senegal/Fatick landscape; the caveat text belongs in description. FLAG for engineer to verify against the record's actual area."
+    },
+    {
+      "free_text": "Entire Kenya",
+      "code": "KEN-NAT",
+      "name": "Kenya (national)",
+      "country": "Kenya"
+    },
+    {
+      "free_text": "Lower Zambezi Valley",
+      "code": "ZWE-MB",
+      "name": "Mbire / Lower Zambezi Valley",
+      "country": "Zimbabwe",
+      "note": "Grouped with Mbire variants - see grouping note."
+    },
+    {
+      "free_text": "Mbire Ward 2",
+      "code": "ZWE-MB",
+      "name": "Mbire / Lower Zambezi Valley",
+      "country": "Zimbabwe"
+    },
+    {
+      "free_text": "Mbire: Wards 2 and 3",
+      "code": "ZWE-MB",
+      "name": "Mbire / Lower Zambezi Valley",
+      "country": "Zimbabwe"
+    },
+    {
+      "free_text": "Mbire: Wards 2, 3, 9, 12 and 17",
+      "code": "ZWE-MB",
+      "name": "Mbire / Lower Zambezi Valley",
+      "country": "Zimbabwe"
+    },
+    {
+      "free_text": "N'Zi watershed",
+      "code": "CIV-NZ",
+      "name": "N'Zi Watershed",
+      "country": "Côte d'Ivoire"
+    },
+    {
+      "free_text": "Northwestern Tunisia",
+      "code": "TUN-NW",
+      "name": "Northwestern Tunisia",
+      "country": "Tunisia",
+      "note": "Source has trailing space ('Northwestern Tunisia '); match after trim."
+    },
+    {
+      "free_text": "Omo-Gibe Ethiopia",
+      "code": "ETH-OG",
+      "name": "Omo-Gibe Basin",
+      "country": "Ethiopia"
+    },
+    {
+      "free_text": "Country and basin scale",
+      "code": "GLB-UNSPEC",
+      "name": "Unspecified / multi-scale",
+      "country": "Unknown",
+      "note": "Not a landscape; a scale descriptor. Map to UNSPEC and FLAG - engineer should infer the real landscape from the record's Country/Description if possible."
+    },
+    {
+      "free_text": "Soil dataset",
+      "code": "GLB-UNSPEC",
+      "name": "Unspecified / malformed",
+      "country": "Unknown",
+      "note": "Malformed row (Country/MFL theme/Data type all = 'Soil dataset'). Keep record, set living_landscape=GLB-UNSPEC, country=null, and FLAG for manual repair."
+    }
+  ],
+  "expected_codes_to_confirm_from_full_data": [
+    {
+      "code": "COL-XX",
+      "name": "Colombia landscape - confirm sub-national value from full registry",
+      "country": "Colombia",
+      "note": "Colombia records exist; engineer must read the LL free_text and add the entry. If only country-level, use COL-NAT. If it matches the demo COL-AM (Amazon), reuse COL-AM."
+    },
+    {
+      "code": "PER-XX",
+      "name": "Peru landscape - confirm sub-national value from full registry",
+      "country": "Peru",
+      "note": "Peru records exist; engineer must read the LL free_text and add the entry. If only country-level, use PER-NAT."
+    }
+  ],
+  "grouping_decisions": {
+    "ZWE-MB": "All four Zimbabwe variants ('Lower Zambezi Valley', 'Mbire Ward 2', 'Mbire: Wards 2 and 3', 'Mbire: Wards 2, 3, 9, 12 and 17') collapse to ONE landscape code ZWE-MB. Rationale: they are nested ward selections inside the same Mbire / Lower Zambezi programme landscape - the differences are analysis extents within one place, not different landscapes. For v1 (functional, not perfect) one code keeps the map and filters clean. Ward-level detail, if needed later, belongs in spatial_resolution / description, not in a new landscape code."
+  },
+  "reserved_codes": {
+    "GLB-UNSPEC": "Value present but not a resolvable landscape (scale descriptors, malformed rows).",
+    "{ISO3}-NAT": "Whole-country extent (e.g. KEN-NAT). Use when the record genuinely covers the entire country.",
+    "{ISO3}-UNK": "Country known but sub-national landscape unresolved."
+  }
+}

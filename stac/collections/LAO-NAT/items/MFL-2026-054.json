@@ -1,0 +1,115 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.1.0/schema.json",
+    "https://climate-data-hub.cgiar.org/stac-extensions/cgiar-cdh/v1.0.0/schema.json"
+  ],
+  "id": "MFL-2026-054",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          100.1,
+          13.9
+        ],
+        [
+          107.7,
+          13.9
+        ],
+        [
+          107.7,
+          22.5
+        ],
+        [
+          100.1,
+          22.5
+        ],
+        [
+          100.1,
+          13.9
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    100.1,
+    13.9,
+    107.7,
+    22.5
+  ],
+  "properties": {
+    "title": "soil classification",
+    "description": "Ministry of Agriculture and Environment (MOAE), Lao PDR",
+    "datetime": null,
+    "start_datetime": null,
+    "end_datetime": null,
+    "created": null,
+    "updated": "NA",
+    "cgiar-cdh:geography": [
+      "lao-people-s-democratic-republic"
+    ],
+    "cgiar-cdh:spatial_resolution": "basin and country levels",
+    "mosaic:living_landscape": "LAO-NAT",
+    "mosaic:theme": "Land cover / land use",
+    "mosaic:access_level": "CGIAR-internal",
+    "mosaic:processing_status": "Validated",
+    "mosaic:migration_status": null,
+    "mosaic:update_frequency": "Unknown",
+    "mosaic:bbox_approximate": true,
+    "mosaic:formats": [
+      "Shapefile"
+    ],
+    "proj:code": null,
+    "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
+    "mosaic:license_original": "Restricted — contact data owner",
+    "contacts": [
+      {
+        "name": "s.douangsavanh@cgiar.org",
+        "emails": [
+          {
+            "value": "s.douangsavanh@cgiar.org"
+          }
+        ],
+        "roles": [
+          "producer",
+          "licensor"
+        ]
+      }
+    ]
+  },
+  "collection": "LAO-NAT",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/LAO-NAT/items/MFL-2026-054.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "access-note": {
+      "href": "",
+      "title": "Access note (no resolvable URL)",
+      "description": "Current location: server and drive | Source note: website-MOAE",
+      "roles": [
+        "metadata"
+      ]
+    }
+  }
+}

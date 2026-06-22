@@ -1,0 +1,128 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.1.0/schema.json",
+    "https://climate-data-hub.cgiar.org/stac-extensions/cgiar-cdh/v1.0.0/schema.json"
+  ],
+  "id": "MFL-2026-026",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          29.8,
+          -16.9
+        ],
+        [
+          31.5,
+          -16.9
+        ],
+        [
+          31.5,
+          -15.6
+        ],
+        [
+          29.8,
+          -15.6
+        ],
+        [
+          29.8,
+          -16.9
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    29.8,
+    -16.9,
+    31.5,
+    -15.6
+  ],
+  "properties": {
+    "title": "District/ward boundaries",
+    "description": "Administrative boundaries for the Lower Zambezi Valley (Districts and wards)",
+    "datetime": null,
+    "start_datetime": null,
+    "end_datetime": null,
+    "created": null,
+    "updated": null,
+    "cgiar-cdh:geography": [
+      "zimbabwe"
+    ],
+    "cgiar-cdh:spatial_resolution": "Admin - MFLLs Boundary",
+    "mosaic:living_landscape": "ZWE-MB",
+    "mosaic:theme": "Boundaries / admin units",
+    "mosaic:access_level": "Open",
+    "mosaic:processing_status": "Validated",
+    "mosaic:migration_status": null,
+    "mosaic:update_frequency": "Unknown",
+    "mosaic:bbox_approximate": true,
+    "mosaic:formats": [
+      "Shapefile"
+    ],
+    "proj:code": null,
+    "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
+    "mosaic:license_original": "CGIAR Open Access",
+    "contacts": [
+      {
+        "name": "Telma.SIBANDA@um6p.ma",
+        "emails": [
+          {
+            "value": "telma.sibanda@um6p.ma"
+          }
+        ],
+        "roles": [
+          "producer",
+          "licensor"
+        ]
+      }
+    ]
+  },
+  "collection": "ZWE-MB",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/ZWE-MB/items/MFL-2026-026.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "via",
+      "href": "https://gadm.org/",
+      "title": "Primary source / download"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://gadm.org/",
+      "title": "Primary data source",
+      "roles": [
+        "data"
+      ],
+      "type": "application/octet-stream"
+    },
+    "access-note": {
+      "href": "",
+      "title": "Access note (no resolvable URL)",
+      "description": "Current location: Drive",
+      "roles": [
+        "metadata"
+      ]
+    }
+  }
+}

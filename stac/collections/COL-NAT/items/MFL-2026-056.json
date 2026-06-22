@@ -1,0 +1,128 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.1.0/schema.json",
+    "https://climate-data-hub.cgiar.org/stac-extensions/cgiar-cdh/v1.0.0/schema.json"
+  ],
+  "id": "MFL-2026-056",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -79.0,
+          -4.2
+        ],
+        [
+          -66.9,
+          -4.2
+        ],
+        [
+          -66.9,
+          12.5
+        ],
+        [
+          -79.0,
+          12.5
+        ],
+        [
+          -79.0,
+          -4.2
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -79.0,
+    -4.2,
+    -66.9,
+    12.5
+  ],
+  "properties": {
+    "title": "Crop fields (2023)  focus on \tPotatoes, Oca, Mashua and andean fruit trees",
+    "description": "A total of 206 farmers in Cumbal, Colombia, were surveyed utilizing ArcGIS Survey 123. Each farmer's field was physically visited, and the 'Participatory Mapping of Farmers' Fields' tool was employed to delineate polygons for each 'shagra', accurately determining their respective areas. This process captured the characteristics of 557 mapped plots across 206 farmers' households. The resultant comprehensive dataset comprises five distinct databases: A) Preliminary Information, B) Shagra Information, C) Land Use Over the Years, and D) Variety Names. These datasets have been individualized and standardized using the common identifiers 'GlobalID Household' and 'GlobalID Shagra'.",
+    "datetime": null,
+    "start_datetime": "2023-01-01T00:00:00Z",
+    "end_datetime": "2023-12-31T23:59:59Z",
+    "created": null,
+    "updated": "NA",
+    "cgiar-cdh:geography": [
+      "colombia"
+    ],
+    "cgiar-cdh:spatial_resolution": "Cumbal (Andean Amazon Landscape)",
+    "mosaic:living_landscape": "COL-NAT",
+    "mosaic:theme": "Agrobiodiversity / crops",
+    "mosaic:access_level": "CGIAR-internal",
+    "mosaic:processing_status": "Validated",
+    "mosaic:migration_status": null,
+    "mosaic:update_frequency": "Unknown",
+    "mosaic:bbox_approximate": true,
+    "mosaic:formats": [
+      "Shapefile"
+    ],
+    "proj:code": null,
+    "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
+    "mosaic:license_original": "Restricted — contact data owner",
+    "contacts": [
+      {
+        "name": "javier.ochoa@cgiar.org",
+        "emails": [
+          {
+            "value": "javier.ochoa@cgiar.org"
+          }
+        ],
+        "roles": [
+          "producer",
+          "licensor"
+        ]
+      }
+    ]
+  },
+  "collection": "COL-NAT",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/COL-NAT/items/MFL-2026-056.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "via",
+      "href": "https://data.cipotato.org/",
+      "title": "Primary source / download"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://data.cipotato.org/",
+      "title": "Primary data source",
+      "roles": [
+        "data"
+      ],
+      "type": "application/octet-stream"
+    },
+    "access-note": {
+      "href": "",
+      "title": "Access note (no resolvable URL)",
+      "description": "Current location: CIP Dataverse",
+      "roles": [
+        "metadata"
+      ]
+    }
+  }
+}

@@ -1,0 +1,81 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.1.0/schema.json",
+    "https://climate-data-hub.cgiar.org/stac-extensions/cgiar-cdh/v1.0.0/schema.json"
+  ],
+  "id": "VNM-NAT",
+  "title": "Vietnam (national)",
+  "description": "Datasets registered under the 'Vietnam (national)' Living Landscape (1 item(s)). Spatial extent is an APPROXIMATE locator box, not a survey-grade boundary.",
+  "license": "other",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          102.1,
+          8.2,
+          109.5,
+          23.4
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2023-01-01T00:00:00Z",
+          "2023-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "keywords": [
+    "Agrobiodiversity / crops"
+  ],
+  "providers": [
+    {
+      "name": "CIP",
+      "roles": [
+        "producer"
+      ]
+    }
+  ],
+  "summaries": {
+    "mosaic:access_level": [
+      "CGIAR-internal"
+    ],
+    "mosaic:theme": [
+      "Agrobiodiversity / crops"
+    ]
+  },
+  "cgiar-cdh:geography": [
+    "viet-nam"
+  ],
+  "mosaic:living_landscape": "VNM-NAT",
+  "mosaic:bbox_approximate": true,
+  "mosaic:bbox_note": "Approximate locator box from MOSAIC bbox_lookup (EPSG:4326). To be replaced by delineated boundaries (2026 objective).",
+  "mosaic:item_count": 1,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/VNM-NAT/collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-057.json",
+      "type": "application/json",
+      "title": "Crop fields (2023)  focus on Banana, Pumpkins, Taro, Mustard"
+    }
+  ]
+}

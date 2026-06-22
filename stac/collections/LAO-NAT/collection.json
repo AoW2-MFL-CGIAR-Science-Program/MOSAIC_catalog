@@ -1,0 +1,89 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.1.0/schema.json",
+    "https://climate-data-hub.cgiar.org/stac-extensions/cgiar-cdh/v1.0.0/schema.json"
+  ],
+  "id": "LAO-NAT",
+  "title": "Laos (national)",
+  "description": "Datasets registered under the 'Laos (national)' Living Landscape (2 item(s)). Spatial extent is an APPROXIMATE locator box, not a survey-grade boundary.",
+  "license": "other",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          100.1,
+          13.9,
+          107.7,
+          22.5
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2021-01-01T00:00:00Z",
+          "2025-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "keywords": [
+    "Land cover / land use",
+    "Socio-economic / livelihoods"
+  ],
+  "providers": [
+    {
+      "name": "IWMI",
+      "roles": [
+        "producer"
+      ]
+    }
+  ],
+  "summaries": {
+    "mosaic:access_level": [
+      "CGIAR-internal"
+    ],
+    "mosaic:theme": [
+      "Land cover / land use",
+      "Socio-economic / livelihoods"
+    ]
+  },
+  "cgiar-cdh:geography": [
+    "lao-people-s-democratic-republic"
+  ],
+  "mosaic:living_landscape": "LAO-NAT",
+  "mosaic:bbox_approximate": true,
+  "mosaic:bbox_note": "Approximate locator box from MOSAIC bbox_lookup (EPSG:4326). To be replaced by delineated boundaries (2026 objective).",
+  "mosaic:item_count": 2,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/LAO-NAT/collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-053.json",
+      "type": "application/json",
+      "title": "Sekong River Basin Management Plan"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-054.json",
+      "type": "application/json",
+      "title": "soil classification"
+    }
+  ]
+}

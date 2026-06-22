@@ -1,0 +1,113 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.1.0/schema.json",
+    "https://climate-data-hub.cgiar.org/stac-extensions/cgiar-cdh/v1.0.0/schema.json"
+  ],
+  "id": "CIV-NZ",
+  "title": "N'Zi Watershed",
+  "description": "Datasets registered under the 'N'Zi Watershed' Living Landscape (4 item(s)). Spatial extent is an APPROXIMATE locator box, not a survey-grade boundary.",
+  "license": "other",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -5.6,
+          6.0,
+          -3.5,
+          8.6
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "1979-01-01T00:00:00Z",
+          "2017-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "keywords": [
+    "Boundaries / admin units",
+    "Water / hydrology"
+  ],
+  "providers": [
+    {
+      "name": "AfricaRice",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "IFPRI",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "National government (external)",
+      "roles": [
+        "producer"
+      ]
+    }
+  ],
+  "summaries": {
+    "mosaic:access_level": [
+      "Open"
+    ],
+    "mosaic:theme": [
+      "Boundaries / admin units",
+      "Water / hydrology"
+    ]
+  },
+  "cgiar-cdh:geography": [
+    "cote-d-ivoire"
+  ],
+  "mosaic:living_landscape": "CIV-NZ",
+  "mosaic:bbox_approximate": true,
+  "mosaic:bbox_note": "Approximate locator box from MOSAIC bbox_lookup (EPSG:4326). To be replaced by delineated boundaries (2026 objective).",
+  "mosaic:item_count": 4,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/CIV-NZ/collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-044.json",
+      "type": "application/json",
+      "title": "District/Region boundaries"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-045.json",
+      "type": "application/json",
+      "title": "Agroecological zones"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-046.json",
+      "type": "application/json",
+      "title": "Climate data"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-058.json",
+      "type": "application/json",
+      "title": "Climate data"
+    }
+  ]
+}

@@ -1,0 +1,81 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.1.0/schema.json",
+    "https://climate-data-hub.cgiar.org/stac-extensions/cgiar-cdh/v1.0.0/schema.json"
+  ],
+  "id": "GLB-UNSPEC",
+  "title": "Unspecified - coarse programme-wide box; flag for repair",
+  "description": "Datasets registered under the 'Unspecified - coarse programme-wide box; flag for repair' Living Landscape (2 item(s)). Spatial extent is an APPROXIMATE locator box, not a survey-grade boundary.",
+  "license": "CC-BY-4.0",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -20.0,
+          -35.0,
+          110.0,
+          40.0
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2015-01-01T00:00:00Z",
+          "2015-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "keywords": [],
+  "providers": [
+    {
+      "name": "AfricaRice",
+      "roles": [
+        "producer"
+      ]
+    }
+  ],
+  "summaries": {
+    "mosaic:access_level": [
+      "Open"
+    ],
+    "mosaic:theme": []
+  },
+  "cgiar-cdh:geography": [],
+  "mosaic:living_landscape": "GLB-UNSPEC",
+  "mosaic:bbox_approximate": true,
+  "mosaic:bbox_note": "Approximate locator box from MOSAIC bbox_lookup (EPSG:4326). To be replaced by delineated boundaries (2026 objective).",
+  "mosaic:item_count": 2,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/GLB-UNSPEC/collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-048.json",
+      "type": "application/json",
+      "title": "Soil dataset (needs repair) — High-resolution soil profile database for crop mod"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-059.json",
+      "type": "application/json",
+      "title": "Soil dataset (needs repair) — Soil data from SoilGrids"
+    }
+  ]
+}

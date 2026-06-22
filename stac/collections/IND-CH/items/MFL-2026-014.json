@@ -1,0 +1,131 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.1.0/schema.json",
+    "https://climate-data-hub.cgiar.org/stac-extensions/cgiar-cdh/v1.0.0/schema.json"
+  ],
+  "id": "MFL-2026-014",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          74.0,
+          20.0
+        ],
+        [
+          82.0,
+          20.0
+        ],
+        [
+          82.0,
+          25.5
+        ],
+        [
+          74.0,
+          25.5
+        ],
+        [
+          74.0,
+          20.0
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    74.0,
+    20.0,
+    82.0,
+    25.5
+  ],
+  "properties": {
+    "title": "Waterbodies data on River, canals, waterbodies, reservoir",
+    "description": "Waterbodies data",
+    "datetime": null,
+    "start_datetime": null,
+    "end_datetime": null,
+    "created": null,
+    "updated": "2024",
+    "cgiar-cdh:geography": [
+      "india"
+    ],
+    "cgiar-cdh:spatial_resolution": "Multiple resolutions",
+    "mosaic:living_landscape": "IND-CH",
+    "mosaic:theme": "Water / hydrology",
+    "mosaic:access_level": "Open",
+    "mosaic:processing_status": "Processed",
+    "mosaic:migration_status": null,
+    "mosaic:update_frequency": "Static",
+    "mosaic:bbox_approximate": true,
+    "mosaic:formats": [
+      "Mixed"
+    ],
+    "proj:code": null,
+    "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
+    "contacts": [
+      {
+        "name": "Core Stack",
+        "emails": [
+          {
+            "value": "s.maliappan@cgiar.org"
+          }
+        ],
+        "roles": [
+          "producer",
+          "licensor"
+        ]
+      }
+    ]
+  },
+  "collection": "IND-CH",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/IND-CH/items/MFL-2026-014.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "via",
+      "href": "https://github.com/core-stack-org/QGIS-Styles/blob/main/Hydrology/Sub-Basin_style.qml",
+      "title": "Primary source / download"
+    },
+    {
+      "rel": "related",
+      "href": "https://climate-data-hub.cgiar.org/",
+      "title": "CGIAR Climate Data Hub (source of truth for climate layers) [placeholder URL]"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://github.com/core-stack-org/QGIS-Styles/blob/main/Hydrology/Sub-Basin_style.qml",
+      "title": "Primary data source",
+      "roles": [
+        "data"
+      ]
+    },
+    "access-note": {
+      "href": "",
+      "title": "Access note (no resolvable URL)",
+      "description": "Current location: CoreStack: Github / Google rive",
+      "roles": [
+        "metadata"
+      ]
+    }
+  }
+}

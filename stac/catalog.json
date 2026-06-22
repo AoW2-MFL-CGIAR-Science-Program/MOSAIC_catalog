@@ -1,0 +1,98 @@
+{
+  "type": "Catalog",
+  "stac_version": "1.0.0",
+  "id": "mosaic-mfl-catalog",
+  "title": "MOSAIC — MFL Multifunctional Landscapes Catalog",
+  "description": "MOSAIC coordination-network metadata catalog for the CGIAR MFL Science Programme (AoW2). One STAC Collection per Living Landscape, one Item per registered dataset. Spatial extents are APPROXIMATE locator boxes pending the 2026 landscape-delineation work. Climate layers link to the CGIAR Climate Data Hub (connect, don't duplicate).",
+  "links": [
+    {
+      "rel": "root",
+      "href": "./catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/CIV-NZ/collection.json",
+      "type": "application/json",
+      "title": "N'Zi Watershed"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/COL-NAT/collection.json",
+      "type": "application/json",
+      "title": "Colombia (national fallback - replace when COL landscape confirmed)"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/ETH-OG/collection.json",
+      "type": "application/json",
+      "title": "Omo-Gibe Basin"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/GLB-UNSPEC/collection.json",
+      "type": "application/json",
+      "title": "Unspecified - coarse programme-wide box; flag for repair"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/IND-CH/collection.json",
+      "type": "application/json",
+      "title": "Central India Highlands"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/KEN-NAT/collection.json",
+      "type": "application/json",
+      "title": "Kenya (national)"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/LAO-NAT/collection.json",
+      "type": "application/json",
+      "title": "Laos (national)"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/MEK-3S/collection.json",
+      "type": "application/json",
+      "title": "3S Basins (Sekong, Sesan, Srepok)"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/PER-NAT/collection.json",
+      "type": "application/json",
+      "title": "Peru (national fallback - replace when PER landscape confirmed)"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/SEN-FK/collection.json",
+      "type": "application/json",
+      "title": "Fatick Department"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/TUN-NW/collection.json",
+      "type": "application/json",
+      "title": "Northwestern Tunisia"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/VNM-NAT/collection.json",
+      "type": "application/json",
+      "title": "Vietnam (national)"
+    },
+    {
+      "rel": "child",
+      "href": "./collections/ZWE-MB/collection.json",
+      "type": "application/json",
+      "title": "Mbire / Lower Zambezi Valley"
+    }
+  ],
+  "mosaic:schema_version": "0.1.0"
+}

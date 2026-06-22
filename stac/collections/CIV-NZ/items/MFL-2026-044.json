@@ -1,0 +1,114 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.1.0/schema.json",
+    "https://climate-data-hub.cgiar.org/stac-extensions/cgiar-cdh/v1.0.0/schema.json"
+  ],
+  "id": "MFL-2026-044",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -5.6,
+          6.0
+        ],
+        [
+          -3.5,
+          6.0
+        ],
+        [
+          -3.5,
+          8.6
+        ],
+        [
+          -5.6,
+          8.6
+        ],
+        [
+          -5.6,
+          6.0
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    -5.6,
+    6.0,
+    -3.5,
+    8.6
+  ],
+  "properties": {
+    "title": "District/Region boundaries",
+    "description": "Administrative boundaries",
+    "datetime": null,
+    "start_datetime": null,
+    "end_datetime": null,
+    "created": null,
+    "updated": null,
+    "cgiar-cdh:geography": [
+      "cote-d-ivoire"
+    ],
+    "cgiar-cdh:spatial_resolution": "admin-level-1, admin-level-2, admin-level-3",
+    "mosaic:living_landscape": "CIV-NZ",
+    "mosaic:theme": "Boundaries / admin units",
+    "mosaic:access_level": "Open",
+    "mosaic:processing_status": "Validated",
+    "mosaic:migration_status": null,
+    "mosaic:update_frequency": "Unknown",
+    "mosaic:bbox_approximate": true,
+    "mosaic:formats": [
+      "Shapefile"
+    ],
+    "proj:code": null,
+    "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
+    "contacts": [
+      {
+        "name": "Louis Kouadio",
+        "emails": [
+          {
+            "value": "a.kouadio2@cgiar.org"
+          }
+        ],
+        "roles": [
+          "producer",
+          "licensor"
+        ]
+      }
+    ]
+  },
+  "collection": "CIV-NZ",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/CIV-NZ/items/MFL-2026-044.json",
+      "type": "application/json"
+    }
+  ],
+  "assets": {
+    "access-note": {
+      "href": "",
+      "title": "Access note (no resolvable URL)",
+      "description": "Current location: Drive | Source note: GADM maps and data (gadm.org)",
+      "roles": [
+        "metadata"
+      ]
+    }
+  }
+}

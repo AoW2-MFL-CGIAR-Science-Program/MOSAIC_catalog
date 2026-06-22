@@ -1,0 +1,129 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.1.0/schema.json",
+    "https://climate-data-hub.cgiar.org/stac-extensions/cgiar-cdh/v1.0.0/schema.json"
+  ],
+  "id": "SEN-FK",
+  "title": "Fatick Department",
+  "description": "Datasets registered under the 'Fatick Department' Living Landscape (8 item(s)). Spatial extent is an APPROXIMATE locator box, not a survey-grade boundary.",
+  "license": "CC-BY-4.0",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -16.9,
+          13.7,
+          -15.7,
+          14.5
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "1981-01-01T00:00:00Z",
+          "2025-12-31T23:59:59Z"
+        ]
+      ]
+    }
+  },
+  "keywords": [
+    "Boundaries / admin units",
+    "Degradation / land health",
+    "Land cover / land use",
+    "Water / hydrology"
+  ],
+  "providers": [
+    {
+      "name": "ISRA-BAME",
+      "roles": [
+        "producer"
+      ]
+    }
+  ],
+  "summaries": {
+    "mosaic:access_level": [
+      "Open"
+    ],
+    "mosaic:theme": [
+      "Boundaries / admin units",
+      "Degradation / land health",
+      "Land cover / land use",
+      "Water / hydrology"
+    ]
+  },
+  "cgiar-cdh:geography": [
+    "senegal"
+  ],
+  "mosaic:living_landscape": "SEN-FK",
+  "mosaic:bbox_approximate": true,
+  "mosaic:bbox_note": "Approximate locator box from MOSAIC bbox_lookup (EPSG:4326). To be replaced by delineated boundaries (2026 objective).",
+  "mosaic:item_count": 8,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/SEN-FK/collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-017.json",
+      "type": "application/json",
+      "title": "Land Use and Land Cover - Senegal"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-018.json",
+      "type": "application/json",
+      "title": "Departments"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-019.json",
+      "type": "application/json",
+      "title": "Municipalities"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-020.json",
+      "type": "application/json",
+      "title": "Localities"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-021.json",
+      "type": "application/json",
+      "title": "Road"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-022.json",
+      "type": "application/json",
+      "title": "Land Degradation - Senegal"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-023.json",
+      "type": "application/json",
+      "title": "Tree mapping"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-024.json",
+      "type": "application/json",
+      "title": "Rainfall data"
+    }
+  ]
+}
