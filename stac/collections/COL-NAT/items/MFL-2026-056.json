@@ -53,7 +53,7 @@
     "cgiar-cdh:spatial_resolution": "Cumbal (Andean Amazon Landscape)",
     "mosaic:living_landscape": "COL-NAT",
     "mosaic:theme": "Agrobiodiversity / crops",
-    "mosaic:access_level": "CGIAR-internal",
+    "mosaic:access_level": "Internal",
     "mosaic:processing_status": "Validated",
     "mosaic:migration_status": null,
     "mosaic:update_frequency": "Unknown",

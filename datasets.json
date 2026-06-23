@@ -1102,7 +1102,7 @@
     "temporal_coverage": "present",
     "source": "IWMI",
     "contact": "s.douangsavanh@cgiar.org",
-    "access_level": "CGIAR-internal",
+    "access_level": "Internal",
     "license": "Restricted — contact data owner",
     "readiness_status": "Validated",
     "formats": [
@@ -1123,7 +1123,7 @@
     "temporal_coverage": "present",
     "source": "IWMI",
     "contact": "s.douangsavanh@cgiar.org",
-    "access_level": "CGIAR-internal",
+    "access_level": "Internal",
     "license": "Restricted — contact data owner",
     "readiness_status": "Validated",
     "formats": [
@@ -1144,7 +1144,7 @@
     "temporal_coverage": "present",
     "source": "IWMI",
     "contact": "s.douangsavanh@cgiar.org",
-    "access_level": "CGIAR-internal",
+    "access_level": "Internal",
     "license": "Restricted — contact data owner",
     "readiness_status": "Validated",
     "formats": [
@@ -1165,7 +1165,7 @@
     "temporal_coverage": "2021-2025",
     "source": "IWMI",
     "contact": "s.douangsavanh@cgiar.org",
-    "access_level": "CGIAR-internal",
+    "access_level": "Internal",
     "license": "Restricted — contact data owner",
     "readiness_status": "Validated",
     "formats": [
@@ -1186,7 +1186,7 @@
     "temporal_coverage": "present",
     "source": "IWMI",
     "contact": "s.douangsavanh@cgiar.org",
-    "access_level": "CGIAR-internal",
+    "access_level": "Internal",
     "license": "Restricted — contact data owner",
     "readiness_status": "Validated",
     "formats": [
@@ -1207,7 +1207,7 @@
     "temporal_coverage": "2025",
     "source": "CIP",
     "contact": "javier.ochoa@cgiar.org",
-    "access_level": "CGIAR-internal",
+    "access_level": "Internal",
     "license": "Restricted — contact data owner",
     "readiness_status": "Validated",
     "formats": [
@@ -1228,7 +1228,7 @@
     "temporal_coverage": "2023",
     "source": "CIP",
     "contact": "javier.ochoa@cgiar.org",
-    "access_level": "CGIAR-internal",
+    "access_level": "Internal",
     "license": "Restricted — contact data owner",
     "readiness_status": "Validated",
     "formats": [
@@ -1249,7 +1249,7 @@
     "temporal_coverage": "2023",
     "source": "CIP",
     "contact": "javier.ochoa@cgiar.org",
-    "access_level": "CGIAR-internal",
+    "access_level": "Internal",
     "license": "Restricted — contact data owner",
     "readiness_status": "Validated",
     "formats": [

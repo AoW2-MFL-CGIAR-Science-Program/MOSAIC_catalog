@@ -32,7 +32,9 @@ VALID_THEMES = {
     "Agrobiodiversity / crops", "Socio-economic / livelihoods",
 }
 VALID_DATA_TYPES = {"Raster", "Vector", "Tabular", "Mixed"}
-VALID_ACCESS = {"Open", "CGIAR-internal", "Restricted"}
+VALID_ACCESS = {"Open", "Internal", "Restricted"}
+# Legacy/source spellings normalized to the canonical access values above.
+ACCESS_ALIASES = {"CGIAR-internal": "Internal", "CGIAR internal": "Internal"}
 VALID_UPDATE_FREQ = {"Annual", "Seasonal", "Monthly", "On-demand", "Static", "Unknown"}
 
 # Themes for which MOSAIC links to the CDH ("connect, don't duplicate").
@@ -161,6 +163,7 @@ def _normalize_row(row, vocab: Vocab, used_ids: set[str], gen_id) -> dict:
 
     # --- access level ---
     access = T.s(_g(row, "access_level"))
+    access = ACCESS_ALIASES.get(access, access)
     if access and access not in VALID_ACCESS:
         access = None
         flags.append("noncanonical_access_level")

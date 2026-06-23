@@ -53,7 +53,7 @@
     "cgiar-cdh:spatial_resolution": "report-country and basin level",
     "mosaic:living_landscape": "LAO-NAT",
     "mosaic:theme": "Socio-economic / livelihoods",
-    "mosaic:access_level": "CGIAR-internal",
+    "mosaic:access_level": "Internal",
     "mosaic:processing_status": "Validated",
     "mosaic:migration_status": null,
     "mosaic:update_frequency": "Unknown",

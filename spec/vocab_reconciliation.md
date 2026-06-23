@@ -59,9 +59,10 @@ Enum (display strings — keep exactly, including diacritics):
 
 ## 5. access_level
 ```
-["Open","CGIAR-internal","Restricted"]
+["Open","Internal","Restricted"]
 ```
 - MOSAIC-local (`mosaic:access_level`). Mappable, not identical to CDH.
+- Source spellings `CGIAR-internal` / `CGIAR internal` in the registry are normalized to `Internal` on read (registry.py `ACCESS_ALIASES`).
 
 ## 6. readiness_status  ** DECISION (see field_mapping.md R7) **
 ```

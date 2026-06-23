@@ -24,7 +24,7 @@
 | `temporal_coverage` | 8 Temporal coverage | Keep raw string for frontend. (STAC splits it — R4.) |
 | `source` | 9 Source / Centre | Trim. Map to centre enum where it matches (vocab_reconciliation.md). |
 | `contact` | 10 Contact person | Extract **email** only (R1). If no email → `null`. |
-| `access_level` | 11 Access level | Map to access_level enum {Open, CGIAR-internal, Restricted}. |
+| `access_level` | 11 Access level | Map to access_level enum {Open, Internal, Restricted}. Source `CGIAR-internal`/`CGIAR internal` → `Internal`. |
 | `license` | 12 License | Map toward SPDX id; keep original as alias if non-SPDX (R3). |
 | `readiness_status` | 13 Processing status | Map Raw/Processed/Validated → v1 readiness vocab (R7). |
 | `formats` | 6 Data type + 14 File name(s) | Array; derive from file extensions, fallback to data_type (R2). |
