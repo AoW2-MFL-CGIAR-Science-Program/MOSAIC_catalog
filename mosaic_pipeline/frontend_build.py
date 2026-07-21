@@ -3,7 +3,8 @@
 One flat record per dataset, using exactly the keys the frontend expects:
 id, title, country, living_landscape, mfl_theme, data_type, spatial_resolution,
 temporal_coverage, source, contact, access_level, license, readiness_status,
-formats, description, download_url, metadata_url.
+formats, description, download_url, metadata_url — plus, since 2026-07-21:
+landscape_name, coverage (landscape|national|global), centroid ([lon, lat]).
 """
 from __future__ import annotations
 
@@ -11,14 +12,14 @@ import json
 from pathlib import Path
 
 FRONTEND_KEYS = [
-    "id", "title", "country", "living_landscape", "mfl_theme", "data_type",
-    "spatial_resolution", "temporal_coverage", "source", "contact",
-    "access_level", "license", "readiness_status", "formats", "description",
-    "download_url", "metadata_url",
+    "id", "title", "country", "living_landscape", "landscape_name", "coverage",
+    "mfl_theme", "data_type", "spatial_resolution", "temporal_coverage",
+    "source", "contact", "access_level", "license", "readiness_status",
+    "formats", "description", "download_url", "metadata_url", "centroid",
 ]
 
 
-def build_frontend(records: list[dict], out_path: Path) -> int:
+def build_frontend(records: list[dict], out_path: Path, vocab=None) -> int:
     out = []
     for r in records:
         out.append({
@@ -26,6 +27,10 @@ def build_frontend(records: list[dict], out_path: Path) -> int:
             "title": r["title"],
             "country": r["country"],
             "living_landscape": r["living_landscape"],
+            "landscape_name": (vocab.landscape_name(r["living_landscape"])
+                               if vocab else r["living_landscape"]),
+            "coverage": r["coverage"],
+            "centroid": r["centroid"],
             "mfl_theme": r["mfl_theme"],
             "data_type": r["data_type"],
             "spatial_resolution": r["spatial_resolution"],

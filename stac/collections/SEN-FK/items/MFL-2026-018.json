@@ -11,33 +11,33 @@
     "coordinates": [
       [
         [
-          -16.9,
-          13.7
+          -16.7921,
+          13.9284
         ],
         [
-          -15.7,
-          13.7
+          -16.1055,
+          13.9284
         ],
         [
-          -15.7,
-          14.5
+          -16.1055,
+          14.6084
         ],
         [
-          -16.9,
-          14.5
+          -16.7921,
+          14.6084
         ],
         [
-          -16.9,
-          13.7
+          -16.7921,
+          13.9284
         ]
       ]
     ]
   },
   "bbox": [
-    -16.9,
-    13.7,
-    -15.7,
-    14.5
+    -16.7921,
+    13.9284,
+    -16.1055,
+    14.6084
   ],
   "properties": {
     "title": "Departments",
@@ -52,12 +52,14 @@
     ],
     "cgiar-cdh:spatial_resolution": null,
     "mosaic:living_landscape": "SEN-FK",
+    "mosaic:coverage": "landscape",
     "mosaic:theme": "Boundaries / admin units",
     "mosaic:access_level": "Open",
     "mosaic:processing_status": "Validated",
     "mosaic:migration_status": null,
     "mosaic:update_frequency": "Static",
-    "mosaic:bbox_approximate": true,
+    "mosaic:bbox_approximate": false,
+    "mosaic:bbox_note": "Bbox of the canonical landscape delineation, used as a proxy for the dataset's own (unrecorded) extent.",
     "mosaic:formats": [
       "Shapefile"
     ],

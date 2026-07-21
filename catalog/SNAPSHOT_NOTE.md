@@ -1,12 +1,16 @@
-# Registry snapshot — provisional
+# Registry snapshot — canonical (2026-07-21)
 
-`MFL_Dataset_Registry.xlsx` in this folder is a **provisional snapshot**, committed
-so the pipeline and CI are self-contained and reproducible.
+`MFL_Dataset_Registry.xlsx` in this folder is the **canonical registry snapshot**,
+committed so the pipeline and CI are self-contained and reproducible.
 
-**This is a v1 exercise** — its purpose is to show what the catalog *would look like*
-with real-shaped data. The content **will change**: records, columns, controlled
-vocabularies, and living-landscape codes are all expected to evolve as focal points
-contribute and the canonical MFL landscape list is confirmed.
+- 68 records, unique literal Record IDs (`MFL-2026-001` … `MFL-2026-069`; ID
+  formulas were removed on 2026-07-21 — see `docs/REGISTRY_CHANGELOG_2026-07-21.md`).
+- The **Living landscape** column uses the canonical controlled list approved by
+  Lizeth on 2026-07-21: 11 delineated landscapes (see `boundaries/`) plus
+  `NATIONAL — Country-wide coverage` and `GLOBAL — Global / cross-landscape`.
+  The full table lives in the workbook's *Reference* sheet (columns K–M).
+- `PER-PCL` (Pucallpa – Ucayali) is **pending confirmation** with the Peru team.
 
-Do not treat this file as the authoritative, final registry. When the real registry
-is ready, replace this file and re-run `python3 build_catalog.py`.
+To update: edit this file (new rows type the next free `MFL-2026-###` ID manually),
+then run `./scripts/regenerate.sh`. Working copies received from focal points
+(e.g. `MFL_Dataset_Registry 21jul.xlsx`) stay local and are git-ignored.

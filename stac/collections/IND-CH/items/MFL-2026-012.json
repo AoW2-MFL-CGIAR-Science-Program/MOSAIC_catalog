@@ -11,33 +11,33 @@
     "coordinates": [
       [
         [
-          74.0,
-          20.0
+          78.2942,
+          22.2022
         ],
         [
-          82.0,
-          20.0
+          81.1975,
+          22.2022
         ],
         [
-          82.0,
-          25.5
+          81.1975,
+          25.9555
         ],
         [
-          74.0,
-          25.5
+          78.2942,
+          25.9555
         ],
         [
-          74.0,
-          20.0
+          78.2942,
+          22.2022
         ]
       ]
     ]
   },
   "bbox": [
-    74.0,
-    20.0,
-    82.0,
-    25.5
+    78.2942,
+    22.2022,
+    81.1975,
+    25.9555
   ],
   "properties": {
     "title": "Rainfall erosivity, soil erodability, and water erosion status of India",
@@ -52,12 +52,14 @@
     ],
     "cgiar-cdh:spatial_resolution": "250 m",
     "mosaic:living_landscape": "IND-CH",
+    "mosaic:coverage": "landscape",
     "mosaic:theme": "Degradation / land health",
     "mosaic:access_level": "Open",
     "mosaic:processing_status": "Processed",
     "mosaic:migration_status": null,
     "mosaic:update_frequency": "Static",
-    "mosaic:bbox_approximate": true,
+    "mosaic:bbox_approximate": false,
+    "mosaic:bbox_note": "Bbox of the canonical landscape delineation, used as a proxy for the dataset's own (unrecorded) extent.",
     "mosaic:formats": [
       "GeoTIFF"
     ],

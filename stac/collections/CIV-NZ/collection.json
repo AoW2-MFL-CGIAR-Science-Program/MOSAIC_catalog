@@ -7,16 +7,16 @@
   ],
   "id": "CIV-NZ",
   "title": "N'Zi Watershed",
-  "description": "Datasets registered under the 'N'Zi Watershed' Living Landscape (4 item(s)). Spatial extent is an APPROXIMATE locator box, not a survey-grade boundary.",
+  "description": "Datasets registered under the 'N'Zi Watershed' Living Landscape (4 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the simplified boundary is published as this collection's 'boundary' asset. National-coverage member items can widen the extent beyond the boundary.",
   "license": "other",
   "extent": {
     "spatial": {
       "bbox": [
         [
-          -5.6,
-          6.0,
-          -3.5,
-          8.6
+          -5.3792,
+          5.95,
+          -3.8583,
+          9.4333
         ]
       ]
     },
@@ -66,8 +66,8 @@
     "cote-d-ivoire"
   ],
   "mosaic:living_landscape": "CIV-NZ",
-  "mosaic:bbox_approximate": true,
-  "mosaic:bbox_note": "Approximate locator box from MOSAIC bbox_lookup (EPSG:4326). To be replaced by delineated boundaries (2026 objective).",
+  "mosaic:bbox_approximate": false,
+  "mosaic:bbox_note": "Bbox derived from the canonical delineation shapefile (dissolved, EPSG:4326), union-ed with member-item locator boxes.",
   "mosaic:item_count": 4,
   "links": [
     {
@@ -105,9 +105,23 @@
     },
     {
       "rel": "item",
-      "href": "./items/MFL-2026-058.json",
+      "href": "./items/MFL-2026-067.json",
       "type": "application/json",
       "title": "Climate data"
     }
-  ]
+  ],
+  "mosaic:landscape_system": "Sudan-Sahelian and Guinea Forest-Savanna Transition",
+  "mosaic:countries": [
+    "Côte d'Ivoire"
+  ],
+  "assets": {
+    "boundary": {
+      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/boundaries/CIV-NZ.geojson",
+      "type": "application/geo+json",
+      "title": "Landscape boundary (canonical delineation, simplified, EPSG:4326)",
+      "roles": [
+        "data"
+      ]
+    }
+  }
 }

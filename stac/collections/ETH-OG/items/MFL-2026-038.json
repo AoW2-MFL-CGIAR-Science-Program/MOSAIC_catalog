@@ -11,33 +11,33 @@
     "coordinates": [
       [
         [
-          35.0,
-          5.0
+          34.9533,
+          4.431
         ],
         [
-          38.5,
-          5.0
+          38.4128,
+          4.431
         ],
         [
-          38.5,
-          9.5
+          38.4128,
+          9.3691
         ],
         [
-          35.0,
-          9.5
+          34.9533,
+          9.3691
         ],
         [
-          35.0,
-          5.0
+          34.9533,
+          4.431
         ]
       ]
     ]
   },
   "bbox": [
-    35.0,
-    5.0,
-    38.5,
-    9.5
+    34.9533,
+    4.431,
+    38.4128,
+    9.3691
   ],
   "properties": {
     "title": "Soil resource",
@@ -52,12 +52,14 @@
     ],
     "cgiar-cdh:spatial_resolution": "250 m",
     "mosaic:living_landscape": "ETH-OG",
+    "mosaic:coverage": "landscape",
     "mosaic:theme": "Degradation / land health",
     "mosaic:access_level": "Open",
     "mosaic:processing_status": "Validated",
     "mosaic:migration_status": null,
     "mosaic:update_frequency": "Unknown",
-    "mosaic:bbox_approximate": true,
+    "mosaic:bbox_approximate": false,
+    "mosaic:bbox_note": "Bbox of the canonical landscape delineation, used as a proxy for the dataset's own (unrecorded) extent.",
     "mosaic:formats": [
       "GeoTIFF"
     ],

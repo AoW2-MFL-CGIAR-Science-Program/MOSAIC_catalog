@@ -78,7 +78,7 @@ def main(argv=None) -> int:
     print(f"Real records read: {len(records)}")
 
     # --- Artifact B: datasets.json (canonical copy inside this repo) ---
-    n_front = build_frontend(records, DATASETS_JSON)
+    n_front = build_frontend(records, DATASETS_JSON, vocab)
     print(f"datasets.json written: {n_front} records")
 
     # --- Artifact A: STAC ---
@@ -116,18 +116,20 @@ def main(argv=None) -> int:
 
 def _report(records, vocab, stac_summary) -> None:
     n = len(records)
-    ll_mapped = sum(1 for r in records if r["living_landscape"] != "GLB-UNSPEC")
+    ll_mapped = sum(1 for r in records if r["living_landscape"] != "GLB")
     bbox_assigned = sum(1 for r in records if r["bbox"])
     url_ok = sum(1 for r in records if r["download_url"])
     email_ok = sum(1 for r in records if r["contact"])
     readiness_ok = sum(1 for r in records if "missing_readiness" not in r["flags"])
+    cov = Counter(r["coverage"] for r in records)
 
     print("=" * 60)
     print("COVERAGE REPORT")
     print(f"  real records processed     : {n}")
-    print(f"  living_landscape mapped    : {ll_mapped}/{n} "
-          f"(GLB-UNSPEC: {n - ll_mapped})")
-    print(f"  bbox assigned (approx)     : {bbox_assigned}/{n}")
+    print(f"  living_landscape mapped    : {ll_mapped}/{n} (GLB: {n - ll_mapped})")
+    print(f"  coverage                   : " +
+          ", ".join(f"{k}={v}" for k, v in cov.most_common()))
+    print(f"  bbox assigned              : {bbox_assigned}/{n}")
     print(f"  download_url usable         : {url_ok}/{n} (rest nulled)")
     print(f"  contact email extracted    : {email_ok}/{n}")
     print(f"  readiness_status mapped    : {readiness_ok}/{n} from registry value")

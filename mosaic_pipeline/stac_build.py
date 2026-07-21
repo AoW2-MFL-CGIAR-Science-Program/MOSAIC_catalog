@@ -16,7 +16,9 @@ import shutil
 from pathlib import Path
 
 from .config import STAC_BASE_URL
-from .vocab import COUNTRY_M49, Vocab
+from .vocab import COUNTRY_M49, MULTI_LANDSCAPE_COUNTRIES, Vocab
+
+BOUNDARIES_SRC = Path(__file__).resolve().parent.parent / "boundaries"
 
 STAC_VERSION = "1.0.0"
 MOSAIC_SCHEMA_VERSION = "0.1.0"
@@ -47,8 +49,15 @@ def build_stac(records: list[dict], vocab: Vocab, stac_dir: Path) -> dict:
         shutil.rmtree(stac_dir)  # idempotent: wipe and rebuild
     (stac_dir / "collections").mkdir(parents=True, exist_ok=True)
 
-    # Group records by living-landscape code.
-    by_code: dict[str, list[dict]] = {}
+    # Publish the committed landscape boundaries alongside the STAC tree so the
+    # existing Pages CI (which publishes stac/) serves them with zero changes.
+    if BOUNDARIES_SRC.is_dir():
+        shutil.copytree(BOUNDARIES_SRC, stac_dir / "boundaries")
+
+    # Group records by living-landscape code. Every canonical delineated
+    # landscape gets a collection even with zero items yet — the catalog is the
+    # published home of the landscape delineations (2026 objective #4).
+    by_code: dict[str, list[dict]] = {c: [] for c in vocab.delineated_codes()}
     for r in records:
         by_code.setdefault(r["living_landscape"], []).append(r)
 
@@ -93,6 +102,12 @@ def build_stac(records: list[dict], vocab: Vocab, stac_dir: Path) -> dict:
             "title": vocab.landscape_name(code),
         })
 
+    catalog_links.append({
+        "rel": "related",
+        "href": f"{STAC_BASE_URL}/boundaries/landscapes.geojson",
+        "type": "application/geo+json",
+        "title": "All Living Landscape boundaries (canonical delineations, simplified)",
+    })
     catalog = {
         "type": "Catalog",
         "stac_version": STAC_VERSION,
@@ -101,9 +116,10 @@ def build_stac(records: list[dict], vocab: Vocab, stac_dir: Path) -> dict:
         "description": (
             "MOSAIC coordination-network metadata catalog for the CGIAR MFL Science "
             "Programme (AoW2). One STAC Collection per Living Landscape, one Item per "
-            "registered dataset. Spatial extents are APPROXIMATE locator boxes pending "
-            "the 2026 landscape-delineation work. Climate layers link to the CGIAR "
-            "Climate Data Hub (connect, don't duplicate)."
+            "registered dataset. Collection extents derive from the canonical landscape "
+            "delineations (2026-07-21); each collection publishes its simplified boundary "
+            "as a GeoJSON asset. Climate layers link to the CGIAR Climate Data Hub "
+            "(connect, don't duplicate)."
         ),
         "links": catalog_links,
         "mosaic:schema_version": MOSAIC_SCHEMA_VERSION,
@@ -142,7 +158,13 @@ def _union_bbox(recs: list[dict]) -> list:
 
 
 def _build_collection(code: str, recs: list[dict], vocab: Vocab) -> dict:
-    bbox = _union_bbox(recs)
+    delineated = vocab.is_delineated(code)
+    # Delineated landscapes use the REAL boundary-derived bbox; the union of
+    # member items still widens it when national-coverage items are included.
+    if delineated:
+        bbox = _union_bbox(recs + [{"bbox": vocab.entry(code)["bbox"]}])
+    else:
+        bbox = _union_bbox(recs)
     temporal = _collect_temporal(recs)
 
     # Geography (UN M49) union across member items.
@@ -168,17 +190,37 @@ def _build_collection(code: str, recs: list[dict], vocab: Vocab) -> dict:
     else:
         license_val = "other"
 
+    if delineated:
+        description = (
+            f"Datasets registered under the '{vocab.landscape_name(code)}' Living "
+            f"Landscape ({len(recs)} item(s)). Spatial extent derives from the "
+            f"canonical landscape delineation (2026-07-21); the simplified boundary "
+            f"is published as this collection's 'boundary' asset. National-coverage "
+            f"member items can widen the extent beyond the boundary."
+        )
+        if vocab.pending_confirmation(code):
+            description += (
+                " NOTE: this landscape's name and delineation are PENDING "
+                "CONFIRMATION with the country team."
+            )
+        bbox_note = (
+            "Bbox derived from the canonical delineation shapefile (dissolved, "
+            "EPSG:4326), union-ed with member-item locator boxes."
+        )
+    else:
+        description = (
+            f"Datasets registered as '{vocab.landscape_name(code)}' "
+            f"({len(recs)} item(s)). Spatial extent is an APPROXIMATE locator box."
+        )
+        bbox_note = "Approximate locator box from MOSAIC bbox_lookup (EPSG:4326)."
+
     coll = {
         "type": "Collection",
         "stac_version": STAC_VERSION,
         "stac_extensions": [EXT_MOSAIC, EXT_CDH],
         "id": code,
         "title": vocab.landscape_name(code),
-        "description": (
-            f"Datasets registered under the '{vocab.landscape_name(code)}' Living "
-            f"Landscape ({len(recs)} item(s)). Spatial extent is an APPROXIMATE "
-            f"locator box, not a survey-grade boundary."
-        ),
+        "description": description,
         "license": license_val,
         "extent": {
             "spatial": {"bbox": [bbox]},
@@ -192,14 +234,26 @@ def _build_collection(code: str, recs: list[dict], vocab: Vocab) -> dict:
         },
         "cgiar-cdh:geography": geographies,
         "mosaic:living_landscape": code,
-        "mosaic:bbox_approximate": True,
-        "mosaic:bbox_note": (
-            "Approximate locator box from MOSAIC bbox_lookup (EPSG:4326). To be "
-            "replaced by delineated boundaries (2026 objective)."
-        ),
+        "mosaic:bbox_approximate": not delineated,
+        "mosaic:bbox_note": bbox_note,
         "mosaic:item_count": len(recs),
         "links": [],  # filled by caller
     }
+    if vocab.landscape_system(code):
+        coll["mosaic:landscape_system"] = vocab.landscape_system(code)
+    if vocab.landscape_countries(code):
+        coll["mosaic:countries"] = vocab.landscape_countries(code)
+    if vocab.pending_confirmation(code):
+        coll["mosaic:pending_confirmation"] = True
+    if delineated:
+        coll["assets"] = {
+            "boundary": {
+                "href": f"{STAC_BASE_URL}/boundaries/{code}.geojson",
+                "type": "application/geo+json",
+                "title": "Landscape boundary (canonical delineation, simplified, EPSG:4326)",
+                "roles": ["data"],
+            }
+        }
     return coll
 
 
@@ -234,12 +288,14 @@ def _build_item(r: dict, code: str, vocab: Vocab) -> dict:
         "cgiar-cdh:spatial_resolution": r["spatial_resolution"],
         # mosaic:* (MOSAIC-specific)
         "mosaic:living_landscape": code,
+        "mosaic:coverage": r["coverage"],
         "mosaic:theme": r["mfl_theme"],
         "mosaic:access_level": r["access_level"],
         "mosaic:processing_status": r["readiness_status"],
         "mosaic:migration_status": r["migration_status"],
         "mosaic:update_frequency": r["update_frequency"],
         "mosaic:bbox_approximate": r["bbox_approximate"],
+        "mosaic:bbox_note": _item_bbox_note(r),
         "mosaic:formats": r["formats"],
     }
     # proj: CRS unknown in registry -> explicit null + note.
@@ -271,6 +327,17 @@ def _build_item(r: dict, code: str, vocab: Vocab) -> dict:
     ]
     if r["download_url"]:
         links.append({"rel": "via", "href": r["download_url"], "title": "Primary source / download"})
+    # National-coverage items in a multi-landscape country also serve the
+    # country's other landscape collections — cross-link them.
+    if r["coverage"] == "national":
+        for other in MULTI_LANDSCAPE_COUNTRIES.get(r["country"] or "", []):
+            if other != code:
+                links.append({
+                    "rel": "related",
+                    "href": f"{STAC_BASE_URL}/collections/{other}/collection.json",
+                    "type": "application/json",
+                    "title": f"Also covers: {vocab.landscape_name(other)} (national-coverage dataset)",
+                })
     # connect, don't duplicate: climate layers point at the CDH.
     if r["is_climate_linked"] and r["cdh_link"]:
         links.append({
@@ -292,6 +359,16 @@ def _build_item(r: dict, code: str, vocab: Vocab) -> dict:
         "assets": assets,
     }
     return item
+
+
+def _item_bbox_note(r: dict) -> str:
+    if r["coverage"] == "national":
+        return ("Country-level locator box (dataset covers the whole country); "
+                "not the dataset's own extent.")
+    if r["coverage"] == "global":
+        return "Global/world locator box; not the dataset's own extent."
+    return ("Bbox of the canonical landscape delineation, used as a proxy for the "
+            "dataset's own (unrecorded) extent.")
 
 
 def _build_assets(r: dict) -> dict:

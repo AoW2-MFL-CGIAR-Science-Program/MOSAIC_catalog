@@ -11,37 +11,37 @@
     "coordinates": [
       [
         [
-          29.8,
-          -16.9
+          28.8445,
+          -17.4339
         ],
         [
-          31.5,
-          -16.9
+          32.0584,
+          -17.4339
         ],
         [
-          31.5,
-          -15.6
+          32.0584,
+          -15.6073
         ],
         [
-          29.8,
-          -15.6
+          28.8445,
+          -15.6073
         ],
         [
-          29.8,
-          -16.9
+          28.8445,
+          -17.4339
         ]
       ]
     ]
   },
   "bbox": [
-    29.8,
-    -16.9,
-    31.5,
-    -15.6
+    28.8445,
+    -17.4339,
+    32.0584,
+    -15.6073
   ],
   "properties": {
     "title": "Ecosystem services mapping",
-    "description": "Ward-level ecosystem services mapping",
+    "description": "Ward-level ecosystem services mapping — Original landscape entry: Mbire Ward 2",
     "datetime": null,
     "start_datetime": "2026-01-01T00:00:00Z",
     "end_datetime": "2026-12-31T23:59:59Z",
@@ -52,12 +52,14 @@
     ],
     "cgiar-cdh:spatial_resolution": null,
     "mosaic:living_landscape": "ZWE-MB",
+    "mosaic:coverage": "landscape",
     "mosaic:theme": "Ecosystem services",
     "mosaic:access_level": "Open",
     "mosaic:processing_status": "Processed",
     "mosaic:migration_status": null,
     "mosaic:update_frequency": "Unknown",
-    "mosaic:bbox_approximate": true,
+    "mosaic:bbox_approximate": false,
+    "mosaic:bbox_note": "Bbox of the canonical landscape delineation, used as a proxy for the dataset's own (unrecorded) extent.",
     "mosaic:formats": [
       "Mixed"
     ],

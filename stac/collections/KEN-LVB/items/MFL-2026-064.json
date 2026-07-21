@@ -1,0 +1,136 @@
+{
+  "type": "Feature",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.1.0/schema.json",
+    "https://climate-data-hub.cgiar.org/stac-extensions/cgiar-cdh/v1.0.0/schema.json"
+  ],
+  "id": "MFL-2026-064",
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          33.9,
+          -4.7
+        ],
+        [
+          41.9,
+          -4.7
+        ],
+        [
+          41.9,
+          5.5
+        ],
+        [
+          33.9,
+          5.5
+        ],
+        [
+          33.9,
+          -4.7
+        ]
+      ]
+    ]
+  },
+  "bbox": [
+    33.9,
+    -4.7,
+    41.9,
+    5.5
+  ],
+  "properties": {
+    "title": "Tree conservation and restoration priority areas",
+    "description": "Conservation for Restoration (C4R) tool KENYA: mapping the vulnerability and priority areas for conservation and restoration of 78 native tree species. Linked to D4R",
+    "datetime": null,
+    "start_datetime": "2017-01-01T00:00:00Z",
+    "end_datetime": "2025-12-31T23:59:59Z",
+    "created": null,
+    "updated": "2025",
+    "cgiar-cdh:geography": [
+      "kenya"
+    ],
+    "cgiar-cdh:spatial_resolution": "1000m",
+    "mosaic:living_landscape": "KEN-LVB",
+    "mosaic:coverage": "national",
+    "mosaic:theme": "Decision-support outputs",
+    "mosaic:access_level": "Open",
+    "mosaic:processing_status": "Validated",
+    "mosaic:migration_status": null,
+    "mosaic:update_frequency": "On-demand",
+    "mosaic:bbox_approximate": true,
+    "mosaic:bbox_note": "Country-level locator box (dataset covers the whole country); not the dataset's own extent.",
+    "mosaic:formats": [
+      "GeoTIFF"
+    ],
+    "proj:code": null,
+    "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
+    "mosaic:license_original": "CGIAR Open Access",
+    "contacts": [
+      {
+        "name": "Hannes Gaisberger",
+        "emails": [
+          {
+            "value": "h.gaisberger@cgiar.org"
+          }
+        ],
+        "roles": [
+          "producer",
+          "licensor"
+        ]
+      }
+    ]
+  },
+  "collection": "KEN-LVB",
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "collection",
+      "href": "../collection.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/KEN-LVB/items/MFL-2026-064.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "via",
+      "href": "https://dataverse.harvard.edu/citation?persistentId=doi:10.7910/DVN/2ZQTB2",
+      "title": "Primary source / download"
+    },
+    {
+      "rel": "related",
+      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/KEN-LEI/collection.json",
+      "type": "application/json",
+      "title": "Also covers: LEILA (Southern Kenya Rangelands) (national-coverage dataset)"
+    }
+  ],
+  "assets": {
+    "data": {
+      "href": "https://dataverse.harvard.edu/citation?persistentId=doi:10.7910/DVN/2ZQTB2",
+      "title": "Primary data source",
+      "roles": [
+        "data"
+      ],
+      "type": "image/tiff; application=geotiff"
+    },
+    "access-note": {
+      "href": "",
+      "title": "Access note (no resolvable URL)",
+      "description": "Current location: Dataverse repository",
+      "roles": [
+        "metadata"
+      ]
+    }
+  }
+}

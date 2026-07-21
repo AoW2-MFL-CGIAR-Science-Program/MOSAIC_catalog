@@ -1,0 +1,81 @@
+{
+  "type": "Collection",
+  "stac_version": "1.0.0",
+  "stac_extensions": [
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.1.0/schema.json",
+    "https://climate-data-hub.cgiar.org/stac-extensions/cgiar-cdh/v1.0.0/schema.json"
+  ],
+  "id": "KEN-LEI",
+  "title": "LEILA (Southern Kenya Rangelands)",
+  "description": "Datasets registered under the 'LEILA (Southern Kenya Rangelands)' Living Landscape (0 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the simplified boundary is published as this collection's 'boundary' asset. National-coverage member items can widen the extent beyond the boundary.",
+  "license": "other",
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          35.9962,
+          -3.187,
+          38.5194,
+          -0.7526
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          null,
+          null
+        ]
+      ]
+    }
+  },
+  "keywords": [],
+  "providers": [
+    {
+      "name": "MOSAIC / CGIAR MFL Science Programme",
+      "roles": [
+        "host"
+      ]
+    }
+  ],
+  "summaries": {
+    "mosaic:access_level": [],
+    "mosaic:theme": []
+  },
+  "cgiar-cdh:geography": [],
+  "mosaic:living_landscape": "KEN-LEI",
+  "mosaic:bbox_approximate": false,
+  "mosaic:bbox_note": "Bbox derived from the canonical delineation shapefile (dissolved, EPSG:4326), union-ed with member-item locator boxes.",
+  "mosaic:item_count": 0,
+  "links": [
+    {
+      "rel": "root",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "parent",
+      "href": "../../catalog.json",
+      "type": "application/json"
+    },
+    {
+      "rel": "self",
+      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/KEN-LEI/collection.json",
+      "type": "application/json"
+    }
+  ],
+  "mosaic:landscape_system": "East-South Africa Highland-Lowland-Rift Valley System",
+  "mosaic:countries": [
+    "Kenya"
+  ],
+  "assets": {
+    "boundary": {
+      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/boundaries/KEN-LEI.geojson",
+      "type": "application/geo+json",
+      "title": "Landscape boundary (canonical delineation, simplified, EPSG:4326)",
+      "roles": [
+        "data"
+      ]
+    }
+  }
+}

@@ -7,16 +7,16 @@
   ],
   "id": "ETH-OG",
   "title": "Omo-Gibe Basin",
-  "description": "Datasets registered under the 'Omo-Gibe Basin' Living Landscape (7 item(s)). Spatial extent is an APPROXIMATE locator box, not a survey-grade boundary.",
+  "description": "Datasets registered under the 'Omo-Gibe Basin' Living Landscape (7 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the simplified boundary is published as this collection's 'boundary' asset. National-coverage member items can widen the extent beyond the boundary.",
   "license": "other",
   "extent": {
     "spatial": {
       "bbox": [
         [
-          35.0,
-          5.0,
-          38.5,
-          9.5
+          34.9533,
+          4.431,
+          38.4128,
+          9.3691
         ]
       ]
     },
@@ -73,8 +73,8 @@
     "ethiopia"
   ],
   "mosaic:living_landscape": "ETH-OG",
-  "mosaic:bbox_approximate": true,
-  "mosaic:bbox_note": "Approximate locator box from MOSAIC bbox_lookup (EPSG:4326). To be replaced by delineated boundaries (2026 objective).",
+  "mosaic:bbox_approximate": false,
+  "mosaic:bbox_note": "Bbox derived from the canonical delineation shapefile (dissolved, EPSG:4326), union-ed with member-item locator boxes.",
   "mosaic:item_count": 7,
   "links": [
     {
@@ -134,5 +134,19 @@
       "type": "application/json",
       "title": "Erosion map"
     }
-  ]
+  ],
+  "mosaic:landscape_system": "East-South Africa Highland-Lowland-Rift Valley System",
+  "mosaic:countries": [
+    "Ethiopia"
+  ],
+  "assets": {
+    "boundary": {
+      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/boundaries/ETH-OG.geojson",
+      "type": "application/geo+json",
+      "title": "Landscape boundary (canonical delineation, simplified, EPSG:4326)",
+      "roles": [
+        "data"
+      ]
+    }
+  }
 }

@@ -1,6 +1,9 @@
 """Controlled-vocabulary lookups: living-landscape crosswalk, country -> M49/ISO3,
-approximate bbox lookup. Loads the spec/*.json files and applies the agreed
-additions (COL-NAT / PER-NAT) per the crosswalk's expected_codes note.
+landscape bbox lookup (REAL delineation-derived boxes since 2026-07-21).
+
+The canonical landscape list (11 delineated landscapes + NATIONAL + GLOBAL
+coverage values) was approved by Lizeth on 2026-07-21. Boundaries live in
+boundaries/<CODE>.geojson; bboxes in spec/bbox_lookup.json are derived from them.
 """
 from __future__ import annotations
 
@@ -11,9 +14,11 @@ SPEC_DIR = Path(__file__).resolve().parent.parent / "spec"
 
 # Country display -> (UN M49 kebab id, ISO3). From vocab_reconciliation.md §1.
 COUNTRY_M49 = {
+    "Cambodia": ("cambodia", "KHM"),
     "Colombia": ("colombia", "COL"),
     "Côte d'Ivoire": ("cote-d-ivoire", "CIV"),
     "Ethiopia": ("ethiopia", "ETH"),
+    "Global": ("world", "GLB"),
     "India": ("india", "IND"),
     "Kenya": ("kenya", "KEN"),
     "Laos": ("lao-people-s-democratic-republic", "LAO"),
@@ -27,6 +32,32 @@ COUNTRY_M49 = {
 
 COUNTRY_ENUM = list(COUNTRY_M49.keys())
 
+# Country -> canonical landscape collection for NATIONAL-coverage datasets
+# ("assign to the country's landscape", decided 2026-07-21). Kenya has TWO
+# landscapes; national Kenya records go to KEN-LVB as primary and the STAC
+# item carries a related link to KEN-LEI (see stac_build).
+COUNTRY_TO_LANDSCAPE = {
+    "Colombia": "COL-CUM",
+    "Côte d'Ivoire": "CIV-NZ",
+    "Ethiopia": "ETH-OG",
+    "India": "IND-CH",
+    "Kenya": "KEN-LVB",
+    "Laos": "MEK-3S",
+    "Cambodia": "MEK-3S",
+    "Vietnam": "MEK-3S",
+    "Peru": "PER-PCL",
+    "Senegal": "SEN-FK",
+    "Tunisia": "TUN-NW",
+    "Zimbabwe": "ZWE-MB",
+}
+
+# Countries whose datasets fold into more than one landscape collection.
+MULTI_LANDSCAPE_COUNTRIES = {"Kenya": ["KEN-LVB", "KEN-LEI"]}
+
+NATIONAL_VALUE = "NATIONAL — Country-wide coverage"
+GLOBAL_VALUE = "GLOBAL — Global / cross-landscape"
+GLOBAL_CODE = "GLB"
+
 
 def _load(name: str) -> dict:
     with open(SPEC_DIR / name, encoding="utf-8") as f:
@@ -34,7 +65,7 @@ def _load(name: str) -> dict:
 
 
 class Vocab:
-    """Holds all crosswalks and records any codes/bboxes added at runtime."""
+    """Holds all crosswalks; landscape entries carry name/system/countries."""
 
     def __init__(self) -> None:
         cw = _load("living_landscape_crosswalk.json")
@@ -47,73 +78,101 @@ class Vocab:
         self.bbox_landscapes: dict[str, dict] = bb["landscapes"]
         self.bbox_country: dict[str, dict] = bb["country_fallback"]
 
-        # Runtime additions reported back to the standards specialist / Lizeth.
+        # Kept for report compatibility; canonical codes are frozen, nothing
+        # is added at runtime any more.
         self.added_codes: list[dict] = []
 
     # --- living landscape -----------------------------------------------------
-    def resolve_landscape(self, raw_ll, country) -> tuple[str, list[str]]:
-        """Returns (CODE, flags). Applies the crosswalk; adds COUNTRY3-NAT
-        entries for known countries whose value didn't resolve to a real place."""
+    def resolve_landscape(self, raw_ll, country) -> tuple[str, str, list[str]]:
+        """Returns (CODE, coverage, flags). coverage: landscape|national|global.
+
+        Handles the canonical controlled values ("CODE — Name", NATIONAL,
+        GLOBAL) plus the legacy free-text crosswalk for robustness."""
         flags: list[str] = []
         from .transform import s
         text = s(raw_ll)
         ctry = s(country)
 
+        code = None
         if text:
-            entry = self.ll_by_text.get(text.strip().lower())
-            if entry:
-                code = entry["code"]
-                # "Country and basin scale" / generic -> GLB-UNSPEC in the crosswalk,
-                # but if we know the country, use the national fallback code instead.
-                if code == "GLB-UNSPEC" and ctry in COUNTRY_M49 and ctry != "Soil dataset":
-                    code = self._ensure_national_code(ctry)
-                    flags.append("unspecified_landscape_mapped_to_national")
-                return code, flags
+            t = text.strip()
+            # Canonical "CODE — Name" values normalize by their code prefix.
+            prefix = t.split("—")[0].strip() if "—" in t else t
+            if prefix in self.bbox_landscapes and prefix != GLOBAL_CODE:
+                return prefix, "landscape", flags
+            if t == NATIONAL_VALUE or prefix == "NATIONAL":
+                code = "NATIONAL"
+            elif t == GLOBAL_VALUE or prefix in ("GLOBAL", GLOBAL_CODE, "GLB-UNSPEC"):
+                code = GLOBAL_CODE
+            else:
+                entry = self.ll_by_text.get(t.lower())
+                if entry:
+                    code = entry["code"]
 
-        # Unmatched free text.
-        if ctry in COUNTRY_M49:
-            code = self._ensure_national_code(ctry)
+        if code is None:
             flags.append("unmatched_living_landscape")
-            return code, flags
-        flags.append("unmatched_living_landscape")
-        return "GLB-UNSPEC", flags
+            code = "NATIONAL" if ctry in COUNTRY_TO_LANDSCAPE else GLOBAL_CODE
 
-    def _ensure_national_code(self, country: str) -> str:
-        iso3 = COUNTRY_M49[country][1]
-        code = f"{iso3}-NAT"
-        if code not in self.bbox_landscapes:
-            # Derive a bbox for the national code from the country fallback.
-            cf = self.bbox_country.get(country)
-            if cf:
-                self.bbox_landscapes[code] = {
-                    "bbox": cf["bbox"], "centroid": cf["centroid"],
-                    "name": f"{country} (national)",
-                }
-                self.added_codes.append({
-                    "code": code, "country": country,
-                    "reason": "Landscape value was country/scale-level only; "
-                              "added national code with country-fallback bbox.",
-                })
-        return code
+        if code == "NATIONAL":
+            if ctry in COUNTRY_TO_LANDSCAPE:
+                assigned = COUNTRY_TO_LANDSCAPE[ctry]
+                if ctry in MULTI_LANDSCAPE_COUNTRIES:
+                    flags.append("national_assigned_to_primary_landscape")
+                return assigned, "national", flags
+            flags.append("national_without_known_country")
+            return GLOBAL_CODE, "global", flags
+
+        if code == GLOBAL_CODE:
+            return GLOBAL_CODE, "global", flags
+
+        return code, "landscape", flags
 
     # --- bbox -----------------------------------------------------------------
-    def bbox_for(self, code: str, country) -> tuple[list, list, bool]:
-        """Returns (bbox, centroid, approximate_flag)."""
+    def bbox_for(self, code: str, country, coverage: str = "landscape") -> tuple[list, list, bool]:
+        """Returns (bbox, centroid, approximate_flag).
+
+        - landscape coverage -> real delineation-derived bbox (approximate only
+          in the sense that the ITEM's own extent is unknown; flag stays True
+          for items, but the box itself is authoritative for the landscape).
+        - national coverage  -> country locator box (approximate).
+        - global coverage    -> world-ish box (approximate).
+        """
         from .transform import s
         ctry = s(country)
+        if coverage == "national" and ctry and ctry in self.bbox_country:
+            e = self.bbox_country[ctry]
+            return e["bbox"], e["centroid"], True
         if code in self.bbox_landscapes:
             e = self.bbox_landscapes[code]
-            return e["bbox"], e["centroid"], True
+            approx = not e.get("delineated", False)
+            return e["bbox"], e["centroid"], approx
         if ctry and ctry in self.bbox_country:
             e = self.bbox_country[ctry]
             return e["bbox"], e["centroid"], True
-        e = self.bbox_landscapes["GLB-UNSPEC"]
+        e = self.bbox_landscapes[GLOBAL_CODE]
         return e["bbox"], e["centroid"], True
 
+    # --- landscape attributes ---------------------------------------------------
+    def entry(self, code: str) -> dict:
+        return self.bbox_landscapes.get(code, {})
+
     def landscape_name(self, code: str) -> str:
-        if code in self.bbox_landscapes:
-            return self.bbox_landscapes[code].get("name", code)
-        return code
+        return self.entry(code).get("name", code)
+
+    def landscape_system(self, code: str):
+        return self.entry(code).get("landscape_system")
+
+    def landscape_countries(self, code: str) -> list[str]:
+        return self.entry(code).get("countries", [])
+
+    def is_delineated(self, code: str) -> bool:
+        return bool(self.entry(code).get("delineated"))
+
+    def pending_confirmation(self, code: str) -> bool:
+        return bool(self.entry(code).get("pending_confirmation"))
+
+    def delineated_codes(self) -> list[str]:
+        return sorted(c for c, e in self.bbox_landscapes.items() if e.get("delineated"))
 
     # --- country --------------------------------------------------------------
     @staticmethod

@@ -130,8 +130,8 @@ def _normalize_row(row, vocab: Vocab, used_ids: set[str], gen_id) -> dict:
     if country and country not in COUNTRY_M49:
         flags.append("noncanonical_country")
 
-    # --- living landscape (CODE) ---
-    ll_code, ll_flags = vocab.resolve_landscape(_g(row, "living_landscape"), country)
+    # --- living landscape (CODE + coverage) ---
+    ll_code, coverage, ll_flags = vocab.resolve_landscape(_g(row, "living_landscape"), country)
     flags += ll_flags
 
     # --- theme ---
@@ -202,8 +202,8 @@ def _normalize_row(row, vocab: Vocab, used_ids: set[str], gen_id) -> dict:
     last_updated = T.s(_g(row, "last_updated"))
     file_size = _g(row, "file_size")
 
-    # --- bbox (approximate) ---
-    bbox, centroid, approx = vocab.bbox_for(ll_code, country)
+    # --- bbox (delineation-derived for landscape coverage; locator otherwise) ---
+    bbox, centroid, approx = vocab.bbox_for(ll_code, country, coverage)
     if not contact_email:
         pass  # already flagged
 
@@ -222,6 +222,7 @@ def _normalize_row(row, vocab: Vocab, used_ids: set[str], gen_id) -> dict:
         "title": title,
         "country": country,
         "living_landscape": ll_code,
+        "coverage": coverage,
         "mfl_theme": theme,
         "data_type": data_type,
         "spatial_resolution": spatial_resolution,

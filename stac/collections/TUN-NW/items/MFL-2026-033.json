@@ -11,33 +11,33 @@
     "coordinates": [
       [
         [
-          8.2,
-          36.0
+          8.9235,
+          35.7384
         ],
         [
-          9.5,
-          36.0
+          9.4466,
+          35.7384
         ],
         [
-          9.5,
-          37.3
+          9.4466,
+          36.4324
         ],
         [
-          8.2,
-          37.3
+          8.9235,
+          36.4324
         ],
         [
-          8.2,
-          36.0
+          8.9235,
+          35.7384
         ]
       ]
     ]
   },
   "bbox": [
-    8.2,
-    36.0,
-    9.5,
-    37.3
+    8.9235,
+    35.7384,
+    9.4466,
+    36.4324
   ],
   "properties": {
     "title": "Tunisia Land use land cover for Le Kef and Siliana.",
@@ -52,12 +52,14 @@
     ],
     "cgiar-cdh:spatial_resolution": "10 m",
     "mosaic:living_landscape": "TUN-NW",
+    "mosaic:coverage": "landscape",
     "mosaic:theme": "Land cover / land use",
     "mosaic:access_level": "Open",
     "mosaic:processing_status": "Validated",
     "mosaic:migration_status": null,
     "mosaic:update_frequency": "Unknown",
-    "mosaic:bbox_approximate": true,
+    "mosaic:bbox_approximate": false,
+    "mosaic:bbox_note": "Bbox of the canonical landscape delineation, used as a proxy for the dataset's own (unrecorded) extent.",
     "mosaic:formats": [
       "Shapefile"
     ],

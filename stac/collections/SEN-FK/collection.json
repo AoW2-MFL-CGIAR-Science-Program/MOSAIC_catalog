@@ -7,16 +7,16 @@
   ],
   "id": "SEN-FK",
   "title": "Fatick Department",
-  "description": "Datasets registered under the 'Fatick Department' Living Landscape (8 item(s)). Spatial extent is an APPROXIMATE locator box, not a survey-grade boundary.",
+  "description": "Datasets registered under the 'Fatick Department' Living Landscape (8 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the simplified boundary is published as this collection's 'boundary' asset. National-coverage member items can widen the extent beyond the boundary.",
   "license": "CC-BY-4.0",
   "extent": {
     "spatial": {
       "bbox": [
         [
-          -16.9,
-          13.7,
-          -15.7,
-          14.5
+          -16.7921,
+          13.9284,
+          -16.1055,
+          14.6084
         ]
       ]
     },
@@ -58,8 +58,8 @@
     "senegal"
   ],
   "mosaic:living_landscape": "SEN-FK",
-  "mosaic:bbox_approximate": true,
-  "mosaic:bbox_note": "Approximate locator box from MOSAIC bbox_lookup (EPSG:4326). To be replaced by delineated boundaries (2026 objective).",
+  "mosaic:bbox_approximate": false,
+  "mosaic:bbox_note": "Bbox derived from the canonical delineation shapefile (dissolved, EPSG:4326), union-ed with member-item locator boxes.",
   "mosaic:item_count": 8,
   "links": [
     {
@@ -125,5 +125,19 @@
       "type": "application/json",
       "title": "Rainfall data"
     }
-  ]
+  ],
+  "mosaic:landscape_system": "Sudan-Sahelian and Guinea Forest-Savanna Transition",
+  "mosaic:countries": [
+    "Senegal"
+  ],
+  "assets": {
+    "boundary": {
+      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/boundaries/SEN-FK.geojson",
+      "type": "application/geo+json",
+      "title": "Landscape boundary (canonical delineation, simplified, EPSG:4326)",
+      "roles": [
+        "data"
+      ]
+    }
+  }
 }

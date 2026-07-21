@@ -15,15 +15,18 @@ The run is **idempotent**: it wipes and rebuilds `stac/` and overwrites `dataset
 
 ## Inputs and outputs
 
-**Input (one file):** `../catalog/MFL_Dataset_Registry.xlsx`, sheet `' Registry'` (the leading space is intentional). ~60 real records; the first data row is a placeholder/instructions row and is skipped.
+**Input (one file):** `catalog/MFL_Dataset_Registry.xlsx`, sheet `' Registry'` (the leading space is intentional). 68 real records (canonical snapshot, 2026-07-21); the first data row is a placeholder/instructions row and is skipped.
 
 **Output A — STAC catalog tree** (`stac/`): plain JSON, no pystac.
 - `stac/catalog.json` (root)
-- `stac/collections/<CODE>/collection.json` — one per living-landscape code (13)
-- `stac/collections/<CODE>/items/<id>.json` — one per dataset (60)
+- `stac/collections/<CODE>/collection.json` — one per canonical living landscape (11, all delineated — created even when empty) + `GLB` for global datasets (12 total)
+- `stac/collections/<CODE>/items/<id>.json` — one per dataset (68)
+- `stac/boundaries/<CODE>.geojson` — the canonical landscape delineations (simplified, EPSG:4326), copied from the committed `boundaries/` folder; each collection exposes its boundary as a `boundary` asset
 - Uses `cgiar-cdh:*` and `mosaic:*` namespaces. Climate-themed items carry a `links[rel=related]` pointing to the CGIAR Climate Data Hub instead of re-describing it (connect, don't duplicate).
 
-**Output B — frontend data contract:** `../MOSAIC_frontend/mfl-living-landscapes-frontend/frontend/data/datasets.json` — 60 flat records consumed by the existing catalogue pages.
+**Output B — frontend data contract:** `datasets.json` — 68 flat records consumed by the catalogue pages (synced into the frontend repo with `--sync-frontend`).
+
+**Boundaries build (local only):** `python3 scripts/build_boundaries.py` regenerates `boundaries/` and the real bboxes in `spec/bbox_lookup.json` from the delineation shapefiles in `../MOSAIC_LLV_delim` (needs geopandas; CI never runs this — it just copies the committed GeoJSONs).
 
 ## How it works
 
@@ -35,17 +38,19 @@ The run is **idempotent**: it wipes and rebuilds `stac/` and overwrites `dataset
 
 ## Caveats and coverage
 
-This is **functional, not perfect**. Honest numbers from the current registry:
+This is **functional, not perfect**. Honest numbers from the current registry (68 records, 2026-07-21):
 
-- **living_landscape:** 58/60 mapped to a code; 2 malformed "Soil dataset" rows fall back to `GLB-UNSPEC`.
-- **bbox:** 60/60 assigned but **APPROXIMATE** — country/landscape locator boxes, **not** precise coordinates (the registry has none). Flagged `mosaic:bbox_approximate: true`.
-- **download_url:** 27/60 usable; the rest were "Internal" / "One drive" / server paths and are set to `null` (kept as an access note in STAC).
-- **contact email:** 58/60 extracted.
+- **living_landscape:** 66/68 mapped to a canonical landscape; 2 global datasets sit in `GLB`. Coverage split: 57 landscape, 9 national (`mosaic:coverage: national`, assigned to the country's landscape collection), 2 global.
+- **bbox:** 68/68 assigned. Landscape-coverage items use the **real delineation-derived bbox** (still flagged `mosaic:bbox_approximate: true` because the dataset's *own* extent is unrecorded — the landscape box is a proxy). National/global items use locator boxes. **Collection** extents are delineation-derived and flagged `false`.
+- **download_url:** 32/68 usable; the rest were "Internal" / "One drive" / server paths and are set to `null` (kept as an access note in STAC).
+- **contact email:** 66/68 extracted.
 - **formats:** the File name(s) column is empty, so `formats[]` falls back to `data_type`.
 - **license / spatial_resolution:** non-SPDX licenses and messy resolution strings are kept verbatim and flagged.
 
-**Provisional, pending confirmation:**
-- Living-landscape codes and the bbox table are provisional until Lizeth's canonical landscape list is set.
+**Canonical vs. pending:**
+- The landscape list (11 codes + `NATIONAL`/`GLOBAL` coverage values) is **canonical**, approved 2026-07-21 — see `spec/living_landscape_crosswalk.json` and `docs/REGISTRY_CHANGELOG_2026-07-21.md`.
+- **`PER-PCL` (Pucallpa – Ucayali) is pending confirmation** with the Peru team (the older reference map said Apurímac; the delivered shapefile is Pucallpa/Ucayali). Flagged `mosaic:pending_confirmation: true`.
+- National-coverage **Kenya** datasets sit in `KEN-LVB` (primary) with a `related` link to `KEN-LEI`.
 - The CDH link URL is a **placeholder** pending the real CDH Collection URLs.
 - The `mosaic:*` / `cgiar-cdh:*` extension schema JSONs are not yet hosted.
 

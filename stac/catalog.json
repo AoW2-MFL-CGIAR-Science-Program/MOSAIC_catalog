@@ -3,7 +3,7 @@
   "stac_version": "1.0.0",
   "id": "mosaic-mfl-catalog",
   "title": "MOSAIC — MFL Multifunctional Landscapes Catalog",
-  "description": "MOSAIC coordination-network metadata catalog for the CGIAR MFL Science Programme (AoW2). One STAC Collection per Living Landscape, one Item per registered dataset. Spatial extents are APPROXIMATE locator boxes pending the 2026 landscape-delineation work. Climate layers link to the CGIAR Climate Data Hub (connect, don't duplicate).",
+  "description": "MOSAIC coordination-network metadata catalog for the CGIAR MFL Science Programme (AoW2). One STAC Collection per Living Landscape, one Item per registered dataset. Collection extents derive from the canonical landscape delineations (2026-07-21); each collection publishes its simplified boundary as a GeoJSON asset. Climate layers link to the CGIAR Climate Data Hub (connect, don't duplicate).",
   "links": [
     {
       "rel": "root",
@@ -23,9 +23,9 @@
     },
     {
       "rel": "child",
-      "href": "./collections/COL-NAT/collection.json",
+      "href": "./collections/COL-CUM/collection.json",
       "type": "application/json",
-      "title": "Colombia (national fallback - replace when COL landscape confirmed)"
+      "title": "Cumbal (Narino)"
     },
     {
       "rel": "child",
@@ -35,9 +35,9 @@
     },
     {
       "rel": "child",
-      "href": "./collections/GLB-UNSPEC/collection.json",
+      "href": "./collections/GLB/collection.json",
       "type": "application/json",
-      "title": "Unspecified - coarse programme-wide box; flag for repair"
+      "title": "Global / cross-landscape"
     },
     {
       "rel": "child",
@@ -47,15 +47,15 @@
     },
     {
       "rel": "child",
-      "href": "./collections/KEN-NAT/collection.json",
+      "href": "./collections/KEN-LEI/collection.json",
       "type": "application/json",
-      "title": "Kenya (national)"
+      "title": "LEILA (Southern Kenya Rangelands)"
     },
     {
       "rel": "child",
-      "href": "./collections/LAO-NAT/collection.json",
+      "href": "./collections/KEN-LVB/collection.json",
       "type": "application/json",
-      "title": "Laos (national)"
+      "title": "Lake Victoria Basin (Kenya)"
     },
     {
       "rel": "child",
@@ -65,9 +65,9 @@
     },
     {
       "rel": "child",
-      "href": "./collections/PER-NAT/collection.json",
+      "href": "./collections/PER-PCL/collection.json",
       "type": "application/json",
-      "title": "Peru (national fallback - replace when PER landscape confirmed)"
+      "title": "Pucallpa - Ucayali"
     },
     {
       "rel": "child",
@@ -83,15 +83,15 @@
     },
     {
       "rel": "child",
-      "href": "./collections/VNM-NAT/collection.json",
-      "type": "application/json",
-      "title": "Vietnam (national)"
-    },
-    {
-      "rel": "child",
       "href": "./collections/ZWE-MB/collection.json",
       "type": "application/json",
-      "title": "Mbire / Lower Zambezi Valley"
+      "title": "Mbire - Lower Zambezi Valley"
+    },
+    {
+      "rel": "related",
+      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/boundaries/landscapes.geojson",
+      "type": "application/geo+json",
+      "title": "All Living Landscape boundaries (canonical delineations, simplified)"
     }
   ],
   "mosaic:schema_version": "0.1.0"

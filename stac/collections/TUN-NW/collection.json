@@ -7,16 +7,16 @@
   ],
   "id": "TUN-NW",
   "title": "Northwestern Tunisia",
-  "description": "Datasets registered under the 'Northwestern Tunisia' Living Landscape (6 item(s)). Spatial extent is an APPROXIMATE locator box, not a survey-grade boundary.",
+  "description": "Datasets registered under the 'Northwestern Tunisia' Living Landscape (6 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the simplified boundary is published as this collection's 'boundary' asset. National-coverage member items can widen the extent beyond the boundary.",
   "license": "other",
   "extent": {
     "spatial": {
       "bbox": [
         [
-          8.2,
-          36.0,
-          9.5,
-          37.3
+          8.9235,
+          35.7384,
+          9.4466,
+          36.4324
         ]
       ]
     },
@@ -58,8 +58,8 @@
     "tunisia"
   ],
   "mosaic:living_landscape": "TUN-NW",
-  "mosaic:bbox_approximate": true,
-  "mosaic:bbox_note": "Approximate locator box from MOSAIC bbox_lookup (EPSG:4326). To be replaced by delineated boundaries (2026 objective).",
+  "mosaic:bbox_approximate": false,
+  "mosaic:bbox_note": "Bbox derived from the canonical delineation shapefile (dissolved, EPSG:4326), union-ed with member-item locator boxes.",
   "mosaic:item_count": 6,
   "links": [
     {
@@ -113,5 +113,19 @@
       "type": "application/json",
       "title": "Agroecological and socioeconomic datasets"
     }
-  ]
+  ],
+  "mosaic:landscape_system": "Dryland Mediterranean",
+  "mosaic:countries": [
+    "Tunisia"
+  ],
+  "assets": {
+    "boundary": {
+      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/boundaries/TUN-NW.geojson",
+      "type": "application/geo+json",
+      "title": "Landscape boundary (canonical delineation, simplified, EPSG:4326)",
+      "roles": [
+        "data"
+      ]
+    }
+  }
 }

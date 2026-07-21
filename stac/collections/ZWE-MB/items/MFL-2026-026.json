@@ -11,33 +11,33 @@
     "coordinates": [
       [
         [
-          29.8,
-          -16.9
+          28.8445,
+          -17.4339
         ],
         [
-          31.5,
-          -16.9
+          32.0584,
+          -17.4339
         ],
         [
-          31.5,
-          -15.6
+          32.0584,
+          -15.6073
         ],
         [
-          29.8,
-          -15.6
+          28.8445,
+          -15.6073
         ],
         [
-          29.8,
-          -16.9
+          28.8445,
+          -17.4339
         ]
       ]
     ]
   },
   "bbox": [
-    29.8,
-    -16.9,
-    31.5,
-    -15.6
+    28.8445,
+    -17.4339,
+    32.0584,
+    -15.6073
   ],
   "properties": {
     "title": "District/ward boundaries",
@@ -52,12 +52,14 @@
     ],
     "cgiar-cdh:spatial_resolution": "Admin - MFLLs Boundary",
     "mosaic:living_landscape": "ZWE-MB",
+    "mosaic:coverage": "landscape",
     "mosaic:theme": "Boundaries / admin units",
     "mosaic:access_level": "Open",
     "mosaic:processing_status": "Validated",
     "mosaic:migration_status": null,
     "mosaic:update_frequency": "Unknown",
-    "mosaic:bbox_approximate": true,
+    "mosaic:bbox_approximate": false,
+    "mosaic:bbox_note": "Bbox of the canonical landscape delineation, used as a proxy for the dataset's own (unrecorded) extent.",
     "mosaic:formats": [
       "Shapefile"
     ],

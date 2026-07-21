@@ -6,17 +6,17 @@
     "https://climate-data-hub.cgiar.org/stac-extensions/cgiar-cdh/v1.0.0/schema.json"
   ],
   "id": "ZWE-MB",
-  "title": "Mbire / Lower Zambezi Valley",
-  "description": "Datasets registered under the 'Mbire / Lower Zambezi Valley' Living Landscape (6 item(s)). Spatial extent is an APPROXIMATE locator box, not a survey-grade boundary.",
+  "title": "Mbire - Lower Zambezi Valley",
+  "description": "Datasets registered under the 'Mbire - Lower Zambezi Valley' Living Landscape (6 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the simplified boundary is published as this collection's 'boundary' asset. National-coverage member items can widen the extent beyond the boundary.",
   "license": "other",
   "extent": {
     "spatial": {
       "bbox": [
         [
-          29.8,
-          -16.9,
-          31.5,
-          -15.6
+          28.8445,
+          -17.4339,
+          32.0584,
+          -15.6073
         ]
       ]
     },
@@ -64,8 +64,8 @@
     "zimbabwe"
   ],
   "mosaic:living_landscape": "ZWE-MB",
-  "mosaic:bbox_approximate": true,
-  "mosaic:bbox_note": "Approximate locator box from MOSAIC bbox_lookup (EPSG:4326). To be replaced by delineated boundaries (2026 objective).",
+  "mosaic:bbox_approximate": false,
+  "mosaic:bbox_note": "Bbox derived from the canonical delineation shapefile (dissolved, EPSG:4326), union-ed with member-item locator boxes.",
   "mosaic:item_count": 6,
   "links": [
     {
@@ -85,7 +85,7 @@
     },
     {
       "rel": "item",
-      "href": "./items/MFL-2026-024-2.json",
+      "href": "./items/MFL-2026-065.json",
       "type": "application/json",
       "title": "Soil health status and texture"
     },
@@ -119,5 +119,19 @@
       "type": "application/json",
       "title": "Ecosystem services mapping"
     }
-  ]
+  ],
+  "mosaic:landscape_system": "East-South Africa Highland-Lowland-Rift Valley System",
+  "mosaic:countries": [
+    "Zimbabwe"
+  ],
+  "assets": {
+    "boundary": {
+      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/boundaries/ZWE-MB.geojson",
+      "type": "application/geo+json",
+      "title": "Landscape boundary (canonical delineation, simplified, EPSG:4326)",
+      "roles": [
+        "data"
+      ]
+    }
+  }
 }
