@@ -72,4 +72,6 @@ This is **functional, not perfect**. Honest numbers from the current registry (6
 - **Registering datasets (focal-point guide): `docs/HOW_TO_REGISTER_DATASETS.md`** — the form, the PR path, and bulk import.
 
 - Field rules and crosswalks: `spec/field_mapping.md`, `spec/vocab_reconciliation.md`, `spec/living_landscape_crosswalk.json`, `spec/bbox_lookup.json`.
-- Governing spec: `MOSAIC_CDH_Interoperability_STAC_Assessment_202606.md`.
+- Governing decisions: the MOSAIC↔CDH interoperability assessment is an internal
+  team document (kept out of the public repo); its operative rules live in
+  `spec/field_mapping.md`, `spec/vocab_reconciliation.md` and the schema docs.
