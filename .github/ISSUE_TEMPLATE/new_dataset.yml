@@ -1,0 +1,131 @@
+name: Register a new dataset
+description: Submit a geospatial dataset to the MOSAIC catalog. A maintainer will turn this into a record file (records/<ID>.yaml) and the catalog rebuilds automatically.
+title: "[Dataset] <short dataset name>"
+labels: ["dataset-submission"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for contributing to MOSAIC! Fill in what you know — only the first
+        four fields are required. A maintainer converts this into a validated
+        record file; you'll be tagged on the pull request for review.
+        Field definitions: see [`spec/record_schema.md`](../blob/main/spec/record_schema.md).
+  - type: input
+    id: title
+    attributes:
+      label: Dataset title
+      description: Short descriptive name.
+      placeholder: e.g. Land use / land cover classification 2024
+    validations:
+      required: true
+  - type: dropdown
+    id: living_landscape
+    attributes:
+      label: Living landscape
+      description: The MFL landscape this dataset covers. Pick NATIONAL for country-wide datasets, GLOBAL for global/cross-landscape ones.
+      options:
+        - CIV-NZ — N'Zi Watershed (Côte d'Ivoire)
+        - COL-CUM — Cumbal, Nariño (Colombia)
+        - ETH-OG — Omo-Gibe Basin (Ethiopia)
+        - IND-CH — Central India Highlands (India)
+        - KEN-LVB — Lake Victoria Basin (Kenya)
+        - KEN-LEI — LEILA, Southern Kenya Rangelands (Kenya)
+        - MEK-3S — 3S Basins (Laos / Cambodia / Vietnam)
+        - PER-PCL — Pucallpa – Ucayali (Peru)
+        - SEN-FK — Fatick Department (Senegal)
+        - TUN-NW — Northwestern Tunisia (Tunisia)
+        - ZWE-MB — Mbire – Lower Zambezi Valley (Zimbabwe)
+        - NATIONAL — Country-wide coverage
+        - GLOBAL — Global / cross-landscape
+    validations:
+      required: true
+  - type: dropdown
+    id: country
+    attributes:
+      label: Country
+      options: [Cambodia, Colombia, "Côte d'Ivoire", Ethiopia, Global, India, Kenya, Laos, Peru, Senegal, Tanzania, Tunisia, Vietnam, Zimbabwe]
+    validations:
+      required: true
+  - type: input
+    id: contact
+    attributes:
+      label: Contact person
+      description: "Name and email, e.g. Jane Doe, j.doe@cgiar.org"
+    validations:
+      required: true
+  - type: dropdown
+    id: theme
+    attributes:
+      label: MFL theme
+      options:
+        - Boundaries / admin units
+        - Land cover / land use
+        - Ecosystem condition
+        - Degradation / land health
+        - Water / hydrology
+        - Biodiversity / ecosystems
+        - Pressures / drivers
+        - Ecosystem services
+        - Hotspots / leverage points
+        - Scenarios / future risks
+        - Decision-support outputs
+        - Agrobiodiversity / crops
+        - Socio-economic / livelihoods
+  - type: dropdown
+    id: data_type
+    attributes:
+      label: Data type
+      options: [Raster, Vector, Tabular, Mixed]
+  - type: textarea
+    id: description
+    attributes:
+      label: Description / notes
+      description: Methods, caveats, limitations, related datasets.
+  - type: input
+    id: spatial_resolution
+    attributes:
+      label: Spatial resolution
+      placeholder: e.g. 30m, 0.05°, admin level 2
+  - type: input
+    id: temporal_coverage
+    attributes:
+      label: Temporal coverage
+      placeholder: e.g. 2017-2025
+  - type: input
+    id: source
+    attributes:
+      label: Source / centre
+      placeholder: e.g. Alliance Bioversity-CIAT, IWMI, ESA (external)
+  - type: dropdown
+    id: access_level
+    attributes:
+      label: Access level
+      options: [Open, Internal, Restricted]
+  - type: input
+    id: license
+    attributes:
+      label: License
+      placeholder: e.g. CC BY 4.0
+  - type: dropdown
+    id: processing_status
+    attributes:
+      label: Processing status
+      options: [Raw, Processed, Validated]
+  - type: input
+    id: download_url
+    attributes:
+      label: Download / primary source URL
+  - type: input
+    id: file_size
+    attributes:
+      label: File size
+      placeholder: e.g. 220 MB
+  - type: input
+    id: crs
+    attributes:
+      label: Coordinate reference system (CRS)
+      placeholder: e.g. EPSG:4326
+  - type: input
+    id: doi
+    attributes:
+      label: DOI or citation (if published)

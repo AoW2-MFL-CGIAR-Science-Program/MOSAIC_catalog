@@ -15,7 +15,20 @@ The run is **idempotent**: it wipes and rebuilds `stac/` and overwrites `dataset
 
 ## Inputs and outputs
 
-**Input (one file):** `catalog/MFL_Dataset_Registry.xlsx`, sheet `' Registry'` (the leading space is intentional). 68 real records (canonical snapshot, 2026-07-21); the first data row is a placeholder/instructions row and is skipped.
+**Input — source of truth (since 2026-07-24):** `records/<ID>.yaml` — one validated
+YAML file per dataset (68 records), reviewed via PRs. See `records/README.md` to
+add or edit datasets and `spec/record_schema.md` for the field docs. Invalid
+records abort the build. The Excel workbook (`catalog/MFL_Dataset_Registry.xlsx`)
+is retained as an import/working view only; `--from-excel` forces it as source
+(the two paths are acceptance-tested byte-identical).
+
+> **CI note:** the Pages workflow still runs `pip install openpyxl` only. Until
+> `pyyaml` is added to that line (one-line edit in
+> `.github/workflows/build-and-pages.yml`, via the GitHub web UI — the local
+> token cannot push workflow changes), CI falls back to the Excel snapshot with
+> a loud warning, so the snapshot must be kept in sync after record edits
+> (`python3 scripts/excel_to_records.py` works Excel→records; regenerating the
+> snapshot the other way is manual until then).
 
 **Output A — STAC catalog tree** (`stac/`): plain JSON, no pystac.
 - `stac/catalog.json` (root)

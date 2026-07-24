@@ -1,5 +1,13 @@
 """Read the MFL Dataset Registry and normalize each real row into a dict that
 both artifacts (frontend record + STAC item) consume. Skips the placeholder row.
+
+Since 2026-07-24 the normalization core is `normalize_fields(fields, ...)`, which
+takes a plain field-dict (COL short names -> raw values) instead of a positional
+Excel row. Two sources feed it:
+  - this module (Excel snapshot path, via `row_to_fields`), and
+  - mosaic_pipeline/records.py (records/<ID>.yaml path — the source of truth).
+Both paths MUST stay byte-identical in their artifacts; do not add Excel-only or
+YAML-only behavior inside normalize_fields.
 """
 from __future__ import annotations
 
@@ -46,6 +54,11 @@ def _g(row, key):
     return row[COL[key] - 1]
 
 
+def row_to_fields(row) -> dict:
+    """Positional Excel row -> field-dict keyed by COL short names (raw values)."""
+    return {key: _g(row, key) for key in COL}
+
+
 def read_registry(xlsx_path: str, vocab: Vocab) -> list[dict]:
     with warnings.catch_warnings():
         warnings.simplefilter("ignore")  # silence "Data Validation extension..."
@@ -74,7 +87,8 @@ def read_registry(xlsx_path: str, vocab: Vocab) -> list[dict]:
         if T.is_placeholder_row(row):
             continue
 
-        rec = _normalize_row(row, vocab, used_ids, lambda: _next_id(seq + 1))
+        rec = normalize_fields(row_to_fields(row), vocab, used_ids,
+                               lambda: _next_id(seq + 1))
         if rec.get("_used_seq"):
             seq += 1
             rec.pop("_used_seq")
@@ -88,20 +102,27 @@ def _next_id(n: int) -> str:
     return f"MFL-2026-{n:03d}"
 
 
-def _normalize_row(row, vocab: Vocab, used_ids: set[str], gen_id) -> dict:
+def normalize_fields(fields: dict, vocab: Vocab, used_ids: set[str], gen_id) -> dict:
+    """Normalize one record from a raw field-dict (COL short names -> raw values).
+
+    Shared by the Excel path (row_to_fields) and the YAML records path
+    (records.py). Values may come in as Excel cell scalars or YAML scalars;
+    every consumer below runs them through T.s()/the R1-R9 extractors, so
+    both sources normalize identically.
+    """
     flags: list[str] = []
 
     # --- malformed "Soil dataset" detection ---
-    country_raw = T.s(_g(row, "country"))
-    theme_raw = T.s(_g(row, "theme"))
-    dtype_raw = T.s(_g(row, "data_type"))
+    country_raw = T.s(fields["country"])
+    theme_raw = T.s(fields["theme"])
+    dtype_raw = T.s(fields["data_type"])
     is_malformed = (country_raw == "Soil dataset" or theme_raw == "Soil dataset")
     if is_malformed:
         flags.append("malformed_row")
 
     # --- R6: id ---
     used_seq = False
-    rid = T.s(_g(row, "record_id"))
+    rid = T.s(fields["record_id"])
     if not rid:
         rid = gen_id()
         used_seq = True
@@ -116,10 +137,10 @@ def _normalize_row(row, vocab: Vocab, used_ids: set[str], gen_id) -> dict:
         flags.append("duplicate_id")
 
     # --- title ---
-    title = T.s(_g(row, "title"))
+    title = T.s(fields["title"])
     if is_malformed and title == "Soil dataset":
         # Use the description to give it a usable title rather than "Soil dataset".
-        desc = T.s(_g(row, "description")) or ""
+        desc = T.s(fields["description"]) or ""
         title = ("Soil dataset (needs repair) — " + desc[:50]).strip() if desc else f"Soil dataset (needs repair) [{rid}]"
     if not title:
         title = f"Untitled dataset ({rid})"
@@ -131,7 +152,7 @@ def _normalize_row(row, vocab: Vocab, used_ids: set[str], gen_id) -> dict:
         flags.append("noncanonical_country")
 
     # --- living landscape (CODE + coverage) ---
-    ll_code, coverage, ll_flags = vocab.resolve_landscape(_g(row, "living_landscape"), country)
+    ll_code, coverage, ll_flags = vocab.resolve_landscape(fields["living_landscape"], country)
     flags += ll_flags
 
     # --- theme ---
@@ -145,62 +166,62 @@ def _normalize_row(row, vocab: Vocab, used_ids: set[str], gen_id) -> dict:
         flags.append("noncanonical_data_type")
 
     # --- resolution (R5) ---
-    spatial_resolution, res_flags = T.check_resolution(_g(row, "spatial_resolution"))
+    spatial_resolution, res_flags = T.check_resolution(fields["spatial_resolution"])
     flags += res_flags
 
     # --- temporal ---
-    temporal_raw = T.s(_g(row, "temporal"))
-    temporal_interval, temp_flags = T.split_temporal(_g(row, "temporal"))
+    temporal_raw = T.s(fields["temporal"])
+    temporal_interval, temp_flags = T.split_temporal(fields["temporal"])
     flags += temp_flags
 
     # --- source ---
-    source = T.s(_g(row, "source"))
+    source = T.s(fields["source"])
 
     # --- contact (R1) ---
-    contact_email, c_flags = T.extract_contact_email(_g(row, "contact"))
+    contact_email, c_flags = T.extract_contact_email(fields["contact"])
     flags += c_flags
-    contact_name = T.extract_contact_name(_g(row, "contact"))
+    contact_name = T.extract_contact_name(fields["contact"])
 
     # --- access level ---
-    access = T.s(_g(row, "access_level"))
+    access = T.s(fields["access_level"])
     access = ACCESS_ALIASES.get(access, access)
     if access and access not in VALID_ACCESS:
         access = None
         flags.append("noncanonical_access_level")
 
     # --- license (R3) ---
-    license_id, license_alias, lic_flags = T.map_license(_g(row, "license"))
+    license_id, license_alias, lic_flags = T.map_license(fields["license"])
     flags += lic_flags
 
     # --- readiness (R7) ---
-    readiness, r_flags = T.map_readiness(_g(row, "processing_status"))
+    readiness, r_flags = T.map_readiness(fields["processing_status"])
     flags += r_flags
 
     # --- formats (R2) ---
-    formats, f_flags = T.derive_formats(_g(row, "file_names"), _g(row, "data_type") if not is_malformed else None)
+    formats, f_flags = T.derive_formats(fields["file_names"], fields["data_type"] if not is_malformed else None)
     flags += f_flags
 
     # --- description ---
-    description = T.s(_g(row, "description")) or ""
+    description = T.s(fields["description"]) or ""
 
     # --- download url (R8) ---
-    download_url, d_flags = T.clean_download_url(_g(row, "download_url"))
+    download_url, d_flags = T.clean_download_url(fields["download_url"])
     flags += d_flags
-    download_raw = T.s(_g(row, "download_url"))
+    download_raw = T.s(fields["download_url"])
 
     # --- current location / server path (STAC asset hrefs) ---
-    current_location = T.s(_g(row, "current_location"))
-    server_path = T.s(_g(row, "server_path"))
+    current_location = T.s(fields["current_location"])
+    server_path = T.s(fields["server_path"])
 
     # --- operational mosaic:* fields ---
-    migration_status = T.s(_g(row, "migration_status"))
-    update_frequency = T.s(_g(row, "update_frequency")) or "Unknown"
+    migration_status = T.s(fields["migration_status"])
+    update_frequency = T.s(fields["update_frequency"]) or "Unknown"
     if update_frequency not in VALID_UPDATE_FREQ:
         update_frequency = "Unknown"
 
-    date_registered = T.s(_g(row, "date_registered"))
-    last_updated = T.s(_g(row, "last_updated"))
-    file_size = _g(row, "file_size")
+    date_registered = T.s(fields["date_registered"])
+    last_updated = T.s(fields["last_updated"])
+    file_size = fields["file_size"]
 
     # --- bbox (delineation-derived for landscape coverage; locator otherwise) ---
     bbox, centroid, approx = vocab.bbox_for(ll_code, country, coverage)

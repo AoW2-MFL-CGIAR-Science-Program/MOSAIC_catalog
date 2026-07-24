@@ -1,0 +1,28 @@
+# MOSAIC dataset record — schema: spec/record_schema.md (the build fails on invalid records)
+id: MFL-2026-013
+title: Tree characteristics (canopy density & canopy height), tree cover change for India
+description: Tree canopy cover, density and height
+country: India
+living_landscape: IND-CH
+theme: Ecosystem condition
+data_type: Raster
+spatial_resolution: Multiple resolutions
+temporal_coverage: 2017 - 2023
+source: National government (external)
+contact: 'Core Stack (Open access)
+
+  Sudharsan Malaiappan - s.maliappan@cgiar.org'
+access_level: Open
+license: CC BY 4.0
+processing_status: Processed
+file_names: null
+current_location: 'CoreStack: Github / Google rive'
+migration_status: null
+server_path: null
+date_registered: null
+last_updated: '2024'
+update_frequency: Annual
+download_url: 'https://github.com/core-stack-org/QGIS-Styles/blob/main/Tree%20Health/ccd_style.qml
+
+  https://github.com/core-stack-org/QGIS-Styles/blob/main/Tree%20Health/canopy_height.qml'
+file_size: null

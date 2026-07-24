@@ -75,15 +75,15 @@
     },
     {
       "rel": "item",
-      "href": "./items/MFL-2026-064.json",
-      "type": "application/json",
-      "title": "Tree conservation and restoration priority areas"
-    },
-    {
-      "rel": "item",
       "href": "./items/MFL-2026-043.json",
       "type": "application/json",
       "title": "Rainfall trends"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-064.json",
+      "type": "application/json",
+      "title": "Tree conservation and restoration priority areas"
     }
   ],
   "mosaic:landscape_system": "East-South Africa Highland-Lowland-Rift Valley System",

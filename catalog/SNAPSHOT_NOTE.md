@@ -1,16 +1,16 @@
-# Registry snapshot — canonical (2026-07-21)
+# Registry Excel — import/working view only (demoted 2026-07-24)
 
-`MFL_Dataset_Registry.xlsx` in this folder is the **canonical registry snapshot**,
-committed so the pipeline and CI are self-contained and reproducible.
+**The source of truth is now `records/<ID>.yaml`** — one validated YAML file per
+dataset, reviewed via pull requests (see `records/README.md`). This Excel is kept
+as an import/working view for people who prefer a spreadsheet, and as the CI
+fallback until the Pages workflow installs PyYAML.
 
-- 68 records, unique literal Record IDs (`MFL-2026-001` … `MFL-2026-069`; ID
-  formulas were removed on 2026-07-21 — see `docs/REGISTRY_CHANGELOG_2026-07-21.md`).
-- The **Living landscape** column uses the canonical controlled list approved by
-  Lizeth on 2026-07-21: 11 delineated landscapes (see `boundaries/`) plus
-  `NATIONAL — Country-wide coverage` and `GLOBAL — Global / cross-landscape`.
-  The full table lives in the workbook's *Reference* sheet (columns K–M).
-- `PER-PCL` (Pucallpa – Ucayali) is **pending confirmation** with the Peru team.
-
-To update: edit this file (new rows type the next free `MFL-2026-###` ID manually),
-then run `./scripts/regenerate.sh`. Working copies received from focal points
-(e.g. `MFL_Dataset_Registry 21jul.xlsx`) stay local and are git-ignored.
+- Snapshot content: 68 records as of 2026-07-21 (unique literal Record IDs,
+  Living landscape column normalized to controlled `CODE — Name` values —
+  see `docs/REGISTRY_CHANGELOG_2026-07-21.md`).
+- `scripts/excel_to_records.py` converts this workbook → `records/` (used for
+  the one-time migration; reusable for bulk imports from focal points).
+- **Until CI installs PyYAML** (one-line workflow edit, see README): after any
+  edit under `records/`, keep this snapshot in step or CI will publish from the
+  stale Excel. After that edit, this file no longer needs to track records/.
+- `PER-PCL` (Pucallpa – Ucayali) is pending confirmation with the Peru team.

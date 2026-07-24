@@ -675,60 +675,6 @@
     "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/SEN-FK/items/MFL-2026-024.json"
   },
   {
-    "id": "MFL-2026-064",
-    "title": "Tree conservation and restoration priority areas",
-    "country": "Kenya",
-    "living_landscape": "KEN-LVB",
-    "landscape_name": "Lake Victoria Basin (Kenya)",
-    "coverage": "national",
-    "centroid": [
-      37.9,
-      0.4
-    ],
-    "mfl_theme": "Decision-support outputs",
-    "data_type": "Raster",
-    "spatial_resolution": "1000m",
-    "temporal_coverage": "2017-2025",
-    "source": "Alliance Bioversity-CIAT",
-    "contact": "h.gaisberger@cgiar.org",
-    "access_level": "Open",
-    "license": "CGIAR Open Access",
-    "readiness_status": "Validated",
-    "formats": [
-      "GeoTIFF"
-    ],
-    "description": "Conservation for Restoration (C4R) tool KENYA: mapping the vulnerability and priority areas for conservation and restoration of 78 native tree species. Linked to D4R",
-    "download_url": "https://dataverse.harvard.edu/citation?persistentId=doi:10.7910/DVN/2ZQTB2",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/KEN-LVB/items/MFL-2026-064.json"
-  },
-  {
-    "id": "MFL-2026-065",
-    "title": "Soil health status and texture",
-    "country": "Zimbabwe",
-    "living_landscape": "ZWE-MB",
-    "landscape_name": "Mbire - Lower Zambezi Valley",
-    "coverage": "landscape",
-    "centroid": [
-      30.1731,
-      -16.4096
-    ],
-    "mfl_theme": "Degradation / land health",
-    "data_type": "Tabular",
-    "spatial_resolution": "Ward level",
-    "temporal_coverage": "2024",
-    "source": "CIMMYT",
-    "contact": "telma.sibanda@um6p.ma",
-    "access_level": "Open",
-    "license": "CGIAR Open Access",
-    "readiness_status": "Processed",
-    "formats": [
-      "CSV"
-    ],
-    "description": "Ward-level soil texture, nitrogen, and carbon content data — Original landscape entry: Mbire: Wards 2 and 3",
-    "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/ZWE-MB/items/MFL-2026-065.json"
-  },
-  {
     "id": "MFL-2026-025",
     "title": "Crop damage mapping",
     "country": "Zimbabwe",
@@ -1323,33 +1269,6 @@
     "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/CIV-NZ/items/MFL-2026-046.json"
   },
   {
-    "id": "MFL-2026-067",
-    "title": "Climate data",
-    "country": "Côte d'Ivoire",
-    "living_landscape": "CIV-NZ",
-    "landscape_name": "N'Zi Watershed",
-    "coverage": "landscape",
-    "centroid": [
-      -4.7151,
-      7.5534
-    ],
-    "mfl_theme": "Water / hydrology",
-    "data_type": "Tabular",
-    "spatial_resolution": "0.05° × 0.05° and 0.1° x 0.1°, depending on the products",
-    "temporal_coverage": "1979 - present",
-    "source": "AfricaRice",
-    "contact": "a.kouadio2@cgiar.org",
-    "access_level": "Open",
-    "license": "CC-BY-4.0",
-    "readiness_status": "Validated",
-    "formats": [
-      "CSV"
-    ],
-    "description": "Gridded daily climate data from CHIRPS and ERA5 climate reanalysis",
-    "download_url": "https://doi.org/10.15780/G2JQ0P",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/CIV-NZ/items/MFL-2026-067.json"
-  },
-  {
     "id": "MFL-2026-048",
     "title": "Soil dataset",
     "country": "Global",
@@ -1375,33 +1294,6 @@
     "description": "High-resolution soil profile database for crop modeling applications. Files are '*.SOL' file format (DSSAT soil database) for each country worldwide.",
     "download_url": "https://doi.org/10.7910/DVN/1PEEY0",
     "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/GLB/items/MFL-2026-048.json"
-  },
-  {
-    "id": "MFL-2026-066",
-    "title": "Soil dataset",
-    "country": "Global",
-    "living_landscape": "GLB",
-    "landscape_name": "Global / cross-landscape",
-    "coverage": "global",
-    "centroid": [
-      0,
-      10
-    ],
-    "mfl_theme": "Degradation / land health",
-    "data_type": null,
-    "spatial_resolution": "250 m",
-    "temporal_coverage": "NA",
-    "source": "AfricaRice",
-    "contact": "a.kouadio2@cgiar.org",
-    "access_level": "Open",
-    "license": "CC-BY-4.0",
-    "readiness_status": "Validated",
-    "formats": [
-      "Unknown"
-    ],
-    "description": "Soil data from SoilGrids",
-    "download_url": "https://soilgrids.org/",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/GLB/items/MFL-2026-066.json"
   },
   {
     "id": "MFL-2026-050",
@@ -1780,6 +1672,114 @@
     "description": "India's Open Natural Ecosystems at a 10-m scale,",
     "download_url": null,
     "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/IND-CH/items/MFL-2026-063.json"
+  },
+  {
+    "id": "MFL-2026-064",
+    "title": "Tree conservation and restoration priority areas",
+    "country": "Kenya",
+    "living_landscape": "KEN-LVB",
+    "landscape_name": "Lake Victoria Basin (Kenya)",
+    "coverage": "national",
+    "centroid": [
+      37.9,
+      0.4
+    ],
+    "mfl_theme": "Decision-support outputs",
+    "data_type": "Raster",
+    "spatial_resolution": "1000m",
+    "temporal_coverage": "2017-2025",
+    "source": "Alliance Bioversity-CIAT",
+    "contact": "h.gaisberger@cgiar.org",
+    "access_level": "Open",
+    "license": "CGIAR Open Access",
+    "readiness_status": "Validated",
+    "formats": [
+      "GeoTIFF"
+    ],
+    "description": "Conservation for Restoration (C4R) tool KENYA: mapping the vulnerability and priority areas for conservation and restoration of 78 native tree species. Linked to D4R",
+    "download_url": "https://dataverse.harvard.edu/citation?persistentId=doi:10.7910/DVN/2ZQTB2",
+    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/KEN-LVB/items/MFL-2026-064.json"
+  },
+  {
+    "id": "MFL-2026-065",
+    "title": "Soil health status and texture",
+    "country": "Zimbabwe",
+    "living_landscape": "ZWE-MB",
+    "landscape_name": "Mbire - Lower Zambezi Valley",
+    "coverage": "landscape",
+    "centroid": [
+      30.1731,
+      -16.4096
+    ],
+    "mfl_theme": "Degradation / land health",
+    "data_type": "Tabular",
+    "spatial_resolution": "Ward level",
+    "temporal_coverage": "2024",
+    "source": "CIMMYT",
+    "contact": "telma.sibanda@um6p.ma",
+    "access_level": "Open",
+    "license": "CGIAR Open Access",
+    "readiness_status": "Processed",
+    "formats": [
+      "CSV"
+    ],
+    "description": "Ward-level soil texture, nitrogen, and carbon content data — Original landscape entry: Mbire: Wards 2 and 3",
+    "download_url": null,
+    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/ZWE-MB/items/MFL-2026-065.json"
+  },
+  {
+    "id": "MFL-2026-066",
+    "title": "Soil dataset",
+    "country": "Global",
+    "living_landscape": "GLB",
+    "landscape_name": "Global / cross-landscape",
+    "coverage": "global",
+    "centroid": [
+      0,
+      10
+    ],
+    "mfl_theme": "Degradation / land health",
+    "data_type": null,
+    "spatial_resolution": "250 m",
+    "temporal_coverage": "NA",
+    "source": "AfricaRice",
+    "contact": "a.kouadio2@cgiar.org",
+    "access_level": "Open",
+    "license": "CC-BY-4.0",
+    "readiness_status": "Validated",
+    "formats": [
+      "Unknown"
+    ],
+    "description": "Soil data from SoilGrids",
+    "download_url": "https://soilgrids.org/",
+    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/GLB/items/MFL-2026-066.json"
+  },
+  {
+    "id": "MFL-2026-067",
+    "title": "Climate data",
+    "country": "Côte d'Ivoire",
+    "living_landscape": "CIV-NZ",
+    "landscape_name": "N'Zi Watershed",
+    "coverage": "landscape",
+    "centroid": [
+      -4.7151,
+      7.5534
+    ],
+    "mfl_theme": "Water / hydrology",
+    "data_type": "Tabular",
+    "spatial_resolution": "0.05° × 0.05° and 0.1° x 0.1°, depending on the products",
+    "temporal_coverage": "1979 - present",
+    "source": "AfricaRice",
+    "contact": "a.kouadio2@cgiar.org",
+    "access_level": "Open",
+    "license": "CC-BY-4.0",
+    "readiness_status": "Validated",
+    "formats": [
+      "CSV"
+    ],
+    "description": "Gridded daily climate data from CHIRPS and ERA5 climate reanalysis",
+    "download_url": "https://doi.org/10.15780/G2JQ0P",
+    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/CIV-NZ/items/MFL-2026-067.json"
   },
   {
     "id": "MFL-2026-068",

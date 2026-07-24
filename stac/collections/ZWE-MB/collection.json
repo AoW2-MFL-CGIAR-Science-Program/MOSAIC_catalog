@@ -85,12 +85,6 @@
     },
     {
       "rel": "item",
-      "href": "./items/MFL-2026-065.json",
-      "type": "application/json",
-      "title": "Soil health status and texture"
-    },
-    {
-      "rel": "item",
       "href": "./items/MFL-2026-025.json",
       "type": "application/json",
       "title": "Crop damage mapping"
@@ -118,6 +112,12 @@
       "href": "./items/MFL-2026-029.json",
       "type": "application/json",
       "title": "Ecosystem services mapping"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-065.json",
+      "type": "application/json",
+      "title": "Soil health status and texture"
     }
   ],
   "mosaic:landscape_system": "East-South Africa Highland-Lowland-Rift Valley System",
