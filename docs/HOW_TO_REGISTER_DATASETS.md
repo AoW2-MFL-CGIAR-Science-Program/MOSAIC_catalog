@@ -29,14 +29,22 @@ within a few minutes.
 ## Way 1 — the submission form (recommended, no Git needed)
 
 1. Open the **[Register a new dataset](https://github.com/AoW2-MFL-CGIAR-Science-Program/MOSAIC_catalog/issues/new?template=new_dataset.yml)**
-   form (a free GitHub account is the only prerequisite).
+   form (needs a free GitHub account — if you'd rather not create one, see Way 2).
 2. Fill in what you know — only four fields are required; everything else can
    be completed later.
 3. Submit. The MOSAIC team converts your submission into a validated record and
    tags you on the pull request to confirm the details.
 4. On merge, the catalog republishes automatically — you'll receive the link.
 
-## Way 2 — edit the record yourself (if you're comfortable with GitHub)
+## Way 2 — plain email (no GitHub account needed)
+
+Send the facts from the checklist above — at minimum the four required ones
+(title, living landscape, country, contact person) — to the MOSAIC coordinator
+(**Lizeth Llanos, l.llanos@cgiar.org**), subject "MOSAIC dataset registration".
+We create the record for you, confirm the details with you by email, and send
+back the published link.
+
+## Way 3 — edit the record yourself (if you're comfortable with GitHub)
 
 Records live in [`records/`](../records/) — one YAML file per dataset, e.g.
 `records/MFL-2026-001.yaml`. To add one: copy an existing record, name it with
@@ -49,7 +57,7 @@ a value is out of vocabulary, so you can't break the catalog.
 To **update or correct** an existing dataset, edit its file the same way (or
 just open an issue describing the change and we'll do it).
 
-## Way 3 — bulk import (many datasets at once)
+## Way 4 — bulk import (many datasets at once)
 
 If your centre has an inventory of datasets (a spreadsheet, an internal
 catalog), don't type them one by one — send it to the MOSAIC coordinator
