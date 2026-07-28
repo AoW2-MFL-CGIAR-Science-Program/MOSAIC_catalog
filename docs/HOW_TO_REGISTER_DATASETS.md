@@ -70,10 +70,12 @@ each dataset's full history is visible in Git.
 
 ## FAQ
 
-**Do I upload the data files?** No. The record points to where the data lives
-(your repository, Dataverse, a drive link, a server). Making the *pointer*
-public is what matters; the data's own access level (Open / Internal /
-Restricted) is recorded honestly.
+**Do I upload the data files?** Not for now. Today the record points to where
+the data lives (your repository, Dataverse, a drive link, a server); making the
+*pointer* public is what matters, and the data's own access level (Open /
+Internal / Restricted) is recorded honestly. In a later phase, the plan is to
+make the open datasets themselves directly available through MOSAIC — datasets
+that already have a home will keep being linked at their source.
 
 **What if I don't know a field?** Leave it empty. An incomplete-but-honest
 record is far more useful than nothing — the catalog flags gaps rather than
