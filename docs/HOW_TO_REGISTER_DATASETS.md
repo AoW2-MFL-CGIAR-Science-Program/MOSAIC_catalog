@@ -26,7 +26,7 @@ within a few minutes.
 - Temporal coverage ("2017–2025"), license ("CC BY 4.0"), file format(s)
 - A description covering method, caveats and related datasets
 
-## Way 1 — the submission form (recommended, no Git needed)
+## Way 1 — the submission form (recommended, no Git skills or commands needed)
 
 1. Open the **[Register a new dataset](https://github.com/AoW2-MFL-CGIAR-Science-Program/MOSAIC_catalog/issues/new?template=new_dataset.yml)**
    form (needs a free GitHub account — if you'd rather not create one, see Way 2).
