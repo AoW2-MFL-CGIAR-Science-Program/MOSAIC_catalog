@@ -47,7 +47,9 @@
     "end_datetime": "2024-12-31T23:59:59Z",
     "created": "2026-08-03",
     "updated": "2026",
-    "cgiar-cdh:geography": [],
+    "cgiar-cdh:geography": [
+      "latin-america-and-the-caribbean"
+    ],
     "cgiar-cdh:spatial_resolution": null,
     "mosaic:living_landscape": "GLB",
     "mosaic:coverage": "global",

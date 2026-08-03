@@ -22,7 +22,7 @@
       "description": "Free-text description / notes."
     },
     "country": {
-      "enum": ["Cambodia", "Colombia", "Côte d'Ivoire", "Ethiopia", "Global", "India", "Kenya", "Laos", "Peru", "Senegal", "Tanzania", "Tunisia", "Vietnam", "Zimbabwe", null],
+      "enum": ["Africa", "Asia", "Cambodia", "Colombia", "Côte d'Ivoire", "Ethiopia", "Global", "India", "Kenya", "Laos", "Latin America and the Caribbean", "Peru", "Senegal", "Tanzania", "Tunisia", "Vietnam", "Zimbabwe", null],
       "description": "Country display name (vocab_reconciliation.md §1), or null."
     },
     "living_landscape": {

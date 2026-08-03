@@ -59,6 +59,7 @@
     ]
   },
   "cgiar-cdh:geography": [
+    "latin-america-and-the-caribbean",
     "world"
   ],
   "mosaic:living_landscape": "GLB",

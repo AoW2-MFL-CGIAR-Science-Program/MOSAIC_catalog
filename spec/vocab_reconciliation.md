@@ -35,6 +35,7 @@ Enum (display strings — keep exactly, including diacritics):
   | Vietnam | viet-nam | VNM |
   | Zimbabwe | zimbabwe | ZWE |
 - **[COORD]** confirm exact kebab `id` strings against the live CDH `geography.json` (Laos, Tanzania, Vietnam, Côte d'Ivoire are the ones whose M49 label differs from common usage). Until confirmed, the ISO3 column is the reliable join key.
+- **Added 2026-08-03 — region/continent tier**, for datasets whose scope spans many countries within one region (e.g. a Latin-America-wide adoption study): `Africa`, `Asia`, `Latin America and the Caribbean` (UN M49 macro-region names/kebab ids — `africa`, `asia`, `latin-america-and-the-caribbean`). No ISO3 exists at this granularity. `Global` stays reserved for worldwide scope; these three sit between a single country and `Global`. **[COORD]** confirm the kebab ids against CDH `geography.json` like the country rows above; add more regions (Europe, Oceania, Northern America) the same way if a submission ever needs one — it's a one-line addition to `COUNTRY_M49` in `vocab.py` + the schema enum.
 
 ## 2. living_landscape  (CODE enum — from living_landscape_crosswalk.json)
 ```

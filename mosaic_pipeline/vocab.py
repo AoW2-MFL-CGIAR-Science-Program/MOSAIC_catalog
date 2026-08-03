@@ -28,6 +28,12 @@ COUNTRY_M49 = {
     "Tunisia": ("tunisia", "TUN"),
     "Vietnam": ("viet-nam", "VNM"),
     "Zimbabwe": ("zimbabwe", "ZWE"),
+    # Regions/continents (added 2026-08-03): for datasets whose scope spans many
+    # countries within one region — neither a single country nor fully "Global".
+    # UN M49 macro-region kebab ids; no ISO3 exists at this granularity (None).
+    "Africa": ("africa", None),
+    "Asia": ("asia", None),
+    "Latin America and the Caribbean": ("latin-america-and-the-caribbean", None),
 }
 
 COUNTRY_ENUM = list(COUNTRY_M49.keys())
