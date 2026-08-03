@@ -4,7 +4,10 @@ One flat record per dataset, using exactly the keys the frontend expects:
 id, title, country, living_landscape, mfl_theme, data_type, spatial_resolution,
 temporal_coverage, source, contact, access_level, license, readiness_status,
 formats, description, download_url, metadata_url — plus, since 2026-07-21:
-landscape_name, coverage (landscape|national|global), centroid ([lon, lat]).
+landscape_name, coverage (landscape|national|global), centroid ([lon, lat]);
+plus, since 2026-08-03: citation (depositor-supplied preferred citation,
+YAML-records-path only — Excel-derived records won't have the key at all;
+read with .get(), never r["citation"]).
 """
 from __future__ import annotations
 
@@ -16,6 +19,7 @@ FRONTEND_KEYS = [
     "mfl_theme", "data_type", "spatial_resolution", "temporal_coverage",
     "source", "contact", "access_level", "license", "readiness_status",
     "formats", "description", "download_url", "metadata_url", "centroid",
+    "citation",
 ]
 
 
@@ -44,6 +48,7 @@ def build_frontend(records: list[dict], out_path: Path, vocab=None) -> int:
             "description": r["description"],
             "download_url": r["download_url"],
             "metadata_url": r["metadata_url"],
+            "citation": r.get("citation"),
         })
     out_path.parent.mkdir(parents=True, exist_ok=True)
     with open(out_path, "w", encoding="utf-8") as f:

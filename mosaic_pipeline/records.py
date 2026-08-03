@@ -222,5 +222,11 @@ def read_records(records_dir, vocab: Vocab) -> list[dict]:
         rec = normalize_fields(_yaml_to_fields(data), vocab, used_ids, _fail_gen)
         rec.pop("_used_seq", None)
         used_ids.add(rec["id"])
+        # citation is YAML-only (not in the Excel path's 23 columns) and stays
+        # OUT of normalize_fields to preserve Excel/YAML byte-identical output
+        # for every field normalize_fields DOES share. Passed through here,
+        # raw, as a depositor-supplied preferred citation string (frontend
+        # displays it verbatim in place of the auto-generated one when present).
+        rec["citation"] = data.get("citation")
         out.append(rec)
     return out
