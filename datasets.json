@@ -1834,5 +1834,32 @@
     "description": "Conservation for Restoration (C4R) tool VIETNAM: mapping the vulnerability and priority areas for conservation and restoration of 66 native tree species. Linked to D4R",
     "download_url": null,
     "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/MEK-3S/items/MFL-2026-069.json"
+  },
+  {
+    "id": "MFL-2026-070",
+    "title": "Coding Matrix: Ecosystem Services in Tropical Cattle Systems — A Systematic Literature Review across Five Thematic Streams",
+    "country": "Global",
+    "living_landscape": "GLB",
+    "landscape_name": "Global / cross-landscape",
+    "coverage": "global",
+    "centroid": [
+      0,
+      10
+    ],
+    "mfl_theme": "Ecosystem services",
+    "data_type": "Tabular",
+    "spatial_resolution": null,
+    "temporal_coverage": null,
+    "source": "Alliance Bioversity-CIAT",
+    "contact": "s.burkart@cgiar.org",
+    "access_level": "Open",
+    "license": "CC-BY-4.0",
+    "readiness_status": "Raw",
+    "formats": [
+      "XLSX"
+    ],
+    "description": "Workbook documenting ~549 coded study entries from a systematic literature review on ecosystem services in tropical and subtropical cattle systems, coded consistently across five thematic streams for cross-paper comparison and filtering. Studies may appear in multiple streams.",
+    "download_url": "https://doi.org/10.7910/DVN/XD96CL",
+    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/GLB/items/MFL-2026-070.json"
   }
 ]
