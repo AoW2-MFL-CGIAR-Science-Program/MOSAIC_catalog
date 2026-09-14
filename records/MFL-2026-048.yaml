@@ -1,6 +1,6 @@
 # MOSAIC dataset record — schema: spec/record_schema.md (the build fails on invalid records)
 id: MFL-2026-048
-title: Soil dataset
+title: DSSAT soil profiles (global .SOL files)
 description: High-resolution soil profile database for crop modeling applications. Files are '*.SOL' file
   format (DSSAT soil database) for each country worldwide.
 country: Global

@@ -1,6 +1,6 @@
 # MOSAIC dataset record — schema: spec/record_schema.md (the build fails on invalid records)
 id: MFL-2026-067
-title: Climate data
+title: Gridded climate data (CHIRPS and AgERA5)
 description: Gridded daily climate data from CHIRPS and ERA5 climate reanalysis
 country: Côte d'Ivoire
 living_landscape: CIV-NZ

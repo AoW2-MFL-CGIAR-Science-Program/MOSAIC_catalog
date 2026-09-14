@@ -8,7 +8,7 @@
   "id": "SEN-FK",
   "title": "Fatick Department",
   "description": "Datasets registered under the 'Fatick Department' Living Landscape (8 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the simplified boundary is published as this collection's 'boundary' asset. National-coverage member items can widen the extent beyond the boundary.",
-  "license": "CC-BY-4.0",
+  "license": "other",
   "extent": {
     "spatial": {
       "bbox": [

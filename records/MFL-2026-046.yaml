@@ -1,6 +1,6 @@
 # MOSAIC dataset record — schema: spec/record_schema.md (the build fails on invalid records)
 id: MFL-2026-046
-title: Climate data
+title: Climate station data (NHMS synoptic stations)
 description: Climate data from climate stations for three major cities in the watershed (coverage period
   varies depending on the station); climate data from M'Be research station
 country: Côte d'Ivoire

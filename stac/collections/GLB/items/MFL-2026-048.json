@@ -40,7 +40,7 @@
     72
   ],
   "properties": {
-    "title": "Soil dataset",
+    "title": "DSSAT soil profiles (global .SOL files)",
     "description": "High-resolution soil profile database for crop modeling applications. Files are '*.SOL' file format (DSSAT soil database) for each country worldwide.",
     "datetime": null,
     "start_datetime": "2015-01-01T00:00:00Z",

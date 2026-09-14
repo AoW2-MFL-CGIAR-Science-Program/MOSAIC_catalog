@@ -86,13 +86,13 @@
       "rel": "item",
       "href": "./items/MFL-2026-048.json",
       "type": "application/json",
-      "title": "Soil dataset"
+      "title": "DSSAT soil profiles (global .SOL files)"
     },
     {
       "rel": "item",
       "href": "./items/MFL-2026-066.json",
       "type": "application/json",
-      "title": "Soil dataset"
+      "title": "SoilGrids gridded soil information"
     },
     {
       "rel": "item",

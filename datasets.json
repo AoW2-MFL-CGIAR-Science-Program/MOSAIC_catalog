@@ -448,34 +448,6 @@
     "citation": null
   },
   {
-    "id": "MFL-2026-016",
-    "title": "Groundwater data - India",
-    "country": "India",
-    "living_landscape": "IND-CH",
-    "landscape_name": "Central India Highlands",
-    "coverage": "landscape",
-    "centroid": [
-      79.6362,
-      24.134
-    ],
-    "mfl_theme": "Water / hydrology",
-    "data_type": "Mixed",
-    "spatial_resolution": null,
-    "temporal_coverage": null,
-    "source": null,
-    "contact": null,
-    "access_level": null,
-    "license": null,
-    "readiness_status": "Raw",
-    "formats": [
-      "Mixed"
-    ],
-    "description": "",
-    "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/IND-CH/items/MFL-2026-016.json",
-    "citation": null
-  },
-  {
     "id": "MFL-2026-017",
     "title": "Land Use and Land Cover - Senegal",
     "country": "Senegal",
@@ -521,7 +493,7 @@
     "source": "ISRA-BAME",
     "contact": "dieyemohamadou@gmail.com",
     "access_level": "Open",
-    "license": "CC-BY-4.0",
+    "license": "Restricted — GADM terms (academic/non-commercial use only, no redistribution)",
     "readiness_status": "Validated",
     "formats": [
       "Shapefile"
@@ -549,7 +521,7 @@
     "source": "ISRA-BAME",
     "contact": "dieyemohamadou@gmail.com",
     "access_level": "Open",
-    "license": "CC-BY-4.0",
+    "license": "Restricted — GADM terms (academic/non-commercial use only, no redistribution)",
     "readiness_status": "Validated",
     "formats": [
       "Shapefile"
@@ -605,7 +577,7 @@
     "source": "ISRA-BAME",
     "contact": "dieyemohamadou@gmail.com",
     "access_level": "Open",
-    "license": "CC-BY-4.0",
+    "license": "Restricted — GADM terms (academic/non-commercial use only, no redistribution)",
     "readiness_status": "Validated",
     "formats": [
       "Shapefile"
@@ -745,7 +717,7 @@
     "source": "CIMMYT",
     "contact": "telma.sibanda@um6p.ma",
     "access_level": "Open",
-    "license": "CGIAR Open Access",
+    "license": "Restricted — GADM terms (academic/non-commercial use only, no redistribution)",
     "readiness_status": "Validated",
     "formats": [
       "Shapefile"
@@ -1204,34 +1176,6 @@
     "citation": null
   },
   {
-    "id": "MFL-2026-043",
-    "title": "Rainfall trends",
-    "country": "Kenya",
-    "living_landscape": "KEN-LVB",
-    "landscape_name": "Lake Victoria Basin (Kenya)",
-    "coverage": "national",
-    "centroid": [
-      37.9,
-      0.4
-    ],
-    "mfl_theme": "Water / hydrology",
-    "data_type": null,
-    "spatial_resolution": null,
-    "temporal_coverage": null,
-    "source": null,
-    "contact": null,
-    "access_level": null,
-    "license": null,
-    "readiness_status": "Raw",
-    "formats": [
-      "Unknown"
-    ],
-    "description": "",
-    "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/KEN-LVB/items/MFL-2026-043.json",
-    "citation": null
-  },
-  {
     "id": "MFL-2026-044",
     "title": "District/Region boundaries",
     "country": "Côte d'Ivoire",
@@ -1249,7 +1193,7 @@
     "source": "National government (external)",
     "contact": "a.kouadio2@cgiar.org",
     "access_level": "Open",
-    "license": "CC-BY-4.0",
+    "license": "Restricted — GADM terms (academic/non-commercial use only, no redistribution)",
     "readiness_status": "Validated",
     "formats": [
       "Shapefile"
@@ -1289,7 +1233,7 @@
   },
   {
     "id": "MFL-2026-046",
-    "title": "Climate data",
+    "title": "Climate station data (NHMS synoptic stations)",
     "country": "Côte d'Ivoire",
     "living_landscape": "CIV-NZ",
     "landscape_name": "N'Zi Watershed",
@@ -1317,7 +1261,7 @@
   },
   {
     "id": "MFL-2026-048",
-    "title": "Soil dataset",
+    "title": "DSSAT soil profiles (global .SOL files)",
     "country": "Global",
     "living_landscape": "GLB",
     "landscape_name": "Global / cross-landscape",
@@ -1793,7 +1737,7 @@
   },
   {
     "id": "MFL-2026-066",
-    "title": "Soil dataset",
+    "title": "SoilGrids gridded soil information",
     "country": "Global",
     "living_landscape": "GLB",
     "landscape_name": "Global / cross-landscape",
@@ -1821,7 +1765,7 @@
   },
   {
     "id": "MFL-2026-067",
-    "title": "Climate data",
+    "title": "Gridded climate data (CHIRPS and AgERA5)",
     "country": "Côte d'Ivoire",
     "living_landscape": "CIV-NZ",
     "landscape_name": "N'Zi Watershed",

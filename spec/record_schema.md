@@ -28,14 +28,14 @@ page explains intent. If the two disagree, the JSON wins — and please fix this
 | 1 | `id` | yes | string, `^MFL-\d{4}-\d{3}$` | Must match filename stem. |
 | 2 | `title` | yes | non-empty string | |
 | 3 | `description` | | string \| null | Free text. Don't bury searchable facts here. |
-| 4 | `country` | | enum \| null | Cambodia, Colombia, Côte d'Ivoire, Ethiopia, Global, India, Kenya, Laos, Peru, Senegal, Tanzania, Tunisia, Vietnam, Zimbabwe — plus the regions **Africa**, **Asia**, **Latin America and the Caribbean** (added 2026-08-03, for datasets spanning many countries within one region; use `Global` only for worldwide scope). |
+| 4 | `country` | yes (since 2026-09-04) | enum | Cambodia, Colombia, Côte d'Ivoire, Ethiopia, Global, India, Kenya, Laos, Peru, Senegal, Tanzania, Tunisia, Vietnam, Zimbabwe — plus the regions **Africa**, **Asia**, **Latin America and the Caribbean** (added 2026-08-03, for datasets spanning many countries within one region; use `Global` only for worldwide scope). |
 | 5 | `living_landscape` | yes | enum | **Bare code**: CIV-NZ, COL-CUM, ETH-OG, IND-CH, KEN-LVB, KEN-LEI, MEK-3S, PER-PCL, SEN-FK, TUN-NW, ZWE-MB, NATIONAL, GLOBAL. *Not* the Excel `CODE — Name` string. |
 | 6 | `theme` | | enum \| null | The 13 MFL themes (see JSON). |
 | 7 | `data_type` | | enum \| null | Raster, Vector, Tabular, Mixed, Netcdf. |
 | 8 | `spatial_resolution` | | string \| null | Verbatim, messy by design ("30m", "5000", "Village level"). Pipeline flags non-numeric. |
 | 9 | `temporal_coverage` | | string \| null | Verbatim; pipeline parses years (R4). |
 | 10 | `source` | | string \| null | Source / Centre. |
-| 11 | `contact` | | string \| null | **Single "Name, email" cell** — keep as one string so the R1 extractors work unchanged. |
+| 11 | `contact` | yes (since 2026-09-04) | non-empty string | **Single "Name, email" cell** — keep as one string so the R1 extractors work unchanged. Required because a record nobody can be asked about cannot be maintained: two such records (016, 043) were moved to `records/_pending/` when this rule landed. |
 | 12 | `access_level` | | enum \| null | Open, Internal, Restricted. ("CGIAR-internal" was normalized to Internal at migration.) |
 | 13 | `license` | | string \| null | Original wording; SPDX mapping is a pipeline rule (R3). |
 | 14 | `processing_status` | | enum \| null | Raw, Processed, Validated. Null → readiness "Raw" + flag. |

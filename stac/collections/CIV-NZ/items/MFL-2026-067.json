@@ -40,7 +40,7 @@
     9.4333
   ],
   "properties": {
-    "title": "Climate data",
+    "title": "Gridded climate data (CHIRPS and AgERA5)",
     "description": "Gridded daily climate data from CHIRPS and ERA5 climate reanalysis",
     "datetime": null,
     "start_datetime": "1979-01-01T00:00:00Z",

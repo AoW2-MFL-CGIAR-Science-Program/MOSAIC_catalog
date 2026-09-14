@@ -101,13 +101,13 @@
       "rel": "item",
       "href": "./items/MFL-2026-046.json",
       "type": "application/json",
-      "title": "Climate data"
+      "title": "Climate station data (NHMS synoptic stations)"
     },
     {
       "rel": "item",
       "href": "./items/MFL-2026-067.json",
       "type": "application/json",
-      "title": "Climate data"
+      "title": "Gridded climate data (CHIRPS and AgERA5)"
     }
   ],
   "mosaic:landscape_system": "Sudan-Sahelian and Guinea Forest-Savanna Transition",

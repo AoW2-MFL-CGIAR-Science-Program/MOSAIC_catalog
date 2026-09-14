@@ -65,6 +65,7 @@
     ],
     "proj:code": null,
     "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
+    "mosaic:license_original": "Restricted — GADM terms (academic/non-commercial use only, no redistribution)",
     "contacts": [
       {
         "name": "dieyemohamadou@gmail.com",

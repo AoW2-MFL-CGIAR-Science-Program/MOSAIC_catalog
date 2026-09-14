@@ -50,14 +50,14 @@ stays reserved (never reuse IDs). Note the removal in the PR description.
 id: MFL-2026-070
 title: ""
 description: null
-country: null
+country: ""            # required (since 2026-09-04) — one of the enum values
 living_landscape: NATIONAL
 theme: null
 data_type: null
 spatial_resolution: null
 temporal_coverage: null
 source: null
-contact: null
+contact: ""            # required (since 2026-09-04) — "Name, email" in one string
 access_level: null
 license: null
 processing_status: null

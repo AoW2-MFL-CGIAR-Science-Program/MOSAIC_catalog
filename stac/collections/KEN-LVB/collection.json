@@ -7,7 +7,7 @@
   ],
   "id": "KEN-LVB",
   "title": "Lake Victoria Basin (Kenya)",
-  "description": "Datasets registered under the 'Lake Victoria Basin (Kenya)' Living Landscape (2 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the simplified boundary is published as this collection's 'boundary' asset. National-coverage member items can widen the extent beyond the boundary.",
+  "description": "Datasets registered under the 'Lake Victoria Basin (Kenya)' Living Landscape (1 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the simplified boundary is published as this collection's 'boundary' asset. National-coverage member items can widen the extent beyond the boundary.",
   "license": "other",
   "extent": {
     "spatial": {
@@ -30,8 +30,7 @@
     }
   },
   "keywords": [
-    "Decision-support outputs",
-    "Water / hydrology"
+    "Decision-support outputs"
   ],
   "providers": [
     {
@@ -46,8 +45,7 @@
       "Open"
     ],
     "mosaic:theme": [
-      "Decision-support outputs",
-      "Water / hydrology"
+      "Decision-support outputs"
     ]
   },
   "cgiar-cdh:geography": [
@@ -56,7 +54,7 @@
   "mosaic:living_landscape": "KEN-LVB",
   "mosaic:bbox_approximate": false,
   "mosaic:bbox_note": "Bbox derived from the canonical delineation shapefile (dissolved, EPSG:4326), union-ed with member-item locator boxes.",
-  "mosaic:item_count": 2,
+  "mosaic:item_count": 1,
   "links": [
     {
       "rel": "root",
@@ -72,12 +70,6 @@
       "rel": "self",
       "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/KEN-LVB/collection.json",
       "type": "application/json"
-    },
-    {
-      "rel": "item",
-      "href": "./items/MFL-2026-043.json",
-      "type": "application/json",
-      "title": "Rainfall trends"
     },
     {
       "rel": "item",

@@ -40,7 +40,7 @@
     9.4333
   ],
   "properties": {
-    "title": "Climate data",
+    "title": "Climate station data (NHMS synoptic stations)",
     "description": "Climate data from climate stations for three major cities in the watershed (coverage period varies depending on the station); climate data from M'Be research station",
     "datetime": null,
     "start_datetime": "2014-01-01T00:00:00Z",

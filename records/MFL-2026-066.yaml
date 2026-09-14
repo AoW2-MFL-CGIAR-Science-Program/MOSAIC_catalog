@@ -1,6 +1,6 @@
 # MOSAIC dataset record — schema: spec/record_schema.md (the build fails on invalid records)
 id: MFL-2026-066
-title: Soil dataset
+title: SoilGrids gridded soil information
 description: Soil data from SoilGrids
 country: Global
 living_landscape: GLOBAL
