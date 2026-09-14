@@ -1,6 +1,6 @@
 # How to send the data file for a dataset you already registered
 
-*A guide for MFL focal points and contributors — updated 2026-09-14.*
+*A guide for MFL focal points and contributors — updated 2026-09-14 (send everything you hold; intake is for quality control, not publication).*
 
 Your dataset is described in the MOSAIC catalog, but the file itself still sits
 on a personal Drive, OneDrive or laptop — so nobody else can actually open it.
@@ -51,19 +51,22 @@ account? See the note at the end of the next section.
 than a few GB**, or a folder that won't let you upload: reply to the email and we'll arrange
 another way.
 
-## Please don't send
+## What to send — and the one thing not to
 
-- **Anything not openly licensed.** If the dataset is Internal or Restricted,
-  keep the file — we record how someone requests access instead. If the access
-  level in the catalog is wrong, tell us and we'll correct the record.
-- **Datasets that already have a public URL or DOI.** Send the link, not the
-  file: duplicating a dataset that already has a home creates two versions that
-  drift apart. This includes anything from an external provider (NASA/USGS,
-  Copernicus, national statistics portals) — MOSAIC links to the source.
-- **Personal or sensitive data**: individual survey responses with identifiers,
-  or precise locations of threatened species or sacred sites. If a dataset needs
-  aggregating or blurring before it can be shared, send the aggregated version
-  and say what you did.
+**Send everything you hold** for your registered records — including datasets that already
+have a public link (we need the actual file to run quality control) and datasets marked
+Internal or Restricted (they stay internal; nothing is published without your say-so, and
+the catalogue record only ever says how to request access). Receiving a file is not
+publishing it: publication follows each record's access level and license, and a dataset
+that already has a durable public home is linked there, not re-hosted.
+
+**The one thing not to send: personal or sensitive data** — individual survey responses
+with identifiers, or precise locations of threatened species or sacred sites. If a dataset
+needs aggregating or blurring before it can be shared, send the aggregated version and say
+what you did.
+
+If a record is wrong — access level, license, link — a one-line correction by email is all
+we need.
 
 ## What happens next
 
