@@ -1,7 +1,27 @@
 # Records changelog — 2026-09-16
 
-Batch: 11 new Peru (Ucayali) records from Beatriz Rodríguez, and consolidation of
-the registry Excel into a single up-to-date workbook.
+Batch: 11 new Peru (Ucayali) records from Beatriz Rodríguez, consolidation of
+the registry Excel into a single up-to-date workbook, and (same day, second
+batch) one new Kenya record from an external copy of the old registry.
+
+## Second batch — MFL-2026-083 (Crop type map, Kenya)
+
+Source: an old external copy of the original registry
+(`MFL_Dataset_RegistryCG.xlsx`, received via Downloads) with one row added at
+the bottom: **Crop type map** — major crop type maps in Nandi county, Kenya;
+IFPRI; contact Zhe Guo; Raster, 10 m, 2023; Open, CGIAR Open Access, Validated;
+on OneDrive, no download URL. The other 69 rows of that copy were all already
+registered (four looked new but were the renamed AfricaRice pairs 046/067 and
+048/066).
+
+- **ID:** the copy's formula had labelled the row `MFL-2026-066` — already
+  taken by SoilGrids. Registered as **MFL-2026-083** (next free ID, verified
+  against `records/` AND `records/_pending/`).
+- **`living_landscape: KEN-LVB` is provisional** — the source row left it
+  empty; Nandi county sits in the Lake Victoria Basin area. Confirm with Zhe
+  Guo (also ask for the files or a URL). KEN-LVB goes from 1 to 2 datasets.
+- Mechanical: contact email lowercased (`Z.GUO@CGIAR.ORG` → `z.guo@cgiar.org`).
+- First IFPRI-owned dataset with a named owner (Zhang Wei is the focal point).
 
 ## New records — MFL-2026-072 … MFL-2026-082
 

@@ -7,7 +7,7 @@
   ],
   "id": "KEN-LVB",
   "title": "Lake Victoria Basin (Kenya)",
-  "description": "Datasets registered under the 'Lake Victoria Basin (Kenya)' Living Landscape (1 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the simplified boundary is published as this collection's 'boundary' asset. National-coverage member items can widen the extent beyond the boundary.",
+  "description": "Datasets registered under the 'Lake Victoria Basin (Kenya)' Living Landscape (2 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the simplified boundary is published as this collection's 'boundary' asset. National-coverage member items can widen the extent beyond the boundary.",
   "license": "other",
   "extent": {
     "spatial": {
@@ -30,11 +30,18 @@
     }
   },
   "keywords": [
-    "Decision-support outputs"
+    "Decision-support outputs",
+    "Ecosystem condition"
   ],
   "providers": [
     {
       "name": "Alliance Bioversity-CIAT",
+      "roles": [
+        "producer"
+      ]
+    },
+    {
+      "name": "IFPRI",
       "roles": [
         "producer"
       ]
@@ -45,7 +52,8 @@
       "Open"
     ],
     "mosaic:theme": [
-      "Decision-support outputs"
+      "Decision-support outputs",
+      "Ecosystem condition"
     ]
   },
   "cgiar-cdh:geography": [
@@ -54,7 +62,7 @@
   "mosaic:living_landscape": "KEN-LVB",
   "mosaic:bbox_approximate": false,
   "mosaic:bbox_note": "Bbox derived from the canonical delineation shapefile (dissolved, EPSG:4326), union-ed with member-item locator boxes.",
-  "mosaic:item_count": 1,
+  "mosaic:item_count": 2,
   "links": [
     {
       "rel": "root",
@@ -76,6 +84,12 @@
       "href": "./items/MFL-2026-064.json",
       "type": "application/json",
       "title": "Tree conservation and restoration priority areas"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-083.json",
+      "type": "application/json",
+      "title": "Crop type map"
     }
   ],
   "mosaic:landscape_system": "East-South Africa Highland-Lowland-Rift Valley System",

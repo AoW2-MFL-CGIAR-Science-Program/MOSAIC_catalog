@@ -2210,5 +2210,33 @@
     "download_url": "https://peru.mapbiomas.org/iniciativas-y-productos/fuego/mapeo-anual/",
     "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/PER-PCL/items/MFL-2026-082.json",
     "citation": null
+  },
+  {
+    "id": "MFL-2026-083",
+    "title": "Crop type map",
+    "country": "Kenya",
+    "living_landscape": "KEN-LVB",
+    "landscape_name": "Lake Victoria Basin (Kenya)",
+    "coverage": "landscape",
+    "centroid": [
+      34.5623,
+      0.0264
+    ],
+    "mfl_theme": "Ecosystem condition",
+    "data_type": "Raster",
+    "spatial_resolution": "10m",
+    "temporal_coverage": "2023",
+    "source": "IFPRI",
+    "contact": "z.guo@cgiar.org",
+    "access_level": "Open",
+    "license": "CGIAR Open Access",
+    "readiness_status": "Validated",
+    "formats": [
+      "GeoTIFF"
+    ],
+    "description": "Major crop type maps in Nandi county, Kenya",
+    "download_url": null,
+    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/KEN-LVB/items/MFL-2026-083.json",
+    "citation": null
   }
 ]
