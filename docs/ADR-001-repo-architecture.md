@@ -154,7 +154,7 @@ jobs:
 **Step 5 — Sync `datasets.json` into the frontend (the routine hand-off).** After each regeneration:
 ```bash
 cp MOSAIC_catalog/datasets.json \
-   MOSAIC_frontend/mfl-living-landscapes-frontend/frontend/data/datasets.json
+   MOSAIC_frontend/frontend/data/datasets.json
 # in the frontend repo:
 git add frontend/data/datasets.json
 git commit -m "Update datasets.json from MOSAIC catalog regeneration"

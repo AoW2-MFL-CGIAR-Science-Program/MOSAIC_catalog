@@ -51,7 +51,6 @@ DATASETS_JSON = HERE / "datasets.json"
 DEFAULT_FRONTEND_DATASETS = (
     HERE.parent
     / "MOSAIC_frontend"
-    / "mfl-living-landscapes-frontend"
     / "frontend"
     / "data"
     / "datasets.json"
