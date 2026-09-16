@@ -125,7 +125,9 @@ def main() -> int:
     for name, (rng, col) in VALIDATIONS.items():
         if name not in existing:
             wb.defined_names.add(DefinedName(name, attr_text=f"Reference!{rng}"))
-        dv = DataValidation(type="list", formula1=f"={name}", allow_blank=True)
+        # OOXML stores validation formulas WITHOUT a leading "=" — with it,
+        # Excel reports the workbook as corrupted and strips the validations.
+        dv = DataValidation(type="list", formula1=name, allow_blank=True)
         letter = ws.cell(3, col).column_letter
         dv.add(f"{letter}3:{letter}200")
         ws.add_data_validation(dv)
