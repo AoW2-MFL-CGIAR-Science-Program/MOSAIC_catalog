@@ -1902,5 +1902,313 @@
     "download_url": "https://doi.org/10.7910/DVN/L86VZ9",
     "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/GLB/items/MFL-2026-071.json",
     "citation": "Burkart, Stefan; Sandoval, Danny; Junca Paredes, John Jairo, 2026, \"Urochloa hybrid adoption in Latin America and the Caribbean 2001-2024: An analysis of the land use, social, economic, and environmental impacts in 27 countries\", https://doi.org/10.7910/DVN/L86VZ9, Harvard Dataverse, V1"
+  },
+  {
+    "id": "MFL-2026-072",
+    "title": "Provinces and Districts",
+    "country": "Peru",
+    "living_landscape": "PER-PCL",
+    "landscape_name": "Pucallpa - Ucayali",
+    "coverage": "landscape",
+    "centroid": [
+      -75.2342,
+      -8.635
+    ],
+    "mfl_theme": "Boundaries / admin units",
+    "data_type": "Vector",
+    "spatial_resolution": "Admin level 2 and 3",
+    "temporal_coverage": "Current boundaries",
+    "source": "Alliance Bioversity-CIAT",
+    "contact": "b.rodriguez@cgiar.org",
+    "access_level": "Open",
+    "license": "Other (specify in notes)",
+    "readiness_status": "Processed",
+    "formats": [
+      "Shapefile"
+    ],
+    "description": "Administrative boundaries for Ucayali, Peru",
+    "download_url": "https://www.datosabiertos.gob.pe/dataset/limites-departamentales",
+    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/PER-PCL/items/MFL-2026-072.json",
+    "citation": null
+  },
+  {
+    "id": "MFL-2026-073",
+    "title": "National Protected Natural Areas",
+    "country": "Peru",
+    "living_landscape": "PER-PCL",
+    "landscape_name": "Pucallpa - Ucayali",
+    "coverage": "landscape",
+    "centroid": [
+      -75.2342,
+      -8.635
+    ],
+    "mfl_theme": "Boundaries / admin units",
+    "data_type": "Vector",
+    "spatial_resolution": "Boundary level",
+    "temporal_coverage": "Current",
+    "source": "Alliance Bioversity-CIAT",
+    "contact": "b.rodriguez@cgiar.org",
+    "access_level": "Open",
+    "license": "Other (specify in notes)",
+    "readiness_status": "Processed",
+    "formats": [
+      "Shapefile"
+    ],
+    "description": "National Protected Natural Areas clipped to  Ucayali",
+    "download_url": "https://geo.sernanp.gob.pe/visorsernanp/",
+    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/PER-PCL/items/MFL-2026-073.json",
+    "citation": null
+  },
+  {
+    "id": "MFL-2026-074",
+    "title": "Regional Conservation Areas",
+    "country": "Peru",
+    "living_landscape": "PER-PCL",
+    "landscape_name": "Pucallpa - Ucayali",
+    "coverage": "landscape",
+    "centroid": [
+      -75.2342,
+      -8.635
+    ],
+    "mfl_theme": "Boundaries / admin units",
+    "data_type": "Vector",
+    "spatial_resolution": "Boundary level",
+    "temporal_coverage": "Current",
+    "source": "Alliance Bioversity-CIAT",
+    "contact": "b.rodriguez@cgiar.org",
+    "access_level": "Open",
+    "license": "Other (specify in notes)",
+    "readiness_status": "Processed",
+    "formats": [
+      "Shapefile"
+    ],
+    "description": "Regional Conservation Areas clipped to Ucayali",
+    "download_url": "https://geo.sernanp.gob.pe/visorsernanp/",
+    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/PER-PCL/items/MFL-2026-074.json",
+    "citation": null
+  },
+  {
+    "id": "MFL-2026-075",
+    "title": "Indigenous Territories",
+    "country": "Peru",
+    "living_landscape": "PER-PCL",
+    "landscape_name": "Pucallpa - Ucayali",
+    "coverage": "landscape",
+    "centroid": [
+      -75.2342,
+      -8.635
+    ],
+    "mfl_theme": "Boundaries / admin units",
+    "data_type": "Vector",
+    "spatial_resolution": "Boundary level",
+    "temporal_coverage": "2025",
+    "source": "Alliance Bioversity-CIAT",
+    "contact": "b.rodriguez@cgiar.org",
+    "access_level": "Open",
+    "license": "Other (specify in notes)",
+    "readiness_status": "Processed",
+    "formats": [
+      "Shapefile"
+    ],
+    "description": "Indigenous Territories clipped to Ucayali",
+    "download_url": "https://www.raisg.org/es/mapas/",
+    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/PER-PCL/items/MFL-2026-075.json",
+    "citation": null
+  },
+  {
+    "id": "MFL-2026-076",
+    "title": "National Ecosystem Map",
+    "country": "Peru",
+    "living_landscape": "PER-PCL",
+    "landscape_name": "Pucallpa - Ucayali",
+    "coverage": "landscape",
+    "centroid": [
+      -75.2342,
+      -8.635
+    ],
+    "mfl_theme": "Biodiversity / ecosystems",
+    "data_type": "Vector",
+    "spatial_resolution": null,
+    "temporal_coverage": "2018",
+    "source": "Alliance Bioversity-CIAT",
+    "contact": "b.rodriguez@cgiar.org",
+    "access_level": "Open",
+    "license": "Other (specify in notes)",
+    "readiness_status": "Processed",
+    "formats": [
+      "Shapefile"
+    ],
+    "description": "Spatial distribution and classification of ecosystem within Ucayali department, derived from Peru´s National Ecosystem Map 2018, and aggregated by adminstrative provinces and districts level",
+    "download_url": "https://geoservidor.minam.gob.pe/recursos/intercambio-de-datos/",
+    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/PER-PCL/items/MFL-2026-076.json",
+    "citation": null
+  },
+  {
+    "id": "MFL-2026-077",
+    "title": "Human Footprint map",
+    "country": "Peru",
+    "living_landscape": "PER-PCL",
+    "landscape_name": "Pucallpa - Ucayali",
+    "coverage": "landscape",
+    "centroid": [
+      -75.2342,
+      -8.635
+    ],
+    "mfl_theme": "Pressures / drivers",
+    "data_type": "Vector",
+    "spatial_resolution": null,
+    "temporal_coverage": "2012, 2015, 2018, 2021",
+    "source": "Alliance Bioversity-CIAT",
+    "contact": "b.rodriguez@cgiar.org",
+    "access_level": "Open",
+    "license": "Other (specify in notes)",
+    "readiness_status": "Processed",
+    "formats": [
+      "Shapefile"
+    ],
+    "description": "Human footprint areas >4 in the Ucayali department for 2012, 2015, 2018, and 2021, derived from Peru´s Human Footprint map. The original raster data was converted to vector polygons and aggregated by adminstrative provinces and districts level",
+    "download_url": "https://geoservidor.minam.gob.pe/recursos/intercambio-de-datos/",
+    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/PER-PCL/items/MFL-2026-077.json",
+    "citation": null
+  },
+  {
+    "id": "MFL-2026-078",
+    "title": "Physical Vulnerability map",
+    "country": "Peru",
+    "living_landscape": "PER-PCL",
+    "landscape_name": "Pucallpa - Ucayali",
+    "coverage": "landscape",
+    "centroid": [
+      -75.2342,
+      -8.635
+    ],
+    "mfl_theme": "Pressures / drivers",
+    "data_type": "Vector",
+    "spatial_resolution": null,
+    "temporal_coverage": "2011",
+    "source": "Alliance Bioversity-CIAT",
+    "contact": "b.rodriguez@cgiar.org",
+    "access_level": "Open",
+    "license": "Other (specify in notes)",
+    "readiness_status": "Processed",
+    "formats": [
+      "Shapefile"
+    ],
+    "description": "Spatial distribution of physical vulnerability levels within the Ucayali department, derived from Peru’s National Physical Vulnerability map 2011, and aggregated by administrative provinces and districts level",
+    "download_url": "https://geoservidor.minam.gob.pe/recursos/intercambio-de-datos/",
+    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/PER-PCL/items/MFL-2026-078.json",
+    "citation": null
+  },
+  {
+    "id": "MFL-2026-079",
+    "title": "Forest/Non-forest 2000/Forest loss 2001-2024",
+    "country": "Peru",
+    "living_landscape": "PER-PCL",
+    "landscape_name": "Pucallpa - Ucayali",
+    "coverage": "landscape",
+    "centroid": [
+      -75.2342,
+      -8.635
+    ],
+    "mfl_theme": "Pressures / drivers",
+    "data_type": "Vector",
+    "spatial_resolution": null,
+    "temporal_coverage": "2000-2024",
+    "source": "Alliance Bioversity-CIAT",
+    "contact": "b.rodriguez@cgiar.org",
+    "access_level": "Open",
+    "license": "Other (specify in notes)",
+    "readiness_status": "Processed",
+    "formats": [
+      "Shapefile"
+    ],
+    "description": "Forest/non-forest baseline for 2000 and annual forest loss from 2001 to 2024 in Ucayali, derived from MINAM’s GEOBOSQUES forest monitoring dataset and spatially aggregated by provinces and districts.",
+    "download_url": "https://geobosques.minam.gob.pe/geobosque/view/descargas.php?122345gxxe345w34gg#download",
+    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/PER-PCL/items/MFL-2026-079.json",
+    "citation": null
+  },
+  {
+    "id": "MFL-2026-080",
+    "title": "Annual deforestation",
+    "country": "Peru",
+    "living_landscape": "PER-PCL",
+    "landscape_name": "Pucallpa - Ucayali",
+    "coverage": "landscape",
+    "centroid": [
+      -75.2342,
+      -8.635
+    ],
+    "mfl_theme": "Pressures / drivers",
+    "data_type": "Vector",
+    "spatial_resolution": null,
+    "temporal_coverage": "2001-2024",
+    "source": "Alliance Bioversity-CIAT",
+    "contact": "b.rodriguez@cgiar.org",
+    "access_level": "Open",
+    "license": "Other (specify in notes)",
+    "readiness_status": "Processed",
+    "formats": [
+      "Shapefile"
+    ],
+    "description": "Annual forest loss from 2001-2025 in Ucayali, derived from MINAM’s GEOBOSQUES forest monitoring dataset and spatially aggregated by provinces and districts",
+    "download_url": "https://geobosques.minam.gob.pe/geobosque/view/descargas.php?122345gxxe345w34gg#download",
+    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/PER-PCL/items/MFL-2026-080.json",
+    "citation": null
+  },
+  {
+    "id": "MFL-2026-081",
+    "title": "Land Cover and Land Use",
+    "country": "Peru",
+    "living_landscape": "PER-PCL",
+    "landscape_name": "Pucallpa - Ucayali",
+    "coverage": "landscape",
+    "centroid": [
+      -75.2342,
+      -8.635
+    ],
+    "mfl_theme": "Land cover / land use",
+    "data_type": "Vector",
+    "spatial_resolution": "30 m (original dataset)",
+    "temporal_coverage": "2000, 2005, 2010, 2015, 2020, 2024",
+    "source": "Alliance Bioversity-CIAT",
+    "contact": "b.rodriguez@cgiar.org",
+    "access_level": "Open",
+    "license": "Other (specify in notes)",
+    "readiness_status": "Processed",
+    "formats": [
+      "Shapefile"
+    ],
+    "description": "Land cover and land-use classification within the Ucayali department for 2000, 2005, 2010, 2015, 2020 and 2024, derived from Mapbiomas Peru Collection 4. The original raster data was converted to vector polygons and aggregated by administrative provinces and districts level",
+    "download_url": "https://peru.mapbiomas.org/iniciativas-y-productos/cobertura-y-uso-del-suelo/cobertura/",
+    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/PER-PCL/items/MFL-2026-081.json",
+    "citation": null
+  },
+  {
+    "id": "MFL-2026-082",
+    "title": "Annual Burned Area",
+    "country": "Peru",
+    "living_landscape": "PER-PCL",
+    "landscape_name": "Pucallpa - Ucayali",
+    "coverage": "landscape",
+    "centroid": [
+      -75.2342,
+      -8.635
+    ],
+    "mfl_theme": "Pressures / drivers",
+    "data_type": "Vector",
+    "spatial_resolution": "30 m (original dataset)",
+    "temporal_coverage": "2013-2024",
+    "source": "Alliance Bioversity-CIAT",
+    "contact": "b.rodriguez@cgiar.org",
+    "access_level": "Open",
+    "license": "Other (specify in notes)",
+    "readiness_status": "Processed",
+    "formats": [
+      "Shapefile"
+    ],
+    "description": "Cumulative Burned Area during 2013–2024 within the Ucayali department, derived from Mapbiomas Peru Collection 1. The original raster data was converted to vector polygons and aggregated by administrative provinces and districts level",
+    "download_url": "https://peru.mapbiomas.org/iniciativas-y-productos/fuego/mapeo-anual/",
+    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/PER-PCL/items/MFL-2026-082.json",
+    "citation": null
   }
 ]

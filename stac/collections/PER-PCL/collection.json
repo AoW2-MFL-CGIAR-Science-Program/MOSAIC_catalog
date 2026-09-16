@@ -7,7 +7,7 @@
   ],
   "id": "PER-PCL",
   "title": "Pucallpa - Ucayali",
-  "description": "Datasets registered under the 'Pucallpa - Ucayali' Living Landscape (1 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the simplified boundary is published as this collection's 'boundary' asset. National-coverage member items can widen the extent beyond the boundary. NOTE: this landscape's name and delineation are PENDING CONFIRMATION with the country team.",
+  "description": "Datasets registered under the 'Pucallpa - Ucayali' Living Landscape (12 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the simplified boundary is published as this collection's 'boundary' asset. National-coverage member items can widen the extent beyond the boundary. NOTE: this landscape's name and delineation are PENDING CONFIRMATION with the country team.",
   "license": "other",
   "extent": {
     "spatial": {
@@ -23,16 +23,26 @@
     "temporal": {
       "interval": [
         [
-          "2025-01-01T00:00:00Z",
+          "2000-01-01T00:00:00Z",
           "2025-12-31T23:59:59Z"
         ]
       ]
     }
   },
   "keywords": [
-    "Agrobiodiversity / crops"
+    "Agrobiodiversity / crops",
+    "Biodiversity / ecosystems",
+    "Boundaries / admin units",
+    "Land cover / land use",
+    "Pressures / drivers"
   ],
   "providers": [
+    {
+      "name": "Alliance Bioversity-CIAT",
+      "roles": [
+        "producer"
+      ]
+    },
     {
       "name": "CIP",
       "roles": [
@@ -42,10 +52,15 @@
   ],
   "summaries": {
     "mosaic:access_level": [
-      "Internal"
+      "Internal",
+      "Open"
     ],
     "mosaic:theme": [
-      "Agrobiodiversity / crops"
+      "Agrobiodiversity / crops",
+      "Biodiversity / ecosystems",
+      "Boundaries / admin units",
+      "Land cover / land use",
+      "Pressures / drivers"
     ]
   },
   "cgiar-cdh:geography": [
@@ -54,7 +69,7 @@
   "mosaic:living_landscape": "PER-PCL",
   "mosaic:bbox_approximate": false,
   "mosaic:bbox_note": "Bbox derived from the canonical delineation shapefile (dissolved, EPSG:4326), union-ed with member-item locator boxes.",
-  "mosaic:item_count": 1,
+  "mosaic:item_count": 12,
   "links": [
     {
       "rel": "root",
@@ -76,6 +91,72 @@
       "href": "./items/MFL-2026-055.json",
       "type": "application/json",
       "title": "Crop fields (2025) - focus on NUS crops"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-072.json",
+      "type": "application/json",
+      "title": "Provinces and Districts"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-073.json",
+      "type": "application/json",
+      "title": "National Protected Natural Areas"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-074.json",
+      "type": "application/json",
+      "title": "Regional Conservation Areas"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-075.json",
+      "type": "application/json",
+      "title": "Indigenous Territories"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-076.json",
+      "type": "application/json",
+      "title": "National Ecosystem Map"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-077.json",
+      "type": "application/json",
+      "title": "Human Footprint map"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-078.json",
+      "type": "application/json",
+      "title": "Physical Vulnerability map"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-079.json",
+      "type": "application/json",
+      "title": "Forest/Non-forest 2000/Forest loss 2001-2024"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-080.json",
+      "type": "application/json",
+      "title": "Annual deforestation"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-081.json",
+      "type": "application/json",
+      "title": "Land Cover and Land Use"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-082.json",
+      "type": "application/json",
+      "title": "Annual Burned Area"
     }
   ],
   "mosaic:landscape_system": "Amazon",

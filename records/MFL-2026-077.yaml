@@ -1,0 +1,26 @@
+# MOSAIC dataset record — schema: spec/record_schema.md (the build fails on invalid records)
+id: MFL-2026-077
+title: Human Footprint map
+description: Human footprint areas >4 in the Ucayali department for 2012, 2015, 2018, and 2021, derived
+  from Peru´s Human Footprint map. The original raster data was converted to vector polygons and aggregated
+  by adminstrative provinces and districts level
+country: Peru
+living_landscape: PER-PCL
+theme: Pressures / drivers
+data_type: Vector
+spatial_resolution: null
+temporal_coverage: 2012, 2015, 2018, 2021
+source: Alliance Bioversity-CIAT
+contact: Beatriz Rodríguez (b.rodriguez@cgiar.org)
+access_level: Open
+license: Other (specify in notes)
+processing_status: Processed
+file_names: null
+current_location: One Drive
+migration_status: null
+server_path: null
+date_registered: '2026-09-15'
+last_updated: NA
+update_frequency: Unknown
+download_url: https://geoservidor.minam.gob.pe/recursos/intercambio-de-datos/
+file_size: null

@@ -3,7 +3,6 @@ __pycache__/
 .DS_Store
 .venv/
 _site/
-MFL_Dataset_Registry 21jul.xlsx
 MOSAIC_Catalog_Gap_Analysis.*
 
 # Internal working documents (discussions, plans, assessments) stay out of git.

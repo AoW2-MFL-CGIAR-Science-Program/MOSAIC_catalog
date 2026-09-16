@@ -1,0 +1,24 @@
+# MOSAIC dataset record — schema: spec/record_schema.md (the build fails on invalid records)
+id: MFL-2026-072
+title: Provinces and Districts
+description: Administrative boundaries for Ucayali, Peru
+country: Peru
+living_landscape: PER-PCL
+theme: Boundaries / admin units
+data_type: Vector
+spatial_resolution: Admin level 2 and 3
+temporal_coverage: Current boundaries
+source: Alliance Bioversity-CIAT
+contact: Beatriz Rodríguez (b.rodriguez@cgiar.org)
+access_level: Open
+license: Other (specify in notes)
+processing_status: Processed
+file_names: null
+current_location: One Drive
+migration_status: null
+server_path: null
+date_registered: '2026-09-15'
+last_updated: NA
+update_frequency: Unknown
+download_url: https://www.datosabiertos.gob.pe/dataset/limites-departamentales
+file_size: null
