@@ -12,3 +12,4 @@ _internal/
 /*.docx
 /*.xlsx
 MOSAIC_CDH_Interoperability_STAC_Assessment_202606.md
+catalog/*_LOCKED_*.xlsx
