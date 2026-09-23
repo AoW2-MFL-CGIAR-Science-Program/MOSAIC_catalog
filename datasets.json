@@ -1921,7 +1921,7 @@
     "source": "Alliance Bioversity-CIAT",
     "contact": "b.rodriguez@cgiar.org",
     "access_level": "Open",
-    "license": "Other (specify in notes)",
+    "license": "Free download from the Peruvian government source (MINAM/GEOBOSQUES, SERNANP, INEI); no formal license stated",
     "readiness_status": "Processed",
     "formats": [
       "Shapefile"
@@ -1949,7 +1949,7 @@
     "source": "Alliance Bioversity-CIAT",
     "contact": "b.rodriguez@cgiar.org",
     "access_level": "Open",
-    "license": "Other (specify in notes)",
+    "license": "Free download from the Peruvian government source (MINAM/GEOBOSQUES, SERNANP, INEI); no formal license stated",
     "readiness_status": "Processed",
     "formats": [
       "Shapefile"
@@ -1977,7 +1977,7 @@
     "source": "Alliance Bioversity-CIAT",
     "contact": "b.rodriguez@cgiar.org",
     "access_level": "Open",
-    "license": "Other (specify in notes)",
+    "license": "Free download from the Peruvian government source (MINAM/GEOBOSQUES, SERNANP, INEI); no formal license stated",
     "readiness_status": "Processed",
     "formats": [
       "Shapefile"
@@ -2005,7 +2005,7 @@
     "source": "Alliance Bioversity-CIAT",
     "contact": "b.rodriguez@cgiar.org",
     "access_level": "Open",
-    "license": "Other (specify in notes)",
+    "license": "Free download from RAISG; no formal license stated",
     "readiness_status": "Processed",
     "formats": [
       "Shapefile"
@@ -2033,7 +2033,7 @@
     "source": "Alliance Bioversity-CIAT",
     "contact": "b.rodriguez@cgiar.org",
     "access_level": "Open",
-    "license": "Other (specify in notes)",
+    "license": "Free download from the Peruvian government source (MINAM/GEOBOSQUES, SERNANP, INEI); no formal license stated",
     "readiness_status": "Processed",
     "formats": [
       "Shapefile"
@@ -2061,7 +2061,7 @@
     "source": "Alliance Bioversity-CIAT",
     "contact": "b.rodriguez@cgiar.org",
     "access_level": "Open",
-    "license": "Other (specify in notes)",
+    "license": "Free download from the Peruvian government source (MINAM/GEOBOSQUES, SERNANP, INEI); no formal license stated",
     "readiness_status": "Processed",
     "formats": [
       "Shapefile"
@@ -2089,7 +2089,7 @@
     "source": "Alliance Bioversity-CIAT",
     "contact": "b.rodriguez@cgiar.org",
     "access_level": "Open",
-    "license": "Other (specify in notes)",
+    "license": "Free download from the Peruvian government source (MINAM/GEOBOSQUES, SERNANP, INEI); no formal license stated",
     "readiness_status": "Processed",
     "formats": [
       "Shapefile"
@@ -2117,7 +2117,7 @@
     "source": "Alliance Bioversity-CIAT",
     "contact": "b.rodriguez@cgiar.org",
     "access_level": "Open",
-    "license": "Other (specify in notes)",
+    "license": "Free download from the Peruvian government source (MINAM/GEOBOSQUES, SERNANP, INEI); no formal license stated",
     "readiness_status": "Processed",
     "formats": [
       "Shapefile"
@@ -2145,12 +2145,12 @@
     "source": "Alliance Bioversity-CIAT",
     "contact": "b.rodriguez@cgiar.org",
     "access_level": "Open",
-    "license": "Other (specify in notes)",
+    "license": "Free download from the Peruvian government source (MINAM/GEOBOSQUES, SERNANP, INEI); no formal license stated",
     "readiness_status": "Processed",
     "formats": [
       "Shapefile"
     ],
-    "description": "Annual forest loss from 2001-2025 in Ucayali, derived from MINAM’s GEOBOSQUES forest monitoring dataset and spatially aggregated by provinces and districts",
+    "description": "Annual forest loss from 2001-2024 in Ucayali, derived from MINAM’s GEOBOSQUES forest monitoring dataset and spatially aggregated by provinces and districts. The 2025 update published at source is not yet included in this layer.",
     "download_url": "https://geobosques.minam.gob.pe/geobosque/view/descargas.php?122345gxxe345w34gg#download",
     "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/PER-PCL/items/MFL-2026-080.json",
     "citation": null
@@ -2173,7 +2173,7 @@
     "source": "Alliance Bioversity-CIAT",
     "contact": "b.rodriguez@cgiar.org",
     "access_level": "Open",
-    "license": "Other (specify in notes)",
+    "license": "CC-BY-4.0",
     "readiness_status": "Processed",
     "formats": [
       "Shapefile"
@@ -2185,7 +2185,7 @@
   },
   {
     "id": "MFL-2026-082",
-    "title": "Annual Burned Area",
+    "title": "Accumulated Burned Area 2013-2024",
     "country": "Peru",
     "living_landscape": "PER-PCL",
     "landscape_name": "Pucallpa - Ucayali",
@@ -2201,7 +2201,7 @@
     "source": "Alliance Bioversity-CIAT",
     "contact": "b.rodriguez@cgiar.org",
     "access_level": "Open",
-    "license": "Other (specify in notes)",
+    "license": "CC-BY-4.0",
     "readiness_status": "Processed",
     "formats": [
       "Shapefile"

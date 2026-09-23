@@ -156,7 +156,7 @@
       "rel": "item",
       "href": "./items/MFL-2026-082.json",
       "type": "application/json",
-      "title": "Annual Burned Area"
+      "title": "Accumulated Burned Area 2013-2024"
     }
   ],
   "mosaic:landscape_system": "Amazon",

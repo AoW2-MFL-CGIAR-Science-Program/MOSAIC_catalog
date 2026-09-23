@@ -41,7 +41,7 @@
   ],
   "properties": {
     "title": "Annual deforestation",
-    "description": "Annual forest loss from 2001-2025 in Ucayali, derived from MINAM’s GEOBOSQUES forest monitoring dataset and spatially aggregated by provinces and districts",
+    "description": "Annual forest loss from 2001-2024 in Ucayali, derived from MINAM’s GEOBOSQUES forest monitoring dataset and spatially aggregated by provinces and districts. The 2025 update published at source is not yet included in this layer.",
     "datetime": null,
     "start_datetime": "2001-01-01T00:00:00Z",
     "end_datetime": "2024-12-31T23:59:59Z",
@@ -65,7 +65,7 @@
     ],
     "proj:code": null,
     "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
-    "mosaic:license_original": "Other (specify in notes)",
+    "mosaic:license_original": "Free download from the Peruvian government source (MINAM/GEOBOSQUES, SERNANP, INEI); no formal license stated",
     "contacts": [
       {
         "name": "Beatriz Rodríguez",

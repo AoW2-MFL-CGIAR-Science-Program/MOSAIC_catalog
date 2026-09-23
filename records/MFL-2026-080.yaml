@@ -1,8 +1,9 @@
 # MOSAIC dataset record — schema: spec/record_schema.md (the build fails on invalid records)
 id: MFL-2026-080
 title: Annual deforestation
-description: Annual forest loss from 2001-2025 in Ucayali, derived from MINAM’s GEOBOSQUES forest monitoring
-  dataset and spatially aggregated by provinces and districts
+description: Annual forest loss from 2001-2024 in Ucayali, derived from MINAM’s GEOBOSQUES forest monitoring
+  dataset and spatially aggregated by provinces and districts. The 2025 update published at source is not
+  yet included in this layer.
 country: Peru
 living_landscape: PER-PCL
 theme: Pressures / drivers
@@ -12,7 +13,7 @@ temporal_coverage: 2001-2024
 source: Alliance Bioversity-CIAT
 contact: Beatriz Rodríguez (b.rodriguez@cgiar.org)
 access_level: Open
-license: Other (specify in notes)
+license: Free download from the Peruvian government source (MINAM/GEOBOSQUES, SERNANP, INEI); no formal license stated
 processing_status: Processed
 file_names: null
 current_location: One Drive

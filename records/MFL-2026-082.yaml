@@ -1,6 +1,6 @@
 # MOSAIC dataset record — schema: spec/record_schema.md (the build fails on invalid records)
 id: MFL-2026-082
-title: Annual Burned Area
+title: Accumulated Burned Area 2013-2024
 description: Cumulative Burned Area during 2013–2024 within the Ucayali department, derived from Mapbiomas
   Peru Collection 1. The original raster data was converted to vector polygons and aggregated by administrative
   provinces and districts level
@@ -13,7 +13,7 @@ temporal_coverage: 2013-2024
 source: Alliance Bioversity-CIAT
 contact: Beatriz Rodríguez (b.rodriguez@cgiar.org)
 access_level: Open
-license: Other (specify in notes)
+license: CC BY 4.0
 processing_status: Processed
 file_names: null
 current_location: One Drive
