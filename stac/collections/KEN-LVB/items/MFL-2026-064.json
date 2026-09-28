@@ -102,7 +102,7 @@
     },
     {
       "rel": "self",
-      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/KEN-LVB/items/MFL-2026-064.json",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/KEN-LVB/items/MFL-2026-064.json",
       "type": "application/json"
     },
     {
@@ -112,7 +112,7 @@
     },
     {
       "rel": "related",
-      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/KEN-LEI/collection.json",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/KEN-LEI/collection.json",
       "type": "application/json",
       "title": "Also covers: LEILA (Southern Kenya Rangelands) (national-coverage dataset)"
     }

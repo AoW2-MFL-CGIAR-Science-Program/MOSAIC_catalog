@@ -71,7 +71,7 @@
     },
     {
       "rel": "self",
-      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/GLB/collection.json",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/GLB/collection.json",
       "type": "application/json"
     },
     {

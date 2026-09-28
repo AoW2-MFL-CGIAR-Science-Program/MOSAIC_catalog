@@ -89,7 +89,7 @@
     },
     {
       "rel": "self",
-      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/ETH-OG/collection.json",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/ETH-OG/collection.json",
       "type": "application/json"
     },
     {
@@ -141,7 +141,7 @@
   ],
   "assets": {
     "boundary": {
-      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/boundaries/ETH-OG.geojson",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/boundaries/ETH-OG.geojson",
       "type": "application/geo+json",
       "title": "Landscape boundary (canonical delineation, simplified, EPSG:4326)",
       "roles": [

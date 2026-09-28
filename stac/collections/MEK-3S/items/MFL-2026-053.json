@@ -101,7 +101,7 @@
     },
     {
       "rel": "self",
-      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/MEK-3S/items/MFL-2026-053.json",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/MEK-3S/items/MFL-2026-053.json",
       "type": "application/json"
     }
   ],

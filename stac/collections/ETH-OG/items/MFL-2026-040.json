@@ -98,7 +98,7 @@
     },
     {
       "rel": "self",
-      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/ETH-OG/items/MFL-2026-040.json",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/ETH-OG/items/MFL-2026-040.json",
       "type": "application/json"
     }
   ],

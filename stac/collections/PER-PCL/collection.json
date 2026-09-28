@@ -83,7 +83,7 @@
     },
     {
       "rel": "self",
-      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/PER-PCL/collection.json",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/PER-PCL/collection.json",
       "type": "application/json"
     },
     {
@@ -166,7 +166,7 @@
   "mosaic:pending_confirmation": true,
   "assets": {
     "boundary": {
-      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/boundaries/PER-PCL.geojson",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/boundaries/PER-PCL.geojson",
       "type": "application/geo+json",
       "title": "Landscape boundary (canonical delineation, simplified, EPSG:4326)",
       "roles": [

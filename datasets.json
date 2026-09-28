@@ -24,7 +24,7 @@
     ],
     "description": "MFL LL boundary",
     "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/IND-CH/items/MFL-2026-000.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/IND-CH/items/MFL-2026-000.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -53,7 +53,7 @@
     ],
     "description": "Related data set: Sentinel 2. Landsat 7, Landsat 8\nMethod: Hierarchical classification approach.",
     "download_url": "https://drive.google.com/file/d/1CPV03S47s0asEJqdAozbNOT1lkgr0YkG/view?usp=sharing",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/IND-CH/items/MFL-2026-001.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/IND-CH/items/MFL-2026-001.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -82,7 +82,7 @@
     ],
     "description": "Rainfall data",
     "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/IND-CH/items/MFL-2026-002.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/IND-CH/items/MFL-2026-002.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -111,7 +111,7 @@
     ],
     "description": "Rainfall data",
     "download_url": "https://imdpune.gov.in/cmpg/Griddata/Rainfall_25_NetCDF.html",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/IND-CH/items/MFL-2026-003.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/IND-CH/items/MFL-2026-003.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -140,7 +140,7 @@
     ],
     "description": "Village level socio-economic inftrastructure data",
     "download_url": "https://missionantyodaya.dord.gov.in/",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/IND-CH/items/MFL-2026-004.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/IND-CH/items/MFL-2026-004.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -169,7 +169,7 @@
     ],
     "description": "Village level agriculture and environmental infrastructure data",
     "download_url": "https://missionantyodaya.dord.gov.in/",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/IND-CH/items/MFL-2026-005.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/IND-CH/items/MFL-2026-005.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -198,7 +198,7 @@
     ],
     "description": "Water footprints, Water productivity - Physical, economic, and Nutritional",
     "download_url": "https://indiawpatlas.shinyapps.io/wpatlas/#/trends",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/IND-CH/items/MFL-2026-006.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/IND-CH/items/MFL-2026-006.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -227,7 +227,7 @@
     ],
     "description": "District-level solar irrigation suitability map.",
     "download_url": "https://solaready.iwmi.org/india/",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/IND-CH/items/MFL-2026-007.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/IND-CH/items/MFL-2026-007.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -256,7 +256,7 @@
     ],
     "description": "District level crop area, production and yield.",
     "download_url": "https://www.data.gov.in/catalog/average-yield-principal-crops",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/IND-CH/items/MFL-2026-008.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/IND-CH/items/MFL-2026-008.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -285,7 +285,7 @@
     ],
     "description": "District level livestock population data",
     "download_url": "https://www.data.gov.in/resource/district-wise-details-livestock-population-madhya-pradesh-20th-livestock-census-2019",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/IND-CH/items/MFL-2026-009.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/IND-CH/items/MFL-2026-009.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -314,7 +314,7 @@
     ],
     "description": "Village level soil health status",
     "download_url": "https://soilhealth.dac.gov.in/legacy-maps/Cycle_II/MADHYA%20PRADESH/23/MANDLA/415",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/IND-CH/items/MFL-2026-010.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/IND-CH/items/MFL-2026-010.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -343,7 +343,7 @@
     ],
     "description": "Assessment of landscape health (Rainfall trends, water bodies, vegetation heath, infrastructure changes, carbon stocks) using various remote sensing indices (such as NDVI, NDBI, CVI, NDRE, FAPAR, NDRE)",
     "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/IND-CH/items/MFL-2026-011.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/IND-CH/items/MFL-2026-011.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -372,7 +372,7 @@
     ],
     "description": "Geospatial modeling and mapping of soil erosion in India",
     "download_url": "https://zenodo.org/records/10846594",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/IND-CH/items/MFL-2026-012.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/IND-CH/items/MFL-2026-012.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -401,7 +401,7 @@
     ],
     "description": "Tree canopy cover, density and height",
     "download_url": "https://github.com/core-stack-org/QGIS-Styles/blob/main/Tree%20Health/ccd_style.qml",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/IND-CH/items/MFL-2026-013.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/IND-CH/items/MFL-2026-013.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -430,7 +430,7 @@
     ],
     "description": "Waterbodies data",
     "download_url": "https://github.com/core-stack-org/QGIS-Styles/blob/main/Hydrology/Sub-Basin_style.qml",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/IND-CH/items/MFL-2026-014.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/IND-CH/items/MFL-2026-014.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -459,7 +459,7 @@
     ],
     "description": "Landuse and Land cover changes",
     "download_url": "https://github.com/core-stack-org/QGIS-Styles/blob/main/Land/LULC0_12class.qml",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/IND-CH/items/MFL-2026-015.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/IND-CH/items/MFL-2026-015.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -488,7 +488,7 @@
     ],
     "description": "Land cover derived from Sentinel-2 imagery using machine learning classification. Moderate spatial accuracy depending on land cover type and cloud cover; small or rapid changes may not be captured. Related: Sentinel-2 imagery, global land cover datasets, NDVI products.",
     "download_url": "https://livingatlas.arcgis.com/landcoverexplorer/#mapCenter=-14.06266%2C13.65709%2C11.00&mode=step&timeExtent=2017%2C2022&year=2023",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/SEN-FK/items/MFL-2026-017.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/SEN-FK/items/MFL-2026-017.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -517,7 +517,7 @@
     ],
     "description": "Official administrative boundaries of Senegal",
     "download_url": "https://gadm.org/",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/SEN-FK/items/MFL-2026-018.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/SEN-FK/items/MFL-2026-018.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -546,7 +546,7 @@
     ],
     "description": "Official administrative boundaries of Senegal",
     "download_url": "https://gadm.org/",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/SEN-FK/items/MFL-2026-019.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/SEN-FK/items/MFL-2026-019.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -575,7 +575,7 @@
     ],
     "description": "Official administrative boundaries of Senegal",
     "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/SEN-FK/items/MFL-2026-020.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/SEN-FK/items/MFL-2026-020.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -604,7 +604,7 @@
     ],
     "description": "Official administrative boundaries of Senegal",
     "download_url": "https://gadm.org/",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/SEN-FK/items/MFL-2026-021.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/SEN-FK/items/MFL-2026-021.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -633,7 +633,7 @@
     ],
     "description": "Based on MODIS time-series vegetation indices (NDVI/EVI) to assess land condition. Coarse spatial resolution (250m–1km) and atmospheric/cloud effects may limit precision; short-term changes may be smoothed. Related: Landsat, Sentinel-2, soil and climate datasets. — Original landscape entry: In the Senegal region, the resolution does not allow for data at the departmental level",
     "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/SEN-FK/items/MFL-2026-022.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/SEN-FK/items/MFL-2026-022.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -662,7 +662,7 @@
     ],
     "description": "Tree data are derived from Sentinel-2 imagery using image classification techniques. Limitations include infrequent updates, which may affect temporal accuracy and may not reflect recent changes. Related datasets: Sentinel-2 imagery, land cover products, vegetation indices (NDVI/EVI).",
     "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/SEN-FK/items/MFL-2026-023.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/SEN-FK/items/MFL-2026-023.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -691,7 +691,7 @@
     ],
     "description": "Derived from satellite observations and climate models (reanalysis and gauge integration). Coarse spatial resolution (~0.25°–1°) and potential bias compared to ground stations; local variability may be underestimated. Related: GPM, TRMM, ERA5, meteorological station data.",
     "download_url": "https://power.larc.nasa.gov/data-access-viewer/",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/SEN-FK/items/MFL-2026-024.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/SEN-FK/items/MFL-2026-024.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -720,7 +720,7 @@
     ],
     "description": "Ward-level crop damage data (severity and incidence) by different species — Original landscape entry: Mbire: Wards 2, 3, 9, 12 and 17",
     "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/ZWE-MB/items/MFL-2026-025.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/ZWE-MB/items/MFL-2026-025.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -749,7 +749,7 @@
     ],
     "description": "Administrative boundaries for the Lower Zambezi Valley (Districts and wards)",
     "download_url": "https://gadm.org/",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/ZWE-MB/items/MFL-2026-026.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/ZWE-MB/items/MFL-2026-026.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -778,7 +778,7 @@
     ],
     "description": "Land Use and Land Cover Classification — Original landscape entry: Mbire: Wards 2, 3, 9, 12 and 17",
     "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/ZWE-MB/items/MFL-2026-027.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/ZWE-MB/items/MFL-2026-027.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -807,7 +807,7 @@
     ],
     "description": "Land Use and Land Cover Classification training points from Sentinel 2 — Original landscape entry: Mbire: Wards 2, 3, 9, 12 and 17",
     "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/ZWE-MB/items/MFL-2026-028.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/ZWE-MB/items/MFL-2026-028.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -836,7 +836,7 @@
     ],
     "description": "Ward-level ecosystem services mapping — Original landscape entry: Mbire Ward 2",
     "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/ZWE-MB/items/MFL-2026-029.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/ZWE-MB/items/MFL-2026-029.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -865,7 +865,7 @@
     ],
     "description": "Administrative boundaries for Tunisia",
     "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/TUN-NW/items/MFL-2026-030.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/TUN-NW/items/MFL-2026-030.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -894,7 +894,7 @@
     ],
     "description": "Administrative boundaries for Tunisia",
     "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/TUN-NW/items/MFL-2026-031.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/TUN-NW/items/MFL-2026-031.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -923,7 +923,7 @@
     ],
     "description": "Administrative boundaries for Tunisia",
     "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/TUN-NW/items/MFL-2026-032.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/TUN-NW/items/MFL-2026-032.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -952,7 +952,7 @@
     ],
     "description": "Land Use and Land Cover Classification",
     "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/TUN-NW/items/MFL-2026-033.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/TUN-NW/items/MFL-2026-033.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -981,7 +981,7 @@
     ],
     "description": "Agricultural soil map classification",
     "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/TUN-NW/items/MFL-2026-034.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/TUN-NW/items/MFL-2026-034.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -1010,7 +1010,7 @@
     ],
     "description": "Survay collecting evidence of the holistic impact of agroecology",
     "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/TUN-NW/items/MFL-2026-035.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/TUN-NW/items/MFL-2026-035.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -1039,7 +1039,7 @@
     ],
     "description": "Survey",
     "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/ETH-OG/items/MFL-2026-036.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/ETH-OG/items/MFL-2026-036.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -1068,7 +1068,7 @@
     ],
     "description": "Land Use and Land Cover Classification",
     "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/ETH-OG/items/MFL-2026-037.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/ETH-OG/items/MFL-2026-037.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -1097,7 +1097,7 @@
     ],
     "description": "Digital soil mapping",
     "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/ETH-OG/items/MFL-2026-038.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/ETH-OG/items/MFL-2026-038.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -1126,7 +1126,7 @@
     ],
     "description": "District level crop area, production and yield.",
     "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/ETH-OG/items/MFL-2026-039.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/ETH-OG/items/MFL-2026-039.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -1155,7 +1155,7 @@
     ],
     "description": "Agroecological zonations",
     "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/ETH-OG/items/MFL-2026-040.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/ETH-OG/items/MFL-2026-040.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -1184,7 +1184,7 @@
     ],
     "description": "Agroecological zonations",
     "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/ETH-OG/items/MFL-2026-041.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/ETH-OG/items/MFL-2026-041.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -1213,7 +1213,7 @@
     ],
     "description": "Emprical modellling",
     "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/ETH-OG/items/MFL-2026-042.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/ETH-OG/items/MFL-2026-042.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -1242,7 +1242,7 @@
     ],
     "description": "GADM 4.1 administrative boundaries for Côte d'Ivoire, levels 0 to 4: the country; 12 districts and 2 autonomous districts; 31 regions plus the 2 autonomous districts; 113 departments; and 191 sub-prefectures. Country-wide, not clipped to the N'Zi landscape. Unmodified from GADM; download from gadm.org. GADM's licence does not allow redistribution, so MOSAIC keeps only an internal quality-control copy.",
     "download_url": "https://gadm.org/download_country.html",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/CIV-NZ/items/MFL-2026-044.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/CIV-NZ/items/MFL-2026-044.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -1271,7 +1271,7 @@
     ],
     "description": "Agroecological zones",
     "download_url": "https://doi.org/10.7910/DVN/G4TBLF",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/CIV-NZ/items/MFL-2026-045.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/CIV-NZ/items/MFL-2026-045.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -1300,7 +1300,7 @@
     ],
     "description": "Daily weather data for three synoptic stations in and around the N'Zi watershed, served by AfricaRice's ARCWeather portal: Bouaké and Ferkessédougou from 1980 to 2010, Korhogo from 1994 to 2001. Korhogo holds fewer variables, and its dew point is estimated from the minimum temperature. AfricaRice's own M'Bé research-station data from 2014 onward is a separate record, MFL-2026-084.",
     "download_url": "https://arcweather.africarice.org/en/downloads",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/CIV-NZ/items/MFL-2026-046.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/CIV-NZ/items/MFL-2026-046.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -1329,7 +1329,7 @@
     ],
     "description": "DSSAT soil profile file for Côte d'Ivoire (CI.SOL): 3,823 soil profiles on a 5-arc-minute grid covering the whole country, 425 of them inside the N'Zi landscape. It is the unmodified Côte d'Ivoire file of the Global High-Resolution Soil Profile Database for Crop Modeling Applications (IRI, MSU and HarvestChoice/IFPRI, 2015), published on the IFPRI Dataverse.",
     "download_url": "https://doi.org/10.7910/DVN/1PEEY0",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/CIV-NZ/items/MFL-2026-048.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/CIV-NZ/items/MFL-2026-048.json",
     "citation": "International Research Institute for Climate and Society (IRI); Michigan State University (MSU); HarvestChoice, International Food Policy Research Institute (IFPRI), 2015, \"Global High-Resolution Soil Profile Database for Crop Modeling Applications\", https://doi.org/10.7910/DVN/1PEEY0",
     "gee_asset_id": null
   },
@@ -1358,7 +1358,7 @@
     ],
     "description": "MRC produced the data",
     "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/MEK-3S/items/MFL-2026-050.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/MEK-3S/items/MFL-2026-050.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -1387,7 +1387,7 @@
     ],
     "description": "MRC produced the data",
     "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/MEK-3S/items/MFL-2026-051.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/MEK-3S/items/MFL-2026-051.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -1416,7 +1416,7 @@
     ],
     "description": "MRC produced the data",
     "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/MEK-3S/items/MFL-2026-052.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/MEK-3S/items/MFL-2026-052.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -1445,7 +1445,7 @@
     ],
     "description": "Ministry of Agriculture and Environment (MOAE), Lao PDR",
     "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/MEK-3S/items/MFL-2026-053.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/MEK-3S/items/MFL-2026-053.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -1474,7 +1474,7 @@
     ],
     "description": "Ministry of Agriculture and Environment (MOAE), Lao PDR",
     "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/MEK-3S/items/MFL-2026-054.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/MEK-3S/items/MFL-2026-054.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -1503,7 +1503,7 @@
     ],
     "description": "Amazonian tubers classified as Neglected and Underutilized Crop Species (NUS crops) in each farmers field, accurately documenting the characteristics of these species in situ. This process generated a comprehensive dataset comprising seven different crops: cassava (Manihot esculenta), sweet potato (Ipomoea batatas), aerial potato (Dioscorea bulbifera L.), achipa or chuin (Pachyrhizus tuberosus), pituca (Colocasia spp., Xanthosoma spp.), dale-dale (Calathea allouia), and sacha papa (Dioscorea bulbifera). Overall, the study captured the main characteristics of 683 varieties/404 species recorded across 273 mapped plots from 221 farmer households. The dataset is organized into: A) Household information, B) Field information and land-use history, C) Species names, D) Variety names, and E) Community collection points of NUS crops",
     "download_url": "https://data.cipotato.org/",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/PER-PCL/items/MFL-2026-055.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/PER-PCL/items/MFL-2026-055.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -1532,7 +1532,7 @@
     ],
     "description": "A total of 206 farmers in Cumbal, Colombia, were surveyed utilizing ArcGIS Survey 123. Each farmer's field was physically visited, and the 'Participatory Mapping of Farmers' Fields' tool was employed to delineate polygons for each 'shagra', accurately determining their respective areas. This process captured the characteristics of 557 mapped plots across 206 farmers' households. The resultant comprehensive dataset comprises five distinct databases: A) Preliminary Information, B) Shagra Information, C) Land Use Over the Years, and D) Variety Names. These datasets have been individualized and standardized using the common identifiers 'GlobalID Household' and 'GlobalID Shagra'.",
     "download_url": "https://data.cipotato.org/",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/COL-CUM/items/MFL-2026-056.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/COL-CUM/items/MFL-2026-056.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -1561,7 +1561,7 @@
     ],
     "description": "A total of 200 farmers in Vietnam, were surveyed utilizing ArcGIS Survey 123. Each farmer's field was physically visited, and the 'Participatory Mapping of Farmers' Fields' tool was employed to delineate polygons for each 'parcel', accurately determining their respective areas. This process captured the characteristics of 773 mapped plots across 200 farmers' households. The resultant comprehensive dataset comprises five distinct databases: A) Preliminary Information, B) Plot Information, C) Plot and Land Use, D) Crop Information, E) Variety Names. These datasets have been individualized and standardized using the common identifiers 'GlobalID Household' and 'GlobalID Plot'.",
     "download_url": "https://data.cipotato.org/",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/MEK-3S/items/MFL-2026-057.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/MEK-3S/items/MFL-2026-057.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -1590,7 +1590,7 @@
     ],
     "description": "Cambodia's annual forest cover developed through the USAID's Cambodia Supporting Forests and Biodiversity (USAID SFB) project",
     "download_url": "https://data.opendevelopmentmekong.net/map/forest-cove-2015-present",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/MEK-3S/items/MFL-2026-058.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/MEK-3S/items/MFL-2026-058.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -1619,7 +1619,7 @@
     ],
     "description": "provides geographic boundaries, size and the number of villages covered by each community fishery",
     "download_url": "https://data.opendevelopmentcambodia.net/en/dataset/community-fisheries-map-for-cambodia-2011",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/MEK-3S/items/MFL-2026-059.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/MEK-3S/items/MFL-2026-059.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -1648,7 +1648,7 @@
     ],
     "description": "Marine fisheries management area to enhance the protection of the marine biodiversity and fisheries livelihood within​ Archipelago in marine areas, divided into 6 classifications such as community fisheries, conservation areas, fisheries refugias, multiple use areas, protected area, and recreational areas.",
     "download_url": "https://data.opendevelopmentcambodia.net/en/dataset/marine-fisheries-management-area",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/MEK-3S/items/MFL-2026-060.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/MEK-3S/items/MFL-2026-060.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -1677,7 +1677,7 @@
     ],
     "description": "Fsh dependency rate based on the communal statistics",
     "download_url": "https://data.opendevelopmentcambodia.net/en/dataset/map_fish_dependency",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/MEK-3S/items/MFL-2026-061.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/MEK-3S/items/MFL-2026-061.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -1706,7 +1706,7 @@
     ],
     "description": "locations of rice in 4 categories: Rainfed upland rice, Recession rice, Deep water/floating rice, Rainfed lowland rice",
     "download_url": "https://data.opendevelopmentcambodia.net/en/dataset/map-rice-ecosystem",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/MEK-3S/items/MFL-2026-062.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/MEK-3S/items/MFL-2026-062.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -1735,7 +1735,7 @@
     ],
     "description": "India's Open Natural Ecosystems at a 10-m scale,",
     "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/IND-CH/items/MFL-2026-063.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/IND-CH/items/MFL-2026-063.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -1764,7 +1764,7 @@
     ],
     "description": "Conservation for Restoration (C4R) tool KENYA: mapping the vulnerability and priority areas for conservation and restoration of 78 native tree species. Linked to D4R",
     "download_url": "https://dataverse.harvard.edu/citation?persistentId=doi:10.7910/DVN/2ZQTB2",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/KEN-LVB/items/MFL-2026-064.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/KEN-LVB/items/MFL-2026-064.json",
     "citation": null,
     "gee_asset_id": "projects/mosaic-mfl/assets/mvp/MFL-2026-064"
   },
@@ -1793,7 +1793,7 @@
     ],
     "description": "Ward-level soil texture, nitrogen, and carbon content data — Original landscape entry: Mbire: Wards 2 and 3",
     "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/ZWE-MB/items/MFL-2026-065.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/ZWE-MB/items/MFL-2026-065.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -1822,7 +1822,7 @@
     ],
     "description": "Fifteen soil properties from iSDAsoil (iSDA), extracted by AfricaRice for the N'Zi watershed at about 30 m, at 0-20 and 20-50 cm: bulk density, calcium, cation exchange capacity, clay, iron, potassium, magnesium, total nitrogen, phosphorus, pH, sulphur, sand, silt, soil organic carbon and zinc, in physical units. The public source is iSDAsoil for Africa.",
     "download_url": "https://www.isda-africa.com/isdasoil/",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/CIV-NZ/items/MFL-2026-066.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/CIV-NZ/items/MFL-2026-066.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -1851,7 +1851,7 @@
     ],
     "description": "Gridded daily climate data from CHIRPS and ERA5 climate reanalysis",
     "download_url": "https://doi.org/10.15780/G2JQ0P",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/CIV-NZ/items/MFL-2026-067.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/CIV-NZ/items/MFL-2026-067.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -1880,7 +1880,7 @@
     ],
     "description": "Conservation for Restoration (C4R) tool LAOS: mapping the vulnerability and priority areas for conservation and restoration of 79 native tree species. Linked to D4R",
     "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/MEK-3S/items/MFL-2026-068.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/MEK-3S/items/MFL-2026-068.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -1909,7 +1909,7 @@
     ],
     "description": "Conservation for Restoration (C4R) tool VIETNAM: mapping the vulnerability and priority areas for conservation and restoration of 66 native tree species. Linked to D4R",
     "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/MEK-3S/items/MFL-2026-069.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/MEK-3S/items/MFL-2026-069.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -1938,7 +1938,7 @@
     ],
     "description": "Workbook documenting ~549 coded study entries from a systematic literature review on ecosystem services in tropical and subtropical cattle systems, coded consistently across five thematic streams for cross-paper comparison and filtering. Studies may appear in multiple streams.",
     "download_url": "https://doi.org/10.7910/DVN/XD96CL",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/GLB/items/MFL-2026-070.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/GLB/items/MFL-2026-070.json",
     "citation": "Lüdtke, Adrian; Burkart, Stefan, 2026, \"Coding Matrix: Ecosystem Services in Tropical Cattle Systems A Systematic Literature Review across Five Thematic Streams\", https://doi.org/10.7910/DVN/XD96CL, Harvard Dataverse, V1",
     "gee_asset_id": null
   },
@@ -1967,7 +1967,7 @@
     ],
     "description": "Analysis of interspecific Urochloa forage-grass hybrid adoption across 27 Latin American and Caribbean countries, 2001-2024. Estimates over 1.09 million adopting farmers on 1.62 million cumulative hectares, projects cumulative forage value of US$47-62 billion by 2033, and estimates potential greenhouse gas emission reductions of 16.9-56.3 Mt CO2-eq by that timeframe.",
     "download_url": "https://doi.org/10.7910/DVN/L86VZ9",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/GLB/items/MFL-2026-071.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/GLB/items/MFL-2026-071.json",
     "citation": "Burkart, Stefan; Sandoval, Danny; Junca Paredes, John Jairo, 2026, \"Urochloa hybrid adoption in Latin America and the Caribbean 2001-2024: An analysis of the land use, social, economic, and environmental impacts in 27 countries\", https://doi.org/10.7910/DVN/L86VZ9, Harvard Dataverse, V1",
     "gee_asset_id": null
   },
@@ -1996,7 +1996,7 @@
     ],
     "description": "Administrative boundaries for Ucayali, Peru",
     "download_url": "https://www.datosabiertos.gob.pe/dataset/limites-departamentales",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/PER-PCL/items/MFL-2026-072.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/PER-PCL/items/MFL-2026-072.json",
     "citation": null,
     "gee_asset_id": "projects/mosaic-mfl/assets/mvp/MFL-2026-072"
   },
@@ -2025,7 +2025,7 @@
     ],
     "description": "National Protected Natural Areas clipped to  Ucayali",
     "download_url": "https://geo.sernanp.gob.pe/visorsernanp/",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/PER-PCL/items/MFL-2026-073.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/PER-PCL/items/MFL-2026-073.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -2054,7 +2054,7 @@
     ],
     "description": "Regional Conservation Areas clipped to Ucayali",
     "download_url": "https://geo.sernanp.gob.pe/visorsernanp/",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/PER-PCL/items/MFL-2026-074.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/PER-PCL/items/MFL-2026-074.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -2083,7 +2083,7 @@
     ],
     "description": "Indigenous Territories clipped to Ucayali",
     "download_url": "https://www.raisg.org/es/mapas/",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/PER-PCL/items/MFL-2026-075.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/PER-PCL/items/MFL-2026-075.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -2112,7 +2112,7 @@
     ],
     "description": "Spatial distribution and classification of ecosystem within Ucayali department, derived from Peru´s National Ecosystem Map 2018, and aggregated by adminstrative provinces and districts level",
     "download_url": "https://geoservidor.minam.gob.pe/recursos/intercambio-de-datos/",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/PER-PCL/items/MFL-2026-076.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/PER-PCL/items/MFL-2026-076.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -2141,7 +2141,7 @@
     ],
     "description": "Human footprint areas >4 in the Ucayali department for 2012, 2015, 2018, and 2021, derived from Peru´s Human Footprint map. The original raster data was converted to vector polygons and aggregated by adminstrative provinces and districts level",
     "download_url": "https://geoservidor.minam.gob.pe/recursos/intercambio-de-datos/",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/PER-PCL/items/MFL-2026-077.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/PER-PCL/items/MFL-2026-077.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -2170,7 +2170,7 @@
     ],
     "description": "Spatial distribution of physical vulnerability levels within the Ucayali department, derived from Peru’s National Physical Vulnerability map 2011, and aggregated by administrative provinces and districts level",
     "download_url": "https://geoservidor.minam.gob.pe/recursos/intercambio-de-datos/",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/PER-PCL/items/MFL-2026-078.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/PER-PCL/items/MFL-2026-078.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -2199,7 +2199,7 @@
     ],
     "description": "Forest/non-forest baseline for 2000 and annual forest loss from 2001 to 2024 in Ucayali, derived from MINAM’s GEOBOSQUES forest monitoring dataset and spatially aggregated by provinces and districts.",
     "download_url": "https://geobosques.minam.gob.pe/geobosque/view/descargas.php?122345gxxe345w34gg#download",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/PER-PCL/items/MFL-2026-079.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/PER-PCL/items/MFL-2026-079.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -2228,7 +2228,7 @@
     ],
     "description": "Annual forest loss from 2001-2024 in Ucayali, derived from MINAM’s GEOBOSQUES forest monitoring dataset and spatially aggregated by provinces and districts. The 2025 update published at source is not yet included in this layer.",
     "download_url": "https://geobosques.minam.gob.pe/geobosque/view/descargas.php?122345gxxe345w34gg#download",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/PER-PCL/items/MFL-2026-080.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/PER-PCL/items/MFL-2026-080.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -2257,7 +2257,7 @@
     ],
     "description": "Land cover and land-use classification within the Ucayali department for 2000, 2005, 2010, 2015, 2020 and 2024, derived from Mapbiomas Peru Collection 4. The original raster data was converted to vector polygons and aggregated by administrative provinces and districts level",
     "download_url": "https://peru.mapbiomas.org/iniciativas-y-productos/cobertura-y-uso-del-suelo/cobertura/",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/PER-PCL/items/MFL-2026-081.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/PER-PCL/items/MFL-2026-081.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -2286,7 +2286,7 @@
     ],
     "description": "Cumulative Burned Area during 2013–2024 within the Ucayali department, derived from Mapbiomas Peru Collection 1. The original raster data was converted to vector polygons and aggregated by administrative provinces and districts level",
     "download_url": "https://peru.mapbiomas.org/iniciativas-y-productos/fuego/mapeo-anual/",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/PER-PCL/items/MFL-2026-082.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/PER-PCL/items/MFL-2026-082.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -2315,7 +2315,7 @@
     ],
     "description": "Major crop type maps in Nandi county, Kenya",
     "download_url": null,
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/KEN-LVB/items/MFL-2026-083.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/KEN-LVB/items/MFL-2026-083.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -2344,7 +2344,7 @@
     ],
     "description": "Daily weather data from AfricaRice's two weather stations at the M'Bé research station near Bouaké, in the N'Zi watershed: MBE_LOWLAND (273 m) and MBE_UPLAND (303 m), from 2014 onward. Served by AfricaRice's ARCWeather portal.",
     "download_url": "https://arcweather.africarice.org/en/downloads",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/CIV-NZ/items/MFL-2026-084.json",
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/CIV-NZ/items/MFL-2026-084.json",
     "citation": null,
     "gee_asset_id": null
   }

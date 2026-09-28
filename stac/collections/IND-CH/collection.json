@@ -109,7 +109,7 @@
     },
     {
       "rel": "self",
-      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/IND-CH/collection.json",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/IND-CH/collection.json",
       "type": "application/json"
     },
     {
@@ -221,7 +221,7 @@
   ],
   "assets": {
     "boundary": {
-      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/boundaries/IND-CH.geojson",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/boundaries/IND-CH.geojson",
       "type": "application/geo+json",
       "title": "Landscape boundary (canonical delineation, simplified, EPSG:4326)",
       "roles": [

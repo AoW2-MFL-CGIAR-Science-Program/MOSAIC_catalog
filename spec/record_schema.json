@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/spec/record_schema.json",
+  "$id": "https://mosaic-mfl.github.io/catalog/spec/record_schema.json",
   "title": "MOSAIC dataset record (records/<ID>.yaml)",
   "description": "One YAML file per dataset under records/. This file is jsonschema-SHAPED but is consumed by the pure-python validator in mosaic_pipeline/records.py (jsonschema is NOT installed in this environment). Only the constructs used here are supported by that validator: type (incl. unions), enum (null in the enum list means nullable), pattern, minLength, required, additionalProperties:false, nested properties (bbox), items.type. Property order below is the canonical key order for records/*.yaml. Human-readable companion: spec/record_schema.md.",
   "type": "object",

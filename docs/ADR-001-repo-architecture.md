@@ -4,6 +4,7 @@
 - **Date:** 2026-06-22
 - **Owner:** Lizeth Llanos (MOSAIC geospatial coordinator, MFL AoW2)
 - **Decision driver:** A new empty repo `AoW2-MFL-CGIAR-Science-Program/MOSAIC_catalog` was created to receive the catalog backend. We must decide how to organize the work before populating it.
+- **Update 2026-09-28:** the organization was renamed `MOSAIC-mfl` and the repos `catalog` (was `MOSAIC_catalog`), `website` (was `mfl-living-landscapes-frontend`) and `vision-foundations` (was `MOSAIC_vision_foundation`). The canonical STAC endpoint is now `https://mosaic-mfl.github.io/catalog/stac/catalog.json`. The two-repo decision stands; the names and URLs below are as of 2026-06-22.
 
 ---
 

@@ -97,7 +97,7 @@
     },
     {
       "rel": "self",
-      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/SEN-FK/items/MFL-2026-020.json",
+      "href": "https://mosaic-mfl.github.io/catalog/stac/collections/SEN-FK/items/MFL-2026-020.json",
       "type": "application/json"
     }
   ],

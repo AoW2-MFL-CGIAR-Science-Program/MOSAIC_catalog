@@ -1,13 +1,13 @@
 # How to register a dataset in the MOSAIC catalog
 
-*A guide for MFL focal points and contributors — updated 2026-07-24.*
+*A guide for MFL focal points and contributors — updated 2026-09-28.*
 
 MOSAIC keeps one small, validated **record** per dataset. You don't upload the
 data itself — MOSAIC is a coordination network, not a repository: the record
 describes your dataset and points to where it lives. Once a record is merged,
 the catalog republishes itself automatically: your dataset appears on the
-[MOSAIC website](https://aow2-mfl-cgiar-science-program.github.io/mfl-living-landscapes-frontend/catalogue/)
-and gets a citable metadata URL in the [STAC endpoint](https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/catalog.json)
+[MOSAIC website](https://mosaic-mfl.github.io/website/catalogue/)
+and gets a citable metadata URL in the [STAC endpoint](https://mosaic-mfl.github.io/catalog/stac/catalog.json)
 within a few minutes.
 
 ## Before you start — have these facts ready
@@ -28,7 +28,7 @@ within a few minutes.
 
 ## Way 1 — the submission form (recommended, no Git skills or commands needed)
 
-1. Open the **[Register a new dataset](https://github.com/AoW2-MFL-CGIAR-Science-Program/MOSAIC_catalog/issues/new?template=new_dataset.yml)**
+1. Open the **[Register a new dataset](https://github.com/MOSAIC-mfl/catalog/issues/new?template=new_dataset.yml)**
    form (needs a free GitHub account — if you'd rather not create one, see Way 2).
 2. Fill in what you know — only four fields are required; everything else can
    be completed later.
