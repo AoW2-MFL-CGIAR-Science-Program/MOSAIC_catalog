@@ -3,7 +3,7 @@
   "stac_version": "1.0.0",
   "stac_extensions": [
     "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.1.0/schema.json",
-    "https://climate-data-hub.cgiar.org/stac-extensions/cgiar-cdh/v1.0.0/schema.json"
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
   ],
   "id": "MFL-2026-046",
   "geometry": {
@@ -50,7 +50,6 @@
     "cgiar-cdh:geography": [
       "cote-d-ivoire"
     ],
-    "cgiar-cdh:spatial_resolution": "Climate station observations",
     "mosaic:living_landscape": "CIV-NZ",
     "mosaic:coverage": "landscape",
     "mosaic:theme": "Water / hydrology",
@@ -63,6 +62,7 @@
     "mosaic:formats": [
       "CSV"
     ],
+    "mosaic:spatial_resolution": "Climate station observations",
     "proj:code": null,
     "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
     "mosaic:license_original": "Other (specify in notes)",

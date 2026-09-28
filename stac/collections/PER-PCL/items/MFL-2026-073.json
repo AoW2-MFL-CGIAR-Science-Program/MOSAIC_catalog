@@ -3,7 +3,7 @@
   "stac_version": "1.0.0",
   "stac_extensions": [
     "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.1.0/schema.json",
-    "https://climate-data-hub.cgiar.org/stac-extensions/cgiar-cdh/v1.0.0/schema.json"
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
   ],
   "id": "MFL-2026-073",
   "geometry": {
@@ -50,7 +50,6 @@
     "cgiar-cdh:geography": [
       "peru"
     ],
-    "cgiar-cdh:spatial_resolution": "Boundary level",
     "mosaic:living_landscape": "PER-PCL",
     "mosaic:coverage": "landscape",
     "mosaic:theme": "Boundaries / admin units",
@@ -63,6 +62,7 @@
     "mosaic:formats": [
       "Shapefile"
     ],
+    "mosaic:spatial_resolution": "Boundary level",
     "proj:code": null,
     "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
     "mosaic:license_original": "Free download from the Peruvian government source (MINAM/GEOBOSQUES, SERNANP, INEI); no formal license stated",

@@ -25,7 +25,12 @@ MOSAIC_SCHEMA_VERSION = "0.1.0"
 
 # Custom extension identifiers (mirrored locally; schemas hosted later).
 EXT_MOSAIC = "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.1.0/schema.json"
-EXT_CDH = "https://climate-data-hub.cgiar.org/stac-extensions/cgiar-cdh/v1.0.0/schema.json"
+# CDH standard release the cgiar-cdh:* fields follow (one tag covers standard, vocab and extension).
+CDH_STANDARD_VERSION = "0.3.0"
+EXT_CDH = (
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/"
+    f"v{CDH_STANDARD_VERSION}/encodings/stac/schema.json"
+)
 
 MEDIA_TYPE = {
     "GeoTIFF": "image/tiff; application=geotiff",
@@ -239,6 +244,8 @@ def _build_collection(code: str, recs: list[dict], vocab: Vocab) -> dict:
         "mosaic:item_count": len(recs),
         "links": [],  # filled by caller
     }
+    if not geographies:
+        del coll["cgiar-cdh:geography"]  # CDH v0.3.0: minItems 1; omit when unknown
     if vocab.landscape_system(code):
         coll["mosaic:landscape_system"] = vocab.landscape_system(code)
     if vocab.landscape_countries(code):
@@ -285,7 +292,6 @@ def _build_item(r: dict, code: str, vocab: Vocab) -> dict:
         "updated": r["last_updated"],
         # cgiar-cdh:* (CDH-defined where applicable)
         "cgiar-cdh:geography": geography,
-        "cgiar-cdh:spatial_resolution": r["spatial_resolution"],
         # mosaic:* (MOSAIC-specific)
         "mosaic:living_landscape": code,
         "mosaic:coverage": r["coverage"],
@@ -298,6 +304,12 @@ def _build_item(r: dict, code: str, vocab: Vocab) -> dict:
         "mosaic:bbox_note": _item_bbox_note(r),
         "mosaic:formats": r["formats"],
     }
+    if not geography:
+        del props["cgiar-cdh:geography"]  # CDH v0.3.0: minItems 1; omit when unknown
+    # Free text ("30m", "Village level"): CDH v0.3.0 takes only structured point/polygon
+    # objects in cgiar-cdh:spatial_resolution (grid spacing -> cube:dimensions), so it stays MOSAIC's.
+    if r["spatial_resolution"]:
+        props["mosaic:spatial_resolution"] = r["spatial_resolution"]
     # proj: CRS unknown in registry -> explicit null + note.
     props["proj:code"] = None
     props["mosaic:crs_note"] = "CRS not recorded in registry (missing_crs)."

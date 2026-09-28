@@ -3,7 +3,7 @@
   "stac_version": "1.0.0",
   "stac_extensions": [
     "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.1.0/schema.json",
-    "https://climate-data-hub.cgiar.org/stac-extensions/cgiar-cdh/v1.0.0/schema.json"
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
   ],
   "id": "KEN-LEI",
   "title": "LEILA (Southern Kenya Rangelands)",
@@ -42,7 +42,6 @@
     "mosaic:access_level": [],
     "mosaic:theme": []
   },
-  "cgiar-cdh:geography": [],
   "mosaic:living_landscape": "KEN-LEI",
   "mosaic:bbox_approximate": false,
   "mosaic:bbox_note": "Bbox derived from the canonical delineation shapefile (dissolved, EPSG:4326), union-ed with member-item locator boxes.",

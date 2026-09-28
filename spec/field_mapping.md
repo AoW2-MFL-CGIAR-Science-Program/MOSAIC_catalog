@@ -6,7 +6,7 @@
 
 **Source:** `MFL_Dataset_Registry.xlsx`, sheet `' Registry'` (LEADING SPACE in name). 23 columns. **Skip the first data row** (placeholder/instructions: values like "Auto-filled by formula", "Select from dropdown"). A row is a placeholder if Record ID is blank or any cell equals one of: `Auto-filled by formula`, `Select from dropdown`, or the instruction sentences.
 
-**Checked (2026-06-22):** CDH `vocab/geography.json` (UN M49 confirmed) and `spec/mapping-stac.md` (contact roles = STAC provider roles; `file:size` required for primary asset; `cgiar-cdh:geography` array; SPDX preferred for license).
+**Checked (2026-06-22):** CDH `vocab/geography.json` (UN M49 confirmed) and `spec/mapping-stac.md` (contact roles = STAC provider roles; `file:size` required for primary asset; `cgiar-cdh:geography` array; SPDX preferred for license). **Re-checked 2026-09-28 against CDH v0.3.0** (repo now `cdh-metadata-standard`): extension id = `…/v0.3.0/encodings/stac/schema.json`; `cgiar-cdh:geography` unchanged (array, at least 1); `cgiar-cdh:spatial_resolution` is now structured.
 
 ---
 
@@ -48,7 +48,7 @@ Per §3 of the assessment. Use `cgiar-cdh:*` where the CDH defines it, `mosaic:*
 | 4 MFL theme | `themes[]` (Themes ext) + `mosaic:theme` | mosaic |
 | 5 Living landscape | `mosaic:living_landscape` (CODE) | mosaic |
 | 6 Data type | object type + asset `media_type`; selects Datacube vs Table ext | core |
-| 7 Spatial resolution | `cgiar-cdh:spatial_resolution` (string for now; `{value,unit}` later) | cgiar-cdh |
+| 7 Spatial resolution | `mosaic:spatial_resolution` (verbatim string; omitted when blank). CDH v0.3.0 `cgiar-cdh:spatial_resolution` takes only structured point/polygon objects and grid spacing goes to `cube:dimensions[].step`, so MOSAIC's free text stays in its own namespace | mosaic |
 | 8 Temporal coverage | `extent.temporal.interval` = `[[start, end]]` (R4) | core |
 | 9 Source / Centre | `providers[]` (role producer/host) | core |
 | 10 Contact person | `providers[]` + Contacts ext `contacts[]`; **≥1 `licensor`** | core + Contacts ext |

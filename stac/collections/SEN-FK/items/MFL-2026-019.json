@@ -3,7 +3,7 @@
   "stac_version": "1.0.0",
   "stac_extensions": [
     "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.1.0/schema.json",
-    "https://climate-data-hub.cgiar.org/stac-extensions/cgiar-cdh/v1.0.0/schema.json"
+    "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
   ],
   "id": "MFL-2026-019",
   "geometry": {
@@ -50,7 +50,6 @@
     "cgiar-cdh:geography": [
       "senegal"
     ],
-    "cgiar-cdh:spatial_resolution": null,
     "mosaic:living_landscape": "SEN-FK",
     "mosaic:coverage": "landscape",
     "mosaic:theme": "Boundaries / admin units",
