@@ -65,6 +65,7 @@
     "mosaic:spatial_resolution": "Climate station observations",
     "proj:code": null,
     "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
+    "license": "other",
     "mosaic:license_original": "ARCWeather usage terms: non-commercial, educational, research or personal use only, with citation. The portal states that Côte d'Ivoire climate data is distributed by Sodexam; no licence stated by the rights holder",
     "contacts": [
       {

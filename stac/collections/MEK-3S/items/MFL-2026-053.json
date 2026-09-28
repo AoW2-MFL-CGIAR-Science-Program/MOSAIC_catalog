@@ -65,6 +65,7 @@
     "mosaic:spatial_resolution": "report-country and basin level",
     "proj:code": null,
     "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
+    "license": "other",
     "mosaic:license_original": "Restricted — contact data owner",
     "contacts": [
       {

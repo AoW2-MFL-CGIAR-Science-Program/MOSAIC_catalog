@@ -65,6 +65,7 @@
     "mosaic:spatial_resolution": "admin-level-0 to admin-level-4 (GADM 4.1)",
     "proj:code": null,
     "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
+    "license": "other",
     "mosaic:license_original": "Restricted — GADM terms (academic/non-commercial use only, no redistribution)",
     "contacts": [
       {

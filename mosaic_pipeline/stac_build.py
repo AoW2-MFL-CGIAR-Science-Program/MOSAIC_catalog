@@ -314,6 +314,11 @@ def _build_item(r: dict, code: str, vocab: Vocab) -> dict:
     props["proj:code"] = None
     props["mosaic:crs_note"] = "CRS not recorded in registry (missing_crs)."
 
+    # Item license: the SPDX id, else "other" (the text travels as mosaic:license_original).
+    # Omitted when the record states none; clients then fall back to the collection.
+    if r["license"]:
+        props["license"] = r["license"] if _looks_spdx(r["license"]) else "other"
+
     # Set for verbatim (non-SPDX) strings and for the vague branch ("other").
     if r["license_alias"]:
         props["mosaic:license_original"] = r["license_alias"]

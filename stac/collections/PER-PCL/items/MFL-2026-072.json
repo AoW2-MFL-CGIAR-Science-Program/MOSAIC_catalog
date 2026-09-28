@@ -65,6 +65,7 @@
     "mosaic:spatial_resolution": "Admin level 2 and 3",
     "proj:code": null,
     "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
+    "license": "other",
     "mosaic:license_original": "Free download from the Peruvian government source (MINAM/GEOBOSQUES, SERNANP, INEI); no formal license stated",
     "mosaic:gee_asset_id": "projects/mosaic-mfl/assets/mvp/MFL-2026-072",
     "contacts": [

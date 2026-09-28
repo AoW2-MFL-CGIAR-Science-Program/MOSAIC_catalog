@@ -53,7 +53,7 @@ Per §3 of the assessment. Use `cgiar-cdh:*` where the CDH defines it, `mosaic:*
 | 9 Source / Centre | `providers[]` (role producer/host) | core |
 | 10 Contact person | `providers[]` + Contacts ext `contacts[]`; **≥1 `licensor`** | core + Contacts ext |
 | 11 Access level | `mosaic:access_level` | mosaic |
-| 12 License | `license` (SPDX) | core |
+| 12 License | `license` on items (since 2026-09-28) and collections: the SPDX id (R3); a verbatim or vague string → `other`, with the text in `mosaic:license_original`. Item: omitted when blank. Collection: the members' shared SPDX id, else `other` | core |
 | 13 Processing status | `mosaic:processing_status` | mosaic |
 | 14 File name(s) | `assets{}` keys / `data[].name` | core |
 | 15 Current location | primary asset `href` | core |
