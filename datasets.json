@@ -1230,9 +1230,9 @@
     ],
     "mfl_theme": "Boundaries / admin units",
     "data_type": "Vector",
-    "spatial_resolution": "admin-level-1, admin-level-2, admin-level-3",
-    "temporal_coverage": "NA",
-    "source": "National government (external)",
+    "spatial_resolution": "admin-level-0 to admin-level-4 (GADM 4.1)",
+    "temporal_coverage": "2022",
+    "source": "AfricaRice",
     "contact": "a.kouadio2@cgiar.org",
     "access_level": "Open",
     "license": "Restricted — GADM terms (academic/non-commercial use only, no redistribution)",
@@ -1240,8 +1240,8 @@
     "formats": [
       "Shapefile"
     ],
-    "description": "Administrative boundaries",
-    "download_url": null,
+    "description": "GADM 4.1 administrative boundaries for Côte d'Ivoire, levels 0 to 4: the country; 12 districts and 2 autonomous districts; 31 regions plus the 2 autonomous districts; 113 departments; and 191 sub-prefectures. Country-wide, not clipped to the N'Zi landscape. Unmodified from GADM; download from gadm.org. GADM's licence does not allow redistribution, so MOSAIC keeps only an internal quality-control copy.",
+    "download_url": "https://gadm.org/download_country.html",
     "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/CIV-NZ/items/MFL-2026-044.json",
     "citation": null,
     "gee_asset_id": null
@@ -1289,34 +1289,34 @@
     "mfl_theme": "Water / hydrology",
     "data_type": "Tabular",
     "spatial_resolution": "Climate station observations",
-    "temporal_coverage": "since 2014",
+    "temporal_coverage": "1980-2010",
     "source": "AfricaRice",
     "contact": "a.kouadio2@cgiar.org",
     "access_level": "Open",
-    "license": "Other (specify in notes)",
+    "license": "ARCWeather usage terms: non-commercial, educational, research or personal use only, with citation. The portal states that Côte d'Ivoire climate data is distributed by Sodexam; no licence stated by the rights holder",
     "readiness_status": "Validated",
     "formats": [
       "CSV"
     ],
-    "description": "Climate data from climate stations for three major cities in the watershed (coverage period varies depending on the station); climate data from M'Be research station",
-    "download_url": null,
+    "description": "Daily weather data for three synoptic stations in and around the N'Zi watershed, served by AfricaRice's ARCWeather portal: Bouaké and Ferkessédougou from 1980 to 2010, Korhogo from 1994 to 2001. Korhogo holds fewer variables, and its dew point is estimated from the minimum temperature. AfricaRice's own M'Bé research-station data from 2014 onward is a separate record, MFL-2026-084.",
+    "download_url": "https://arcweather.africarice.org/en/downloads",
     "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/CIV-NZ/items/MFL-2026-046.json",
     "citation": null,
     "gee_asset_id": null
   },
   {
     "id": "MFL-2026-048",
-    "title": "DSSAT soil profiles (global .SOL files)",
-    "country": "Global",
-    "living_landscape": "GLB",
-    "landscape_name": "Global / cross-landscape",
-    "coverage": "global",
+    "title": "DSSAT soil profiles for Côte d'Ivoire (CI.SOL)",
+    "country": "Côte d'Ivoire",
+    "living_landscape": "CIV-NZ",
+    "landscape_name": "N'Zi Watershed",
+    "coverage": "national",
     "centroid": [
-      0,
-      10
+      -5.5,
+      7.5
     ],
     "mfl_theme": "Degradation / land health",
-    "data_type": null,
+    "data_type": "Tabular",
     "spatial_resolution": "5-min resolution",
     "temporal_coverage": "2015",
     "source": "AfricaRice",
@@ -1325,12 +1325,12 @@
     "license": "CC-BY-4.0",
     "readiness_status": "Validated",
     "formats": [
-      "Unknown"
+      "DSSAT-SOL"
     ],
-    "description": "High-resolution soil profile database for crop modeling applications. Files are '*.SOL' file format (DSSAT soil database) for each country worldwide.",
+    "description": "DSSAT soil profile file for Côte d'Ivoire (CI.SOL): 3,823 soil profiles on a 5-arc-minute grid covering the whole country, 425 of them inside the N'Zi landscape. It is the unmodified Côte d'Ivoire file of the Global High-Resolution Soil Profile Database for Crop Modeling Applications (IRI, MSU and HarvestChoice/IFPRI, 2015), published on the IFPRI Dataverse.",
     "download_url": "https://doi.org/10.7910/DVN/1PEEY0",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/GLB/items/MFL-2026-048.json",
-    "citation": null,
+    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/CIV-NZ/items/MFL-2026-048.json",
+    "citation": "International Research Institute for Climate and Society (IRI); Michigan State University (MSU); HarvestChoice, International Food Policy Research Institute (IFPRI), 2015, \"Global High-Resolution Soil Profile Database for Crop Modeling Applications\", https://doi.org/10.7910/DVN/1PEEY0",
     "gee_asset_id": null
   },
   {
@@ -1799,18 +1799,18 @@
   },
   {
     "id": "MFL-2026-066",
-    "title": "SoilGrids gridded soil information",
-    "country": "Global",
-    "living_landscape": "GLB",
-    "landscape_name": "Global / cross-landscape",
-    "coverage": "global",
+    "title": "iSDAsoil soil properties for the N'Zi watershed (0-20 and 20-50 cm)",
+    "country": "Côte d'Ivoire",
+    "living_landscape": "CIV-NZ",
+    "landscape_name": "N'Zi Watershed",
+    "coverage": "landscape",
     "centroid": [
-      0,
-      10
+      -4.7151,
+      7.5534
     ],
     "mfl_theme": "Degradation / land health",
-    "data_type": null,
-    "spatial_resolution": "250 m",
+    "data_type": "Raster",
+    "spatial_resolution": "30 m",
     "temporal_coverage": "NA",
     "source": "AfricaRice",
     "contact": "a.kouadio2@cgiar.org",
@@ -1818,11 +1818,11 @@
     "license": "CC-BY-4.0",
     "readiness_status": "Validated",
     "formats": [
-      "Unknown"
+      "GeoTIFF"
     ],
-    "description": "Soil data from SoilGrids",
-    "download_url": "https://soilgrids.org/",
-    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/GLB/items/MFL-2026-066.json",
+    "description": "Fifteen soil properties from iSDAsoil (iSDA), extracted by AfricaRice for the N'Zi watershed at about 30 m, at 0-20 and 20-50 cm: bulk density, calcium, cation exchange capacity, clay, iron, potassium, magnesium, total nitrogen, phosphorus, pH, sulphur, sand, silt, soil organic carbon and zinc, in physical units. The public source is iSDAsoil for Africa.",
+    "download_url": "https://www.isda-africa.com/isdasoil/",
+    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/CIV-NZ/items/MFL-2026-066.json",
     "citation": null,
     "gee_asset_id": null
   },
@@ -2316,6 +2316,35 @@
     "description": "Major crop type maps in Nandi county, Kenya",
     "download_url": null,
     "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/KEN-LVB/items/MFL-2026-083.json",
+    "citation": null,
+    "gee_asset_id": null
+  },
+  {
+    "id": "MFL-2026-084",
+    "title": "Climate data AfricaRice M'Bé Research Station",
+    "country": "Côte d'Ivoire",
+    "living_landscape": "CIV-NZ",
+    "landscape_name": "N'Zi Watershed",
+    "coverage": "landscape",
+    "centroid": [
+      -4.7151,
+      7.5534
+    ],
+    "mfl_theme": "Water / hydrology",
+    "data_type": "Tabular",
+    "spatial_resolution": "Point level",
+    "temporal_coverage": "2014 - present",
+    "source": "AfricaRice",
+    "contact": "a.kouadio2@cgiar.org",
+    "access_level": "Open",
+    "license": "AfricaRice Terms of Use (https://www.africarice.org/privacy-policy), the usage policy linked from ARCWeather: attribution with the ARCWeather citation; non-commercial, research, educational or personal use only; reuse under the same conditions. No formal licence issued for the climate data yet",
+    "readiness_status": "Raw",
+    "formats": [
+      "CSV"
+    ],
+    "description": "Daily weather data from AfricaRice's two weather stations at the M'Bé research station near Bouaké, in the N'Zi watershed: MBE_LOWLAND (273 m) and MBE_UPLAND (303 m), from 2014 onward. Served by AfricaRice's ARCWeather portal.",
+    "download_url": "https://arcweather.africarice.org/en/downloads",
+    "metadata_url": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/CIV-NZ/items/MFL-2026-084.json",
     "citation": null,
     "gee_asset_id": null
   }

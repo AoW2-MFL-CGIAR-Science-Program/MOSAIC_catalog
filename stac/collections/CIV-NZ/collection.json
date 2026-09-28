@@ -7,16 +7,16 @@
   ],
   "id": "CIV-NZ",
   "title": "N'Zi Watershed",
-  "description": "Datasets registered under the 'N'Zi Watershed' Living Landscape (4 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the simplified boundary is published as this collection's 'boundary' asset. National-coverage member items can widen the extent beyond the boundary.",
+  "description": "Datasets registered under the 'N'Zi Watershed' Living Landscape (7 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the simplified boundary is published as this collection's 'boundary' asset. National-coverage member items can widen the extent beyond the boundary.",
   "license": "other",
   "extent": {
     "spatial": {
       "bbox": [
         [
-          -5.3792,
-          5.95,
-          -3.8583,
-          9.4333
+          -8.6,
+          4.3,
+          -2.5,
+          10.7
         ]
       ]
     },
@@ -24,13 +24,14 @@
       "interval": [
         [
           "1979-01-01T00:00:00Z",
-          "2017-12-31T23:59:59Z"
+          "2022-12-31T23:59:59Z"
         ]
       ]
     }
   },
   "keywords": [
     "Boundaries / admin units",
+    "Degradation / land health",
     "Water / hydrology"
   ],
   "providers": [
@@ -45,12 +46,6 @@
       "roles": [
         "producer"
       ]
-    },
-    {
-      "name": "National government (external)",
-      "roles": [
-        "producer"
-      ]
     }
   ],
   "summaries": {
@@ -59,6 +54,7 @@
     ],
     "mosaic:theme": [
       "Boundaries / admin units",
+      "Degradation / land health",
       "Water / hydrology"
     ]
   },
@@ -68,7 +64,7 @@
   "mosaic:living_landscape": "CIV-NZ",
   "mosaic:bbox_approximate": false,
   "mosaic:bbox_note": "Bbox derived from the canonical delineation shapefile (dissolved, EPSG:4326), union-ed with member-item locator boxes.",
-  "mosaic:item_count": 4,
+  "mosaic:item_count": 7,
   "links": [
     {
       "rel": "root",
@@ -105,9 +101,27 @@
     },
     {
       "rel": "item",
+      "href": "./items/MFL-2026-048.json",
+      "type": "application/json",
+      "title": "DSSAT soil profiles for Côte d'Ivoire (CI.SOL)"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-066.json",
+      "type": "application/json",
+      "title": "iSDAsoil soil properties for the N'Zi watershed (0-20 and 20-50 cm)"
+    },
+    {
+      "rel": "item",
       "href": "./items/MFL-2026-067.json",
       "type": "application/json",
       "title": "Gridded climate data (CHIRPS and AgERA5)"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-084.json",
+      "type": "application/json",
+      "title": "Climate data AfricaRice M'Bé Research Station"
     }
   ],
   "mosaic:landscape_system": "Sudan-Sahelian and Guinea Forest-Savanna Transition",

@@ -11,58 +11,58 @@
     "coordinates": [
       [
         [
-          -180,
-          -60
+          -5.3792,
+          5.95
         ],
         [
-          180,
-          -60
+          -3.8583,
+          5.95
         ],
         [
-          180,
-          72
+          -3.8583,
+          9.4333
         ],
         [
-          -180,
-          72
+          -5.3792,
+          9.4333
         ],
         [
-          -180,
-          -60
+          -5.3792,
+          5.95
         ]
       ]
     ]
   },
   "bbox": [
-    -180,
-    -60,
-    180,
-    72
+    -5.3792,
+    5.95,
+    -3.8583,
+    9.4333
   ],
   "properties": {
-    "title": "SoilGrids gridded soil information",
-    "description": "Soil data from SoilGrids",
+    "title": "iSDAsoil soil properties for the N'Zi watershed (0-20 and 20-50 cm)",
+    "description": "Fifteen soil properties from iSDAsoil (iSDA), extracted by AfricaRice for the N'Zi watershed at about 30 m, at 0-20 and 20-50 cm: bulk density, calcium, cation exchange capacity, clay, iron, potassium, magnesium, total nitrogen, phosphorus, pH, sulphur, sand, silt, soil organic carbon and zinc, in physical units. The public source is iSDAsoil for Africa.",
     "datetime": null,
     "start_datetime": null,
     "end_datetime": null,
     "created": null,
     "updated": "2026",
     "cgiar-cdh:geography": [
-      "world"
+      "cote-d-ivoire"
     ],
-    "mosaic:living_landscape": "GLB",
-    "mosaic:coverage": "global",
+    "mosaic:living_landscape": "CIV-NZ",
+    "mosaic:coverage": "landscape",
     "mosaic:theme": "Degradation / land health",
     "mosaic:access_level": "Open",
     "mosaic:processing_status": "Validated",
     "mosaic:migration_status": null,
     "mosaic:update_frequency": "Unknown",
-    "mosaic:bbox_approximate": true,
-    "mosaic:bbox_note": "Global/world locator box; not the dataset's own extent.",
+    "mosaic:bbox_approximate": false,
+    "mosaic:bbox_note": "Bbox of the canonical landscape delineation, used as a proxy for the dataset's own (unrecorded) extent.",
     "mosaic:formats": [
-      "Unknown"
+      "GeoTIFF"
     ],
-    "mosaic:spatial_resolution": "250 m",
+    "mosaic:spatial_resolution": "30 m",
     "proj:code": null,
     "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
     "contacts": [
@@ -80,7 +80,7 @@
       }
     ]
   },
-  "collection": "GLB",
+  "collection": "CIV-NZ",
   "links": [
     {
       "rel": "root",
@@ -99,22 +99,23 @@
     },
     {
       "rel": "self",
-      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/GLB/items/MFL-2026-066.json",
+      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/CIV-NZ/items/MFL-2026-066.json",
       "type": "application/json"
     },
     {
       "rel": "via",
-      "href": "https://soilgrids.org/",
+      "href": "https://www.isda-africa.com/isdasoil/",
       "title": "Primary source / download"
     }
   ],
   "assets": {
     "data": {
-      "href": "https://soilgrids.org/",
+      "href": "https://www.isda-africa.com/isdasoil/",
       "title": "Primary data source",
       "roles": [
         "data"
-      ]
+      ],
+      "type": "image/tiff; application=geotiff"
     },
     "access-note": {
       "href": "",

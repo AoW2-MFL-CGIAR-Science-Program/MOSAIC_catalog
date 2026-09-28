@@ -61,7 +61,7 @@ changes nothing in the outputs; this is documented so nobody is surprised).
 | `encoding` | `stac` \| `ogc-records` \| null | Target encoding for the record. |
 | `bbox` | `{xmin, ymin, xmax, ymax}` (numbers) \| null | The dataset's **own** extent, EPSG:4326. Never fabricated. |
 | `crs` | string \| null | e.g. `EPSG:4326`. |
-| `citation` | string \| null | Preferred citation. |
+| `citation` | string \| null | Preferred citation. **Consumed:** passed to `datasets.json` and shown on the site as the "Suggested citation" (since 2026-08-03); not yet in STAC. |
 | `doi` | string \| null | |
 | `keywords` | list of strings \| null | |
 | `media_type` | string \| null | IANA media type of the primary asset. |

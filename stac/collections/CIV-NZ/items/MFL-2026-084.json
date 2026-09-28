@@ -5,7 +5,7 @@
     "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.2.0/schema.json",
     "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
   ],
-  "id": "MFL-2026-044",
+  "id": "MFL-2026-084",
   "geometry": {
     "type": "Polygon",
     "coordinates": [
@@ -40,32 +40,32 @@
     9.4333
   ],
   "properties": {
-    "title": "District/Region boundaries",
-    "description": "GADM 4.1 administrative boundaries for Côte d'Ivoire, levels 0 to 4: the country; 12 districts and 2 autonomous districts; 31 regions plus the 2 autonomous districts; 113 departments; and 191 sub-prefectures. Country-wide, not clipped to the N'Zi landscape. Unmodified from GADM; download from gadm.org. GADM's licence does not allow redistribution, so MOSAIC keeps only an internal quality-control copy.",
+    "title": "Climate data AfricaRice M'Bé Research Station",
+    "description": "Daily weather data from AfricaRice's two weather stations at the M'Bé research station near Bouaké, in the N'Zi watershed: MBE_LOWLAND (273 m) and MBE_UPLAND (303 m), from 2014 onward. Served by AfricaRice's ARCWeather portal.",
     "datetime": null,
-    "start_datetime": "2022-01-01T00:00:00Z",
-    "end_datetime": "2022-12-31T23:59:59Z",
-    "created": null,
-    "updated": "2022",
+    "start_datetime": "2014-01-01T00:00:00Z",
+    "end_datetime": null,
+    "created": "2026-09-22",
+    "updated": "2026",
     "cgiar-cdh:geography": [
       "cote-d-ivoire"
     ],
     "mosaic:living_landscape": "CIV-NZ",
     "mosaic:coverage": "landscape",
-    "mosaic:theme": "Boundaries / admin units",
+    "mosaic:theme": "Water / hydrology",
     "mosaic:access_level": "Open",
-    "mosaic:processing_status": "Validated",
+    "mosaic:processing_status": "Raw",
     "mosaic:migration_status": null,
     "mosaic:update_frequency": "Unknown",
     "mosaic:bbox_approximate": false,
     "mosaic:bbox_note": "Bbox of the canonical landscape delineation, used as a proxy for the dataset's own (unrecorded) extent.",
     "mosaic:formats": [
-      "Shapefile"
+      "CSV"
     ],
-    "mosaic:spatial_resolution": "admin-level-0 to admin-level-4 (GADM 4.1)",
+    "mosaic:spatial_resolution": "Point level",
     "proj:code": null,
     "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
-    "mosaic:license_original": "Restricted — GADM terms (academic/non-commercial use only, no redistribution)",
+    "mosaic:license_original": "AfricaRice Terms of Use (https://www.africarice.org/privacy-policy), the usage policy linked from ARCWeather: attribution with the ARCWeather citation; non-commercial, research, educational or personal use only; reuse under the same conditions. No formal licence issued for the climate data yet",
     "contacts": [
       {
         "name": "Louis Kouadio",
@@ -100,31 +100,28 @@
     },
     {
       "rel": "self",
-      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/CIV-NZ/items/MFL-2026-044.json",
+      "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/CIV-NZ/items/MFL-2026-084.json",
       "type": "application/json"
     },
     {
       "rel": "via",
-      "href": "https://gadm.org/download_country.html",
+      "href": "https://arcweather.africarice.org/en/downloads",
       "title": "Primary source / download"
+    },
+    {
+      "rel": "related",
+      "href": "https://climate-data-hub.cgiar.org/",
+      "title": "CGIAR Climate Data Hub (source of truth for climate layers) [placeholder URL]"
     }
   ],
   "assets": {
     "data": {
-      "href": "https://gadm.org/download_country.html",
+      "href": "https://arcweather.africarice.org/en/downloads",
       "title": "Primary data source",
       "roles": [
         "data"
       ],
-      "type": "application/octet-stream"
-    },
-    "access-note": {
-      "href": "",
-      "title": "Access note (no resolvable URL)",
-      "description": "Current location: Drive",
-      "roles": [
-        "metadata"
-      ]
+      "type": "text/csv"
     }
   }
 }

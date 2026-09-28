@@ -41,10 +41,10 @@
   ],
   "properties": {
     "title": "Climate station data (NHMS synoptic stations)",
-    "description": "Climate data from climate stations for three major cities in the watershed (coverage period varies depending on the station); climate data from M'Be research station",
+    "description": "Daily weather data for three synoptic stations in and around the N'Zi watershed, served by AfricaRice's ARCWeather portal: Bouaké and Ferkessédougou from 1980 to 2010, Korhogo from 1994 to 2001. Korhogo holds fewer variables, and its dew point is estimated from the minimum temperature. AfricaRice's own M'Bé research-station data from 2014 onward is a separate record, MFL-2026-084.",
     "datetime": null,
-    "start_datetime": "2014-01-01T00:00:00Z",
-    "end_datetime": "2014-12-31T23:59:59Z",
+    "start_datetime": "1980-01-01T00:00:00Z",
+    "end_datetime": "2010-12-31T23:59:59Z",
     "created": null,
     "updated": "2026",
     "cgiar-cdh:geography": [
@@ -56,7 +56,7 @@
     "mosaic:access_level": "Open",
     "mosaic:processing_status": "Validated",
     "mosaic:migration_status": null,
-    "mosaic:update_frequency": "Monthly",
+    "mosaic:update_frequency": "Static",
     "mosaic:bbox_approximate": false,
     "mosaic:bbox_note": "Bbox of the canonical landscape delineation, used as a proxy for the dataset's own (unrecorded) extent.",
     "mosaic:formats": [
@@ -65,7 +65,7 @@
     "mosaic:spatial_resolution": "Climate station observations",
     "proj:code": null,
     "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
-    "mosaic:license_original": "Other (specify in notes)",
+    "mosaic:license_original": "ARCWeather usage terms: non-commercial, educational, research or personal use only, with citation. The portal states that Côte d'Ivoire climate data is distributed by Sodexam; no licence stated by the rights holder",
     "contacts": [
       {
         "name": "Louis Kouadio",
@@ -104,16 +104,29 @@
       "type": "application/json"
     },
     {
+      "rel": "via",
+      "href": "https://arcweather.africarice.org/en/downloads",
+      "title": "Primary source / download"
+    },
+    {
       "rel": "related",
       "href": "https://climate-data-hub.cgiar.org/",
       "title": "CGIAR Climate Data Hub (source of truth for climate layers) [placeholder URL]"
     }
   ],
   "assets": {
+    "data": {
+      "href": "https://arcweather.africarice.org/en/downloads",
+      "title": "Primary data source",
+      "roles": [
+        "data"
+      ],
+      "type": "text/csv"
+    },
     "access-note": {
       "href": "",
       "title": "Access note (no resolvable URL)",
-      "description": "Current location: server and drive | Source note: NHMS for the synoptic climate stations",
+      "description": "Current location: server and drive",
       "roles": [
         "metadata"
       ]

@@ -7,7 +7,7 @@
   ],
   "id": "GLB",
   "title": "Global / cross-landscape",
-  "description": "Datasets registered as 'Global / cross-landscape' (4 item(s)). Spatial extent is an APPROXIMATE locator box.",
+  "description": "Datasets registered as 'Global / cross-landscape' (2 item(s)). Spatial extent is an APPROXIMATE locator box.",
   "license": "other",
   "extent": {
     "spatial": {
@@ -31,16 +31,9 @@
   },
   "keywords": [
     "Agrobiodiversity / crops",
-    "Degradation / land health",
     "Ecosystem services"
   ],
   "providers": [
-    {
-      "name": "AfricaRice",
-      "roles": [
-        "producer"
-      ]
-    },
     {
       "name": "Alliance Bioversity-CIAT",
       "roles": [
@@ -54,7 +47,6 @@
     ],
     "mosaic:theme": [
       "Agrobiodiversity / crops",
-      "Degradation / land health",
       "Ecosystem services"
     ]
   },
@@ -65,7 +57,7 @@
   "mosaic:living_landscape": "GLB",
   "mosaic:bbox_approximate": true,
   "mosaic:bbox_note": "Approximate locator box from MOSAIC bbox_lookup (EPSG:4326).",
-  "mosaic:item_count": 4,
+  "mosaic:item_count": 2,
   "links": [
     {
       "rel": "root",
@@ -81,18 +73,6 @@
       "rel": "self",
       "href": "https://aow2-mfl-cgiar-science-program.github.io/MOSAIC_catalog/stac/collections/GLB/collection.json",
       "type": "application/json"
-    },
-    {
-      "rel": "item",
-      "href": "./items/MFL-2026-048.json",
-      "type": "application/json",
-      "title": "DSSAT soil profiles (global .SOL files)"
-    },
-    {
-      "rel": "item",
-      "href": "./items/MFL-2026-066.json",
-      "type": "application/json",
-      "title": "SoilGrids gridded soil information"
     },
     {
       "rel": "item",
