@@ -49,26 +49,26 @@ Per §3 of the assessment. Use `cgiar-cdh:*` where the CDH defines it, `mosaic:*
 | 5 Living landscape | `mosaic:living_landscape` (CODE) | mosaic |
 | 6 Data type | object type + asset `media_type`; selects Datacube vs Table ext | core |
 | 7 Spatial resolution | `mosaic:spatial_resolution` (verbatim string; omitted when blank). CDH v0.3.0 `cgiar-cdh:spatial_resolution` takes only structured point/polygon objects and grid spacing goes to `cube:dimensions[].step`, so MOSAIC's free text stays in its own namespace | mosaic |
-| 8 Temporal coverage | `extent.temporal.interval` = `[[start, end]]` (R4) | core |
+| 8 Temporal coverage | Item `start_datetime`/`end_datetime` + collection `extent.temporal.interval` (R4). No period → item `datetime` = the date the record was catalogued (`date_registered`, else 2026-07-21, the canonical snapshot); an open end ("present") closes on that date; both flagged in `mosaic:datetime_note` (since 2026-09-28) | core + mosaic |
 | 9 Source / Centre | `providers[]` (role producer/host) | core |
 | 10 Contact person | `providers[]` + Contacts ext `contacts[]`; **≥1 `licensor`** | core + Contacts ext |
 | 11 Access level | `mosaic:access_level` | mosaic |
 | 12 License | `license` on items (since 2026-09-28) and collections: the SPDX id (R3); a verbatim or vague string → `other`, with the text in `mosaic:license_original`. Item: omitted when blank. Collection: the members' shared SPDX id, else `other` | core |
 | 13 Processing status | `mosaic:processing_status` | mosaic |
 | 14 File name(s) | `assets{}` keys / `data[].name` | core |
-| 15 Current location | primary asset `href` | core |
+| 15 Current location | `mosaic:access_note` (item property, with 17 and the source note); never an asset — STAC asset `href`s must resolve | mosaic |
 | 16 Migration status | `mosaic:migration_status` | mosaic |
-| 17 Server path | additional asset / Alternate Assets ext | core/ext |
+| 17 Server path | `mosaic:access_note` (see 15) | mosaic |
 | 18 Description / Notes | `description` (+ `cgiar-cdh:note` for structured leftovers) | core + cgiar-cdh |
-| 19 Date registered | `created` | core |
-| 20 Last updated | `updated` | core |
+| 19 Date registered | `created` (RFC 3339, midnight UTC), only when it is a full date; otherwise omitted | core |
+| 20 Last updated | `mosaic:last_updated` (verbatim: mostly a bare year, and it describes the data; STAC `updated` is the metadata's own timestamp) | mosaic |
 | 21 Update frequency | `mosaic:update_frequency` | mosaic |
 | 22 Download URL | primary asset `href` / `links[rel=via]` | core |
 | 23 File Size | `file:size` (File ext) | File ext |
 
 **YAML-only record fields (no Excel column):** `citation` → `datasets.json` `citation`; `gee_asset_id` (since 2026-09-23) → STAC item property `mosaic:gee_asset_id` (only when set) + `datasets.json` `gee_asset_id`. MOSAIC-local: the CDH standard has no Earth Engine field.
 
-**Not in registry, set by exporter:** `encoding: "stac"` (all spatial rows; a non-spatial document row → `"ogc-records"`), `mosaic_schema_version`, `extent.spatial.bbox` (from `bbox_lookup.json` until real geometries exist), `proj:code`/`proj:epsg` (CRS — absent in registry, leave null + FLAG).
+**Not in registry, set by exporter:** `encoding: "stac"` (all spatial rows; a non-spatial document row → `"ogc-records"`), `mosaic_schema_version`, `extent.spatial.bbox` (from `bbox_lookup.json` until real geometries exist), `proj:code`/`proj:epsg` (CRS — absent in registry, leave null + FLAG). **Official STAC 1.0.0 schema conformance** since 2026-09-28 (MOSAIC STAC extension 0.3.0: `mosaic:access_note`, `mosaic:last_updated`, `mosaic:datetime_note`); `validate.py` enforces RFC 3339 dates and non-empty asset hrefs.
 
 **SKIP (CDH owns):** the climate block (`climate.*`) and CDH climate vocabularies (hazard, commodity). For climate layers, MOSAIC links to the CDH via `links[rel=related|via]` — do not redefine.
 

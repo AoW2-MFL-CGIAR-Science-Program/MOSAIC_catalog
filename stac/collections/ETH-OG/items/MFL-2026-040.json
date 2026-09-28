@@ -2,7 +2,7 @@
   "type": "Feature",
   "stac_version": "1.0.0",
   "stac_extensions": [
-    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.2.0/schema.json",
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
     "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
   ],
   "id": "MFL-2026-040",
@@ -45,8 +45,6 @@
     "datetime": null,
     "start_datetime": "2005-01-01T00:00:00Z",
     "end_datetime": "2005-12-31T23:59:59Z",
-    "created": "Drive",
-    "updated": null,
     "cgiar-cdh:geography": [
       "ethiopia"
     ],
@@ -78,7 +76,8 @@
           "licensor"
         ]
       }
-    ]
+    ],
+    "mosaic:access_note": "Current location: Drive | Source note: Internal Available on request"
   },
   "collection": "ETH-OG",
   "links": [
@@ -103,14 +102,5 @@
       "type": "application/json"
     }
   ],
-  "assets": {
-    "access-note": {
-      "href": "",
-      "title": "Access note (no resolvable URL)",
-      "description": "Current location: Drive | Source note: Internal Available on request",
-      "roles": [
-        "metadata"
-      ]
-    }
-  }
+  "assets": {}
 }

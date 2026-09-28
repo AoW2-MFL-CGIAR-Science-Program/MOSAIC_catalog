@@ -2,7 +2,7 @@
   "type": "Feature",
   "stac_version": "1.0.0",
   "stac_extensions": [
-    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.2.0/schema.json",
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
     "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
   ],
   "id": "MFL-2026-042",
@@ -42,11 +42,7 @@
   "properties": {
     "title": "Erosion map",
     "description": "Emprical modellling",
-    "datetime": null,
-    "start_datetime": null,
-    "end_datetime": null,
-    "created": null,
-    "updated": null,
+    "datetime": "2026-07-21T00:00:00Z",
     "cgiar-cdh:geography": [
       "ethiopia"
     ],
@@ -62,6 +58,7 @@
     "mosaic:formats": [
       "GeoTIFF"
     ],
+    "mosaic:datetime_note": "No temporal coverage recorded. datetime is a stand-in: the date the record was catalogued (2026-07-21, the canonical registry snapshot it predates), not a time of the data.",
     "proj:code": null,
     "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
     "license": "CC-BY-4.0",
@@ -78,7 +75,8 @@
           "licensor"
         ]
       }
-    ]
+    ],
+    "mosaic:access_note": "Current location: Drive | Source note: Internal Available on request"
   },
   "collection": "ETH-OG",
   "links": [
@@ -103,14 +101,5 @@
       "type": "application/json"
     }
   ],
-  "assets": {
-    "access-note": {
-      "href": "",
-      "title": "Access note (no resolvable URL)",
-      "description": "Current location: Drive | Source note: Internal Available on request",
-      "roles": [
-        "metadata"
-      ]
-    }
-  }
+  "assets": {}
 }

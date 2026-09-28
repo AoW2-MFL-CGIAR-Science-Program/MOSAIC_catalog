@@ -2,7 +2,7 @@
   "type": "Feature",
   "stac_version": "1.0.0",
   "stac_extensions": [
-    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.2.0/schema.json",
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
     "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
   ],
   "id": "MFL-2026-070",
@@ -42,11 +42,8 @@
   "properties": {
     "title": "Coding Matrix: Ecosystem Services in Tropical Cattle Systems — A Systematic Literature Review across Five Thematic Streams",
     "description": "Workbook documenting ~549 coded study entries from a systematic literature review on ecosystem services in tropical and subtropical cattle systems, coded consistently across five thematic streams for cross-paper comparison and filtering. Studies may appear in multiple streams.",
-    "datetime": null,
-    "start_datetime": null,
-    "end_datetime": null,
-    "created": "2026-08-03",
-    "updated": "2026",
+    "datetime": "2026-08-03T00:00:00Z",
+    "created": "2026-08-03T00:00:00Z",
     "cgiar-cdh:geography": [
       "world"
     ],
@@ -62,6 +59,8 @@
     "mosaic:formats": [
       "XLSX"
     ],
+    "mosaic:datetime_note": "No temporal coverage recorded. datetime is a stand-in: the date the record was catalogued (its registration date), not a time of the data.",
+    "mosaic:last_updated": "2026",
     "proj:code": null,
     "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
     "license": "CC-BY-4.0",
@@ -78,7 +77,8 @@
           "licensor"
         ]
       }
-    ]
+    ],
+    "mosaic:access_note": "Current location: Harvard Dataverse"
   },
   "collection": "GLB",
   "links": [
@@ -116,14 +116,6 @@
         "data"
       ],
       "type": "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
-    },
-    "access-note": {
-      "href": "",
-      "title": "Access note (no resolvable URL)",
-      "description": "Current location: Harvard Dataverse",
-      "roles": [
-        "metadata"
-      ]
     }
   }
 }

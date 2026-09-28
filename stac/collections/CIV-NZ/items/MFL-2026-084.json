@@ -2,7 +2,7 @@
   "type": "Feature",
   "stac_version": "1.0.0",
   "stac_extensions": [
-    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.2.0/schema.json",
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
     "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
   ],
   "id": "MFL-2026-084",
@@ -44,9 +44,8 @@
     "description": "Daily weather data from AfricaRice's two weather stations at the M'Bé research station near Bouaké, in the N'Zi watershed: MBE_LOWLAND (273 m) and MBE_UPLAND (303 m), from 2014 onward. Served by AfricaRice's ARCWeather portal.",
     "datetime": null,
     "start_datetime": "2014-01-01T00:00:00Z",
-    "end_datetime": null,
-    "created": "2026-09-22",
-    "updated": "2026",
+    "end_datetime": "2026-09-22T00:00:00Z",
+    "created": "2026-09-22T00:00:00Z",
     "cgiar-cdh:geography": [
       "cote-d-ivoire"
     ],
@@ -63,6 +62,8 @@
       "CSV"
     ],
     "mosaic:spatial_resolution": "Point level",
+    "mosaic:datetime_note": "Open-ended coverage ('present'). end_datetime is the date the record was catalogued (its registration date).",
+    "mosaic:last_updated": "2026",
     "proj:code": null,
     "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
     "license": "other",

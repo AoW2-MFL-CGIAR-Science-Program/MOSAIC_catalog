@@ -2,7 +2,7 @@
   "type": "Feature",
   "stac_version": "1.0.0",
   "stac_extensions": [
-    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.2.0/schema.json",
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
     "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
   ],
   "id": "MFL-2026-066",
@@ -42,11 +42,7 @@
   "properties": {
     "title": "iSDAsoil soil properties for the N'Zi watershed (0-20 and 20-50 cm)",
     "description": "Fifteen soil properties from iSDAsoil (iSDA), extracted by AfricaRice for the N'Zi watershed at about 30 m, at 0-20 and 20-50 cm: bulk density, calcium, cation exchange capacity, clay, iron, potassium, magnesium, total nitrogen, phosphorus, pH, sulphur, sand, silt, soil organic carbon and zinc, in physical units. The public source is iSDAsoil for Africa.",
-    "datetime": null,
-    "start_datetime": null,
-    "end_datetime": null,
-    "created": null,
-    "updated": "2026",
+    "datetime": "2026-07-21T00:00:00Z",
     "cgiar-cdh:geography": [
       "cote-d-ivoire"
     ],
@@ -63,6 +59,8 @@
       "GeoTIFF"
     ],
     "mosaic:spatial_resolution": "30 m",
+    "mosaic:datetime_note": "No temporal coverage recorded. datetime is a stand-in: the date the record was catalogued (2026-07-21, the canonical registry snapshot it predates), not a time of the data.",
+    "mosaic:last_updated": "2026",
     "proj:code": null,
     "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
     "license": "CC-BY-4.0",
@@ -79,7 +77,8 @@
           "licensor"
         ]
       }
-    ]
+    ],
+    "mosaic:access_note": "Current location: server and drive"
   },
   "collection": "CIV-NZ",
   "links": [
@@ -117,14 +116,6 @@
         "data"
       ],
       "type": "image/tiff; application=geotiff"
-    },
-    "access-note": {
-      "href": "",
-      "title": "Access note (no resolvable URL)",
-      "description": "Current location: server and drive",
-      "roles": [
-        "metadata"
-      ]
     }
   }
 }

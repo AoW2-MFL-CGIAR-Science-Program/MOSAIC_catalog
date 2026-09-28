@@ -2,7 +2,7 @@
   "type": "Collection",
   "stac_version": "1.0.0",
   "stac_extensions": [
-    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.2.0/schema.json",
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.3.0/schema.json",
     "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
   ],
   "id": "KEN-LEI",
@@ -38,10 +38,7 @@
       ]
     }
   ],
-  "summaries": {
-    "mosaic:access_level": [],
-    "mosaic:theme": []
-  },
+  "summaries": {},
   "mosaic:living_landscape": "KEN-LEI",
   "mosaic:bbox_approximate": false,
   "mosaic:bbox_note": "Bbox derived from the canonical delineation shapefile (dissolved, EPSG:4326), union-ed with member-item locator boxes.",

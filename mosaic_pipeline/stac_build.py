@@ -12,7 +12,9 @@ to the CDH via links[rel=via|related] rather than re-describing them.
 from __future__ import annotations
 
 import json
+import re
 import shutil
+from datetime import date
 from pathlib import Path
 
 from .config import STAC_BASE_URL
@@ -22,7 +24,7 @@ from .vocab import COUNTRY_M49, MULTI_LANDSCAPE_COUNTRIES, Vocab
 BOUNDARIES_SRC = Path(__file__).resolve().parent.parent / "boundaries"
 
 STAC_VERSION = "1.0.0"
-MOSAIC_SCHEMA_VERSION = "0.2.0"
+MOSAIC_SCHEMA_VERSION = "0.3.0"
 
 # Custom extension identifiers (mirrored locally; schemas hosted later).
 EXT_MOSAIC = f"https://mosaic.cgiar.org/stac-extensions/mosaic/v{MOSAIC_SCHEMA_VERSION}/schema.json"
@@ -32,6 +34,9 @@ EXT_CDH = (
     "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/"
     f"v{CDH_STANDARD_VERSION}/encodings/stac/schema.json"
 )
+
+# Canonical registry snapshot. Every record without a registration date is older than it.
+SNAPSHOT_DATE = "2026-07-21"
 
 MEDIA_TYPE = {
     "GeoTIFF": "image/tiff; application=geotiff",
@@ -47,6 +52,18 @@ MEDIA_TYPE = {
 
 def _self_link(path_from_root: str) -> dict:
     return {"rel": "self", "href": path_from_root}
+
+
+def _rfc3339(value) -> str | None:
+    """A full calendar date ('2026-09-15') as RFC 3339 midnight UTC; anything else -> None."""
+    v = str(value).strip() if value is not None else ""
+    if not re.fullmatch(r"\d{4}-\d{2}-\d{2}", v):
+        return None
+    try:
+        date.fromisoformat(v)
+    except ValueError:
+        return None
+    return f"{v}T00:00:00Z"
 
 
 def build_stac(records: list[dict], vocab: Vocab, stac_dir: Path) -> dict:
@@ -234,10 +251,9 @@ def _build_collection(code: str, recs: list[dict], vocab: Vocab) -> dict:
         },
         "keywords": themes,
         "providers": _collection_providers(recs),
-        "summaries": {
-            "mosaic:access_level": access_levels,
-            "mosaic:theme": themes,
-        },
+        # STAC summaries need at least one value per field (KEN-LEI has no items yet).
+        "summaries": {k: v for k, v in (("mosaic:access_level", access_levels),
+                                        ("mosaic:theme", themes)) if v},
         "cgiar-cdh:geography": geographies,
         "mosaic:living_landscape": code,
         "mosaic:bbox_approximate": not delineated,
@@ -281,15 +297,16 @@ def _build_item(r: dict, code: str, vocab: Vocab) -> dict:
     geometry = _bbox_to_polygon(bbox)
 
     geography, _ = Vocab.country_m49(r["country"])
+    start, end = r["temporal_interval"][0]
+    catalogued = _rfc3339(r["date_registered"])
 
     props = {
         "title": r["title"],
         "description": r["description"],
         "datetime": None,  # closed interval below; null datetime is valid with start/end
-        "start_datetime": r["temporal_interval"][0][0],
-        "end_datetime": r["temporal_interval"][0][1],
-        "created": r["date_registered"],
-        "updated": r["last_updated"],
+        "start_datetime": start,
+        "end_datetime": end,
+        "created": catalogued,
         # cgiar-cdh:* (CDH-defined where applicable)
         "cgiar-cdh:geography": geography,
         # mosaic:* (MOSAIC-specific)
@@ -310,6 +327,28 @@ def _build_item(r: dict, code: str, vocab: Vocab) -> dict:
     # objects in cgiar-cdh:spatial_resolution (grid spacing -> cube:dimensions), so it stays MOSAIC's.
     if r["spatial_resolution"]:
         props["mosaic:spatial_resolution"] = r["spatial_resolution"]
+    # STAC needs a real time on every Item. With no period recorded, the date the record was
+    # catalogued stands in, flagged; an open end ("1981 - present") closes on that date.
+    stand_in = catalogued or f"{SNAPSHOT_DATE}T00:00:00Z"
+    stand_in_source = ("its registration date" if catalogued
+                       else f"{SNAPSHOT_DATE}, the canonical registry snapshot it predates")
+    if not start:
+        del props["start_datetime"], props["end_datetime"]
+        props["datetime"] = stand_in
+        props["mosaic:datetime_note"] = (
+            "No temporal coverage recorded. datetime is a stand-in: the date the record was "
+            f"catalogued ({stand_in_source}), not a time of the data.")
+    elif not end:
+        props["end_datetime"] = stand_in
+        props["mosaic:datetime_note"] = (
+            "Open-ended coverage ('present'). end_datetime is the date the record was "
+            f"catalogued ({stand_in_source}).")
+    if not catalogued:
+        del props["created"]  # missing, or not a date (text typed in the wrong column)
+    # The registry's 'Last updated' describes the data and is mostly a bare year, so it stays
+    # verbatim here; STAC 'updated' is the metadata's own RFC 3339 timestamp.
+    if r["last_updated"]:
+        props["mosaic:last_updated"] = r["last_updated"]
     # proj: CRS unknown in registry -> explicit null + note.
     props["proj:code"] = None
     props["mosaic:crs_note"] = "CRS not recorded in registry (missing_crs)."
@@ -337,7 +376,9 @@ def _build_item(r: dict, code: str, vocab: Vocab) -> dict:
     # Drop None datetime keys that STAC validators dislike? datetime=null is allowed
     # when start/end present, so keep it.
 
-    assets = _build_assets(r)
+    assets, access_note = _build_assets(r)
+    if access_note:
+        props["mosaic:access_note"] = access_note
 
     links = [
         {"rel": "root", "href": "../../../catalog.json", "type": "application/json"},
@@ -393,7 +434,9 @@ def _item_bbox_note(r: dict) -> str:
             "dataset's own (unrecorded) extent.")
 
 
-def _build_assets(r: dict) -> dict:
+def _build_assets(r: dict) -> tuple[dict, str | None]:
+    """Returns (assets, access note). Only resolvable URLs become assets: a STAC asset href
+    must not be empty, so locations and source notes travel as mosaic:access_note."""
     assets: dict[str, dict] = {}
     primary_media = MEDIA_TYPE.get(r["formats"][0]) if r["formats"] else None
 
@@ -419,22 +462,9 @@ def _build_assets(r: dict) -> dict:
         notes.append(f"Server path: {r['server_path']}")
     if r["download_raw"] and not r["download_url"]:
         notes.append(f"Source note: {r['download_raw']}")
-    if notes:
-        assets["access-note"] = {
-            "href": "",
-            "title": "Access note (no resolvable URL)",
-            "description": " | ".join(notes),
-            "roles": ["metadata"],
-        }
-
-    if not assets:
-        # Items must have an assets object; provide an explicit empty-state marker.
-        assets["unavailable"] = {
-            "href": "",
-            "title": "No download URL or location recorded",
-            "roles": ["metadata"],
-        }
-    return assets
+    if not notes and not assets:
+        notes.append("No download URL or location recorded")
+    return assets, " | ".join(notes) or None
 
 
 def _bbox_to_polygon(bbox: list) -> dict:
