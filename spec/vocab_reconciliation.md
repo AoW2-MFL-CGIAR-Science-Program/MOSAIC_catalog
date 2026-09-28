@@ -76,6 +76,7 @@ Enum is open to SPDX ids; the dropdown seed list (extend as data requires):
 ```
 ["CC-BY-4.0","CC-BY-SA-4.0","CC-BY-NC-4.0","CC0-1.0","other",null]
 ```
+- 2026-09-23: R3 now also emits every CC BY variant (1.0–4.0, the 3.0 IGO ports), `ODC-By-1.0`, `ODbL-1.0` and `PDDL-1.0` — list in `transform.py:SPDX_LICENSE_IDS`.
 - Non-SPDX CGIAR strings kept verbatim as documented aliases + flagged (field_mapping R3).
 - **[COORD]** agree the SPDX subset + CGIAR-license aliases with Brayden so both hubs read the same values.
 

@@ -97,6 +97,63 @@ def derive_formats(filenames, data_type) -> tuple[list[str], list[str]]:
 
 
 # --- R3: license -> SPDX -----------------------------------------------------
+# SPDX ids R3 can emit (checked against SPDX License List 3.29, 2026-09-23).
+# CC IGO ports exist only at 3.0, and SPDX has no CC-BY-ND-3.0-IGO.
+_CC_VERSIONS = ("1.0", "2.0", "2.5", "3.0", "4.0")
+SPDX_LICENSE_IDS = frozenset(
+    [f"CC-BY{e}-{v}" for e in ("", "-SA", "-NC", "-NC-SA", "-NC-ND", "-ND")
+     for v in _CC_VERSIONS]
+    + [f"CC-BY{e}-3.0-IGO" for e in ("", "-SA", "-NC", "-NC-SA", "-NC-ND")]
+    + ["CC0-1.0", "ODC-By-1.0", "ODbL-1.0", "PDDL-1.0"]
+)
+
+# "CC BY-NC-SA 4.0", "CC-BY-4.0", "(CC BY-IGO)": group 1 = the element chain.
+_CC_ABBR_RE = re.compile(r"\bcc[\s_-]*by(?![a-z])((?:[\s_-]*(?:nc|sa|nd|igo)(?![a-z]))*)")
+_CC_VERSION_RE = re.compile(r"(?<![\d.])(\d\.\d)(?![\d.])")
+
+
+def _cc_by_spdx(low: str) -> tuple[bool, Optional[str]]:
+    """(names a CC BY-family license?, its SPDX id, or None if SPDX lists no such id).
+
+    Reads the abbreviated form ("CC BY-NC-SA 4.0") and the long form ("Creative
+    Commons Attribution-NonCommercial-ShareAlike 4.0 International"). No version
+    -> 4.0, except IGO, which exists only as 3.0.
+    """
+    abbr = _CC_ABBR_RE.search(low)
+    long_pos = low.find("creative commons") if "attribution" in low else -1
+    if not abbr and long_pos < 0:
+        return False, None
+    elements = set(re.findall(r"nc|sa|nd|igo", abbr.group(1))) if abbr else set()
+    if long_pos >= 0:
+        if re.search(r"non[\s-]?commercial", low):
+            elements.add("nc")
+        if re.search(r"share[\s-]?alike", low):
+            elements.add("sa")
+        if re.search(r"no[\s-]?deriv", low):
+            elements.add("nd")
+    if "intergovernmental" in low or re.search(r"\bigo\b", low):
+        elements.add("igo")
+    start = min(p for p in (abbr.start() if abbr else -1, long_pos) if p >= 0)
+    m = _CC_VERSION_RE.search(low, start)
+    version = m.group(1) if m else ("3.0" if "igo" in elements else "4.0")
+    spdx = ("CC-BY" + "".join(f"-{e.upper()}" for e in ("nc", "sa", "nd") if e in elements)
+            + f"-{version}" + ("-IGO" if "igo" in elements else ""))
+    return True, (spdx if spdx in SPDX_LICENSE_IDS else None)
+
+
+def _odc_spdx(low: str) -> tuple[bool, Optional[str]]:
+    """(names an Open Data Commons license?, its SPDX id or None). All are 1.0 only."""
+    if re.search(r"\bodbl\b", low) or "open database licen" in low:
+        return True, "ODbL-1.0"
+    if re.search(r"\bodc[\s_-]*by\b", low) or "open data commons attribution" in low:
+        return True, "ODC-By-1.0"
+    if re.search(r"\bpddl\b", low) or "public domain dedication and licen" in low:
+        return True, "PDDL-1.0"
+    if "open data commons" in low or re.search(r"\bodc\b", low):
+        return True, None
+    return False, None
+
+
 def map_license(raw) -> tuple[Optional[str], Optional[str], list[str]]:
     """Returns (spdx_or_value, original_alias_if_non_spdx, flags)."""
     flags: list[str] = []
@@ -104,18 +161,25 @@ def map_license(raw) -> tuple[Optional[str], Optional[str], list[str]]:
     if not t:
         return None, None, ["missing_license"]
     low = t.lower()
-    if "cc by-sa" in low or "cc-by-sa" in low:
-        return "CC-BY-SA-4.0", None, flags
-    if "cc by-nc" in low or "cc-by-nc" in low:
-        return "CC-BY-NC-4.0", None, flags
-    if "cc by 4.0" in low or "cc-by" in low or "cc by" in low:
-        return "CC-BY-4.0", None, flags
+    # Deliberate restrictive wording (project rule: GADM, WDPA, IUCN, OSM/ODbL)
+    # is never reduced to an SPDX id, even when it names one.
+    if low.startswith("restricted"):
+        return t, t, ["non_spdx_license"]
+    # Before CC (ODC-By says "Attribution"), public domain (PDDL) and the vague
+    # branch (the names start "Open Data Commons" / "Open Database").
+    for parse in (_odc_spdx, _cc_by_spdx):
+        named, spdx = parse(low)
+        if named:
+            if spdx:
+                return spdx, None, flags
+            # a combination SPDX does not list (e.g. CC BY-ND 3.0 IGO) -> verbatim
+            return t, t, ["non_spdx_license"]
     if "cc0" in low or "public domain" in low:
         return "CC0-1.0", None, flags
     if low.startswith("open") or "open data" in low:
         return "other", t, ["vague_license"]
-    # anything else (e.g. "CGIAR Open Access", "Restricted — contact data owner",
-    # "Other (specify in notes)") -> keep verbatim, flag.
+    # anything else (e.g. "CGIAR Open Access", "Other (specify in notes)")
+    # -> keep verbatim, flag.
     return t, t, ["non_spdx_license"]
 
 

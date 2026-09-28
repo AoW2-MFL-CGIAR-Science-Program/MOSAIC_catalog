@@ -90,15 +90,22 @@ Input is messy "Name - email" / "Name, email" / "Name (email)" / just a name / j
 
 ### R3 — License → SPDX (col 12 → `license`)
 Map known values to SPDX ids; keep unknown CGIAR-specific strings verbatim and FLAG `non_spdx_license`.
-| Registry value (case-insensitive contains) | `license` |
+Rules apply top to bottom (revised 2026-09-23; the emitted ids are `SPDX_LICENSE_IDS` in `transform.py`).
+| Registry value (case-insensitive) | `license` |
 |---|---|
-| CC BY 4.0 / CC-BY | `CC-BY-4.0` |
-| CC BY-SA | `CC-BY-SA-4.0` |
-| CC BY-NC | `CC-BY-NC-4.0` |
+| starts with "Restricted" (project rule: GADM, WDPA, IUCN, OSM/ODbL) | keep verbatim + FLAG `non_spdx_license`, even if it names a license |
+| ODbL / Open Database License | `ODbL-1.0` |
+| ODC-BY / Open Data Commons Attribution | `ODC-By-1.0` |
+| PDDL / Public Domain Dedication and License | `PDDL-1.0` |
+| any other "Open Data Commons" / ODC | keep verbatim + FLAG `non_spdx_license` |
+| CC BY family, abbreviated ("CC BY-NC-SA 4.0") or long ("Creative Commons Attribution-NonCommercial-…") | `CC-BY[-NC][-SA\|-ND]-<version>[-IGO]`, e.g. `CC-BY-NC-SA-4.0`, `CC-BY-3.0-IGO`. No version → 4.0; IGO → 3.0 (its only version) |
+| CC combination SPDX does not list (e.g. CC BY-ND 3.0 IGO, CC BY 4.0 IGO) | keep verbatim + FLAG `non_spdx_license` |
 | CC0 / public domain | `CC0-1.0` |
 | Open / open data (no specific license) | `other` + FLAG `vague_license` |
 | (blank) | `null` + FLAG `missing_license` |
 | anything else (e.g. "CGIAR internal use") | keep verbatim + FLAG `non_spdx_license` |
+
+The original string travels as the alias whenever the value is verbatim or `other`, and is published as STAC `mosaic:license_original` (verbatim values are also `license` in `datasets.json`).
 
 ### R4 — Temporal coverage split (col 8 → STAC `extent.temporal.interval`)
 Frontend keeps the raw string. For STAC only:

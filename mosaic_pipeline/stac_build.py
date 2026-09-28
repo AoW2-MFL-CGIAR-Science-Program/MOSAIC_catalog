@@ -16,6 +16,7 @@ import shutil
 from pathlib import Path
 
 from .config import STAC_BASE_URL
+from .transform import SPDX_LICENSE_IDS
 from .vocab import COUNTRY_M49, MULTI_LANDSCAPE_COUNTRIES, Vocab
 
 BOUNDARIES_SRC = Path(__file__).resolve().parent.parent / "boundaries"
@@ -265,8 +266,7 @@ def _build_collection(code: str, recs: list[dict], vocab: Vocab) -> dict:
 
 
 def _looks_spdx(value: str) -> bool:
-    spdx = {"CC-BY-4.0", "CC-BY-SA-4.0", "CC-BY-NC-4.0", "CC0-1.0", "other"}
-    return value in spdx
+    return value in SPDX_LICENSE_IDS or value == "other"
 
 
 def _collection_providers(recs: list[dict]) -> list[dict]:
@@ -314,7 +314,8 @@ def _build_item(r: dict, code: str, vocab: Vocab) -> dict:
     props["proj:code"] = None
     props["mosaic:crs_note"] = "CRS not recorded in registry (missing_crs)."
 
-    if r["license_alias"] and not _looks_spdx(r["license"] or ""):
+    # Set for verbatim (non-SPDX) strings and for the vague branch ("other").
+    if r["license_alias"]:
         props["mosaic:license_original"] = r["license_alias"]
 
     # An ID, not a URL: no link until the asset is public (a private asset link is a dead end).
