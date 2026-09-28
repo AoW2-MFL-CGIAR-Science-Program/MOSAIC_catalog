@@ -34,9 +34,10 @@ entire class of round-trip corruption.
 - Verifies after saving: reloads the file, compares every Registry cell against
   the records, and parses every XML part of the package (exit 1 on failure).
 
-The Excel path cannot carry the YAML-only forward fields (citation, doi, ...):
-a --from-excel build is byte-identical in stac/ and differs in datasets.json
-only where records carry a citation. That gap is by design (see SNAPSHOT_NOTE).
+The Excel path cannot carry the YAML-only fields (citation, gee_asset_id, doi, ...):
+a --from-excel build differs in stac/ only by mosaic:gee_asset_id on the items
+that have one, and in datasets.json only where records carry a citation or a
+gee_asset_id. That gap is by design (see SNAPSHOT_NOTE).
 """
 from __future__ import annotations
 

@@ -66,6 +66,8 @@ Per §3 of the assessment. Use `cgiar-cdh:*` where the CDH defines it, `mosaic:*
 | 22 Download URL | primary asset `href` / `links[rel=via]` | core |
 | 23 File Size | `file:size` (File ext) | File ext |
 
+**YAML-only record fields (no Excel column):** `citation` → `datasets.json` `citation`; `gee_asset_id` (since 2026-09-23) → STAC item property `mosaic:gee_asset_id` (only when set) + `datasets.json` `gee_asset_id`. MOSAIC-local: the CDH standard has no Earth Engine field.
+
 **Not in registry, set by exporter:** `encoding: "stac"` (all spatial rows; a non-spatial document row → `"ogc-records"`), `mosaic_schema_version`, `extent.spatial.bbox` (from `bbox_lookup.json` until real geometries exist), `proj:code`/`proj:epsg` (CRS — absent in registry, leave null + FLAG).
 
 **SKIP (CDH owns):** the climate block (`climate.*`) and CDH climate vocabularies (hazard, commodity). For climate layers, MOSAIC links to the CDH via `links[rel=related|via]` — do not redefine.

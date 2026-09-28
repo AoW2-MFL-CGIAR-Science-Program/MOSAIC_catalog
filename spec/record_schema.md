@@ -48,6 +48,7 @@ page explains intent. If the two disagree, the JSON wins — and please fix this
 | 21 | `update_frequency` | | enum \| null | Annual, Seasonal, Monthly, On-demand, Static, Unknown. Null → "Unknown". |
 | 22 | `download_url` | | string \| null | Raw value; pipeline extracts a real URL or nulls it (R8). |
 | 23 | `file_size` | | string \| number \| null | Raw scalar; ints stay ints ("220 MB" stays a string). |
+| 24 | `gee_asset_id` | | string \| null, `^projects/<cloud-project>/assets/<path>$` | Google Earth Engine asset ID of MOSAIC's copy (since 2026-09-23), e.g. `projects/mosaic-mfl/assets/mvp/MFL-2026-064`. **YAML-only** (the Excel path has no column). Published as STAC property `mosaic:gee_asset_id` and `gee_asset_id` in `datasets.json`. An ID, not a URL: `download_url` stays the canonical location, and no link is emitted while assets are private. |
 
 ## Forward-looking fields (assessment §4, Phase 1 — all default null)
 

@@ -7,7 +7,9 @@ formats, description, download_url, metadata_url — plus, since 2026-07-21:
 landscape_name, coverage (landscape|national|global), centroid ([lon, lat]);
 plus, since 2026-08-03: citation (depositor-supplied preferred citation,
 YAML-records-path only — Excel-derived records won't have the key at all;
-read with .get(), never r["citation"]).
+read with .get(), never r["citation"]);
+plus, since 2026-09-23: gee_asset_id (Earth Engine asset ID, YAML-only like
+citation; not rendered by the site yet).
 """
 from __future__ import annotations
 
@@ -19,7 +21,7 @@ FRONTEND_KEYS = [
     "mfl_theme", "data_type", "spatial_resolution", "temporal_coverage",
     "source", "contact", "access_level", "license", "readiness_status",
     "formats", "description", "download_url", "metadata_url", "centroid",
-    "citation",
+    "citation", "gee_asset_id",
 ]
 
 
@@ -49,6 +51,7 @@ def build_frontend(records: list[dict], out_path: Path, vocab=None) -> int:
             "download_url": r["download_url"],
             "metadata_url": r["metadata_url"],
             "citation": r.get("citation"),
+            "gee_asset_id": r.get("gee_asset_id"),
         })
     out_path.parent.mkdir(parents=True, exist_ok=True)
     with open(out_path, "w", encoding="utf-8") as f:

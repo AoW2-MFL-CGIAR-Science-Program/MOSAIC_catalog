@@ -223,6 +223,14 @@
       ],
       "description": "Raw scalar exactly as in the source (e.g. '220 MB'); ints stay ints."
     },
+    "gee_asset_id": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^projects/[a-z][a-z0-9-]{4,28}[a-z0-9]/assets/[A-Za-z0-9_-]+(/[A-Za-z0-9_-]+)*$",
+      "description": "Google Earth Engine asset ID of MOSAIC's copy of the dataset (Cloud-project form, e.g. 'projects/mosaic-mfl/assets/mvp/MFL-2026-064'). YAML-only; published as STAC property mosaic:gee_asset_id. An ID, not a URL; download_url stays the canonical location."
+    },
     "encoding": {
       "enum": [
         "stac",

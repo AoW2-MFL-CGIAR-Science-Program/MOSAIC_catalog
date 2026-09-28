@@ -61,7 +61,7 @@ def main(argv=None) -> int:
     schema = load_schema()
     key_order = record_key_order(schema)
     core_keys = [k for k in key_order
-                 if k not in ("encoding", "bbox", "crs", "citation", "doi",
+                 if k not in ("gee_asset_id", "encoding", "bbox", "crs", "citation", "doi",
                               "keywords", "media_type")]
     enums = {k: v["enum"] for k, v in schema["properties"].items() if "enum" in v}
 

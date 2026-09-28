@@ -228,5 +228,7 @@ def read_records(records_dir, vocab: Vocab) -> list[dict]:
         # raw, as a depositor-supplied preferred citation string (frontend
         # displays it verbatim in place of the auto-generated one when present).
         rec["citation"] = data.get("citation")
+        # gee_asset_id is YAML-only for the same reason (since 2026-09-23).
+        rec["gee_asset_id"] = data.get("gee_asset_id")
         out.append(rec)
     return out

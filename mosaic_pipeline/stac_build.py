@@ -21,10 +21,10 @@ from .vocab import COUNTRY_M49, MULTI_LANDSCAPE_COUNTRIES, Vocab
 BOUNDARIES_SRC = Path(__file__).resolve().parent.parent / "boundaries"
 
 STAC_VERSION = "1.0.0"
-MOSAIC_SCHEMA_VERSION = "0.1.0"
+MOSAIC_SCHEMA_VERSION = "0.2.0"
 
 # Custom extension identifiers (mirrored locally; schemas hosted later).
-EXT_MOSAIC = "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.1.0/schema.json"
+EXT_MOSAIC = f"https://mosaic.cgiar.org/stac-extensions/mosaic/v{MOSAIC_SCHEMA_VERSION}/schema.json"
 # CDH standard release the cgiar-cdh:* fields follow (one tag covers standard, vocab and extension).
 CDH_STANDARD_VERSION = "0.3.0"
 EXT_CDH = (
@@ -316,6 +316,10 @@ def _build_item(r: dict, code: str, vocab: Vocab) -> dict:
 
     if r["license_alias"] and not _looks_spdx(r["license"] or ""):
         props["mosaic:license_original"] = r["license_alias"]
+
+    # An ID, not a URL: no link until the asset is public (a private asset link is a dead end).
+    if r.get("gee_asset_id"):
+        props["mosaic:gee_asset_id"] = r["gee_asset_id"]
 
     if r["contact"] or r["contact_name"]:
         props["contacts"] = [{

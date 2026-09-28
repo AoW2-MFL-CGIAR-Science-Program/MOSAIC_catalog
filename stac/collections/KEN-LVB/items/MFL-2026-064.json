@@ -2,7 +2,7 @@
   "type": "Feature",
   "stac_version": "1.0.0",
   "stac_extensions": [
-    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.1.0/schema.json",
+    "https://mosaic.cgiar.org/stac-extensions/mosaic/v0.2.0/schema.json",
     "https://cgiar-climate-data-hub.github.io/cdh-metadata-standard/v0.3.0/encodings/stac/schema.json"
   ],
   "id": "MFL-2026-064",
@@ -66,6 +66,7 @@
     "proj:code": null,
     "mosaic:crs_note": "CRS not recorded in registry (missing_crs).",
     "mosaic:license_original": "CGIAR Open Access",
+    "mosaic:gee_asset_id": "projects/mosaic-mfl/assets/mvp/MFL-2026-064",
     "contacts": [
       {
         "name": "Hannes Gaisberger",
