@@ -7,8 +7,11 @@ Run LOCALLY only (the shapefiles live outside this repo and are not in CI):
     python3 scripts/build_boundaries.py [--source ../MOSAIC_LLV_delim]
 
 Outputs (committed to the repo; build_catalog.py copies them into stac/):
-    boundaries/<CODE>.geojson      one dissolved, simplified boundary per landscape
-    boundaries/landscapes.geojson  all landscapes in one FeatureCollection
+    boundaries/<CODE>.geojson      one dissolved, simplified boundary per landscape, carrying
+                                   source/license/license_url/attribution from
+                                   spec/boundary_provenance.json; not written when that file
+                                   says publish=false (the licence forbids redistribution)
+    boundaries/landscapes.geojson  all published landscapes in one FeatureCollection
     spec/bbox_lookup.json          real bboxes/centroids (replaces the approximate ones)
 
 The canonical landscape list below was approved by Lizeth on 2026-07-21.
@@ -28,6 +31,9 @@ from shapely.ops import polygonize, unary_union
 REPO = Path(__file__).resolve().parent.parent
 BOUNDARIES_DIR = REPO / "boundaries"
 SPEC_BBOX = REPO / "spec" / "bbox_lookup.json"
+# Source, licence and attribution per code; publish=false withholds the geometry.
+SPEC_PROVENANCE = REPO / "spec" / "boundary_provenance.json"
+PROVENANCE_KEYS = ("source", "license", "license_url", "attribution")
 
 # Vertex budget per boundary: simplify (topology-preserving) with a growing
 # tolerance until the geometry fits, so files stay small enough to commit.
@@ -96,6 +102,10 @@ def main() -> None:
     BOUNDARIES_DIR.mkdir(exist_ok=True)
     today = date.today().isoformat()
     features, lookup = [], {}
+    provenance = json.loads(SPEC_PROVENANCE.read_text(encoding="utf-8"))
+    missing = [c for c in CANONICAL if c not in provenance]
+    if missing:
+        raise SystemExit(f"No provenance in {SPEC_PROVENANCE.name} for: {', '.join(missing)}")
 
     for code, (name, system, countries, shp) in CANONICAL.items():
         gdf = gpd.read_file(src / shp).to_crs(epsg=4326)
@@ -122,6 +132,7 @@ def main() -> None:
             "simplify_tolerance_deg": tol,
             "generated": today,
         }
+        props.update({k: provenance[code].get(k) for k in PROVENANCE_KEYS})
         if code in PENDING_CONFIRMATION:
             props["pending_confirmation"] = True
 
@@ -136,9 +147,14 @@ def main() -> None:
             {"type": simp.geom_type, "coordinates": round_coords(simp.__geo_interface__["coordinates"])}))
 
         out = BOUNDARIES_DIR / f"{code}.geojson"
-        out.write_text(json.dumps(feature, ensure_ascii=False, separators=(",", ":")) + "\n",
-                       encoding="utf-8")
-        features.append(feature)
+        if provenance[code]["publish"]:
+            out.write_text(json.dumps(feature, ensure_ascii=False, separators=(",", ":")) + "\n",
+                           encoding="utf-8")
+            features.append(feature)
+        else:
+            # The licence forbids stand-alone redistribution: no geometry file
+            # (the bbox below is still derived; the STAC collection cites the source).
+            out.unlink(missing_ok=True)
 
         entry = {
             "bbox": round_coords([w, s, e, n], 4),
@@ -151,8 +167,8 @@ def main() -> None:
         if code in PENDING_CONFIRMATION:
             entry["pending_confirmation"] = True
         lookup[code] = entry
-        kb = out.stat().st_size / 1024
-        print(f"  {code:8s} {name[:38]:38s} {len(gdf):3d} src feats  tol={tol:<7g} {kb:7.1f} KB")
+        size = f"{out.stat().st_size / 1024:7.1f} KB" if out.exists() else "withheld (licence)"
+        print(f"  {code:8s} {name[:38]:38s} {len(gdf):3d} src feats  tol={tol:<7g} {size}")
 
     combined = {"type": "FeatureCollection",
                 "name": "MFL Living Landscapes - canonical delineations",
@@ -189,7 +205,8 @@ def main() -> None:
         "name": "Global / cross-landscape", "delineated": False,
     }
     SPEC_BBOX.write_text(json.dumps(new, indent=1, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(f"\nWrote {len(lookup)} boundaries + landscapes.geojson + spec/bbox_lookup.json")
+    print(f"\nWrote {len(features)} boundaries ({len(CANONICAL) - len(features)} withheld) "
+          f"+ landscapes.geojson + spec/bbox_lookup.json")
 
 
 if __name__ == "__main__":

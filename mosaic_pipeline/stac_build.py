@@ -22,6 +22,11 @@ from .transform import SPDX_LICENSE_IDS
 from .vocab import COUNTRY_M49, MULTI_LANDSCAPE_COUNTRIES, Vocab
 
 BOUNDARIES_SRC = Path(__file__).resolve().parent.parent / "boundaries"
+# Source, licence and attribution of each delineation (also stamped into the GeoJSON).
+PROVENANCE_SRC = Path(__file__).resolve().parent.parent / "spec" / "boundary_provenance.json"
+BOUNDARY_PROVENANCE = (
+    json.loads(PROVENANCE_SRC.read_text(encoding="utf-8")) if PROVENANCE_SRC.is_file() else {}
+)
 
 STAC_VERSION = "1.0.0"
 MOSAIC_SCHEMA_VERSION = "0.3.0"
@@ -129,7 +134,7 @@ def build_stac(records: list[dict], vocab: Vocab, stac_dir: Path) -> dict:
         "rel": "related",
         "href": f"{STAC_BASE_URL}/boundaries/landscapes.geojson",
         "type": "application/geo+json",
-        "title": "All Living Landscape boundaries (canonical delineations, simplified)",
+        "title": "Living Landscape boundaries that MOSAIC may redistribute (simplified; licence per feature)",
     })
     catalog = {
         "type": "Catalog",
@@ -213,13 +218,19 @@ def _build_collection(code: str, recs: list[dict], vocab: Vocab) -> dict:
     else:
         license_val = "other"
 
+    boundary_published = (BOUNDARIES_SRC / f"{code}.geojson").is_file()
     if delineated:
+        boundary_sentence = (
+            "the simplified boundary is published as this collection's 'boundary' asset"
+            if boundary_published else
+            "the boundary geometry is not redistributed here because its licence does not "
+            "allow it; the 'boundary-source' asset names the source"
+        )
         description = (
             f"Datasets registered under the '{vocab.landscape_name(code)}' Living "
             f"Landscape ({len(recs)} item(s)). Spatial extent derives from the "
-            f"canonical landscape delineation (2026-07-21); the simplified boundary "
-            f"is published as this collection's 'boundary' asset. National-coverage "
-            f"member items can widen the extent beyond the boundary."
+            f"canonical landscape delineation (2026-07-21); {boundary_sentence}. "
+            f"National-coverage member items can widen the extent beyond the boundary."
         )
         if vocab.pending_confirmation(code):
             description += (
@@ -270,15 +281,42 @@ def _build_collection(code: str, recs: list[dict], vocab: Vocab) -> dict:
     if vocab.pending_confirmation(code):
         coll["mosaic:pending_confirmation"] = True
     if delineated:
-        coll["assets"] = {
-            "boundary": {
-                "href": f"{STAC_BASE_URL}/boundaries/{code}.geojson",
-                "type": "application/geo+json",
-                "title": "Landscape boundary (canonical delineation, simplified, EPSG:4326)",
-                "roles": ["data"],
-            }
-        }
+        asset = _boundary_asset(code, boundary_published)
+        if asset:
+            coll["assets"] = {"boundary" if boundary_published else "boundary-source": asset}
     return coll
+
+
+def _boundary_asset(code: str, published: bool) -> dict | None:
+    """The boundary GeoJSON when it may be redistributed; otherwise a pointer to its source.
+
+    Either way the asset carries the delineation's licence (SPDX id or 'other'), source
+    and required attribution from spec/boundary_provenance.json.
+    """
+    prov = BOUNDARY_PROVENANCE.get(code, {})
+    if published:
+        asset = {
+            "href": f"{STAC_BASE_URL}/boundaries/{code}.geojson",
+            "type": "application/geo+json",
+            "title": "Landscape boundary (canonical delineation, simplified, EPSG:4326)",
+            "roles": ["data"],
+        }
+    elif prov.get("source_url"):
+        asset = {
+            "href": prov["source_url"],
+            "type": "text/html",
+            "title": "Source of the landscape boundary (geometry not redistributed by MOSAIC)",
+            "roles": ["metadata"],
+        }
+    else:
+        return None
+    if prov:
+        asset["license"] = prov["license"]
+        if prov.get("license_url"):
+            asset["mosaic:license_url"] = prov["license_url"]
+        asset["mosaic:source"] = prov["source"]
+        asset["mosaic:attribution"] = prov["attribution"]
+    return asset
 
 
 def _looks_spdx(value: str) -> bool:

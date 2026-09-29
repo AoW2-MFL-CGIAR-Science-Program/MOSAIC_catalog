@@ -125,7 +125,11 @@
       "title": "Landscape boundary (canonical delineation, simplified, EPSG:4326)",
       "roles": [
         "data"
-      ]
+      ],
+      "license": "CC-BY-3.0-IGO",
+      "mosaic:license_url": "https://creativecommons.org/licenses/by/3.0/igo/legalcode",
+      "mosaic:source": "Tunisia - Subnational Administrative Boundaries (COD-AB) v01, admin level 4, valid 2022-11-15; source Institut National de la Statistique Tunisie (INS), published by OCHA on HDX. Union of 7 sectors: Bousliaa, El Marja and Elles (Es Sers, Le Kef); El Ahouez Sud (Gaafour), Hammam Biadha Sud (El Krib), Chouarnia (Makthar) and Kesra (Kesra) (Siliana).",
+      "mosaic:attribution": "Contains data from 'Tunisia - Subnational Administrative Boundaries' (COD-AB), source: Institut National de la Statistique Tunisie (INS), published by UN OCHA on the Humanitarian Data Exchange (https://data.humdata.org/dataset/cod-ab-tun), licensed under CC BY-IGO 3.0. Changes: seven admin-4 sectors dissolved into one outline and simplified."
     }
   }
 }

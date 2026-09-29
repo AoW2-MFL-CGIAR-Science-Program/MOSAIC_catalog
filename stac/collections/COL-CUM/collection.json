@@ -89,7 +89,10 @@
       "title": "Landscape boundary (canonical delineation, simplified, EPSG:4326)",
       "roles": [
         "data"
-      ]
+      ],
+      "license": "other",
+      "mosaic:source": "Nine veredas of the Cumbal indigenous reserve area (Tasmag, Quilismal, Boyera, Cuaical, Cuaspud Grande, Llano de Piedras, Cuetial, Guan, San Martin-Miraflores), layer 'Cumbal_veredas_wgs84' compiled by Javier Ochoa (CIP). Original source to be confirmed.",
+      "mosaic:attribution": "Vereda boundaries compiled by J. Ochoa (CIP) for the CGIAR Science Program on Multifunctional Landscapes; original source to be confirmed."
     }
   }
 }

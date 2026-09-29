@@ -171,7 +171,10 @@
       "title": "Landscape boundary (canonical delineation, simplified, EPSG:4326)",
       "roles": [
         "data"
-      ]
+      ],
+      "license": "other",
+      "mosaic:source": "INEI referential census district limits (cartography of the V Censo Nacional Economico 2022; 'Distrital' layer, ide.inei.gob.pe): 11 whole districts of Coronel Portillo and Padre Abad provinces (Ucayali) and a clipped part of Calleria.",
+      "mosaic:attribution": "Contains referential census district limits of the Instituto Nacional de Estadistica e Informatica (INEI), Peru (ide.inei.gob.pe); the limits are referential and have no demarcation value. Changes: districts dissolved into one outline, Calleria clipped, simplified. No licence is stated by INEI (to be confirmed)."
     }
   }
 }

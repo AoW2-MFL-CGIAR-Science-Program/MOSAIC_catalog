@@ -91,7 +91,7 @@
       "rel": "related",
       "href": "https://mosaic-mfl.github.io/catalog/stac/boundaries/landscapes.geojson",
       "type": "application/geo+json",
-      "title": "All Living Landscape boundaries (canonical delineations, simplified)"
+      "title": "Living Landscape boundaries that MOSAIC may redistribute (simplified; licence per feature)"
     }
   ],
   "mosaic:schema_version": "0.3.0"

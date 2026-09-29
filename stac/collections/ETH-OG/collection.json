@@ -146,7 +146,11 @@
       "title": "Landscape boundary (canonical delineation, simplified, EPSG:4326)",
       "roles": [
         "data"
-      ]
+      ],
+      "license": "CC-BY-4.0",
+      "mosaic:license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "mosaic:source": "Ethiopia River Basins (eth_basins), World Bank Group, World Bank Data Catalog dataset 0040202: Omo basin polygon (79,549 km2).",
+      "mosaic:attribution": "Contains data from 'Ethiopia River Basins', World Bank Group (World Bank Data Catalog, dataset 0040202), licensed under CC BY 4.0. Changes: Omo basin polygon extracted, reprojected from Adindan / UTM zone 37N to WGS 84, trimmed near the Kenya border (about 255 km2) and simplified."
     }
   }
 }

@@ -7,7 +7,7 @@
   ],
   "id": "MEK-3S",
   "title": "3S Basins (Sekong, Sesan, Srepok)",
-  "description": "Datasets registered under the '3S Basins (Sekong, Sesan, Srepok)' Living Landscape (13 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the simplified boundary is published as this collection's 'boundary' asset. National-coverage member items can widen the extent beyond the boundary.",
+  "description": "Datasets registered under the '3S Basins (Sekong, Sesan, Srepok)' Living Landscape (13 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the boundary geometry is not redistributed here because its licence does not allow it; the 'boundary-source' asset names the source. National-coverage member items can widen the extent beyond the boundary.",
   "license": "other",
   "extent": {
     "spatial": {
@@ -190,13 +190,17 @@
     "Vietnam"
   ],
   "assets": {
-    "boundary": {
-      "href": "https://mosaic-mfl.github.io/catalog/stac/boundaries/MEK-3S.geojson",
-      "type": "application/geo+json",
-      "title": "Landscape boundary (canonical delineation, simplified, EPSG:4326)",
+    "boundary-source": {
+      "href": "https://portal.mrcmekong.org/",
+      "type": "text/html",
+      "title": "Source of the landscape boundary (geometry not redistributed by MOSAIC)",
       "roles": [
-        "data"
-      ]
+        "metadata"
+      ],
+      "license": "other",
+      "mosaic:license_url": "https://portal.mrcmekong.org/about/account-types",
+      "mosaic:source": "Mekong River Commission (MRC), 'Subcatchments of the Lower Mekong Basin' (Watershed Classification Project, October 2000; layer b_catlmb50): sub-catchments 43 Se Kong, 44 Se San and 45 Sre Pok.",
+      "mosaic:attribution": "Sub-catchment boundaries © Mekong River Commission (MRC). Not redistributed by MOSAIC: MRC data are provided under MRC data use licences."
     }
   }
 }
