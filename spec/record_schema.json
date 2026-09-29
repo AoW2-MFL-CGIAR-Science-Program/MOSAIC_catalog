@@ -229,7 +229,7 @@
         "null"
       ],
       "pattern": "^projects/[a-z][a-z0-9-]{4,28}[a-z0-9]/assets/[A-Za-z0-9_-]+(/[A-Za-z0-9_-]+)*$",
-      "description": "Google Earth Engine asset ID of MOSAIC's copy of the dataset (Cloud-project form, e.g. 'projects/mosaic-mfl/assets/mvp/MFL-2026-064'). YAML-only; published as STAC property mosaic:gee_asset_id. An ID, not a URL; download_url stays the canonical location."
+      "description": "Google Earth Engine asset ID of MOSAIC's copy of the dataset (Cloud-project form, e.g. 'projects/mosaic-mfl/assets/mvp/MFL-2026-064'). YAML-only; published as STAC property mosaic:gee_asset_id. An ID, not a URL; download_url stays the canonical location. Once the asset is public, STAC also gets an earth-engine asset with the CDH's form, https://earthengine.googleapis.com/v1/<gee_asset_id> (needs a Google sign-in)."
     },
     "encoding": {
       "enum": [

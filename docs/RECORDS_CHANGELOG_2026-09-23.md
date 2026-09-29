@@ -11,7 +11,9 @@ hosting pilot on the programme project `mosaic-mfl`.
 - **Output:** STAC item property `mosaic:gee_asset_id` (only when set); `datasets.json` key
   `gee_asset_id` (null when unset). No STAC link or asset: an Earth Engine asset ID is not a URL,
   and a link to a private asset is a dead end. Add a `rel: related` Code Editor link once an asset
-  is public.
+  is public. *Update 2026-09-29:* no Code Editor link. Once an asset is public it gets an
+  `earth-engine` STAC asset with the Earth Engine REST URL (`https://earthengine.googleapis.com/v1/<gee_asset_id>`), the form the CDH uses
+  (CDH issue #34); Lizeth's choice.
 - **MOSAIC STAC extension version:** 0.1.0 → 0.2.0 (first new `mosaic:*` item property), so every
   STAC file changes its `mosaic:schema_version` / extension URL. 0.2.0 also covers
   `mosaic:spatial_resolution` (catalog commit `30d42c6`, CDH v0.3.0 alignment, 2026-09-28); both

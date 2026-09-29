@@ -363,6 +363,8 @@ def _build_item(r: dict, code: str, vocab: Vocab) -> dict:
         props["mosaic:license_original"] = r["license_alias"]
 
     # An ID, not a URL: no link until the asset is public (a private asset link is a dead end).
+    # Once public, add an 'earth-engine' asset with the CDH's form (CDH issue #34):
+    # https://earthengine.googleapis.com/v1/<gee_asset_id>
     if r.get("gee_asset_id"):
         props["mosaic:gee_asset_id"] = r["gee_asset_id"]
 

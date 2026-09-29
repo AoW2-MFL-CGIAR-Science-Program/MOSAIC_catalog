@@ -66,7 +66,7 @@ Per §3 of the assessment. Use `cgiar-cdh:*` where the CDH defines it, `mosaic:*
 | 22 Download URL | primary asset `href` / `links[rel=via]` | core |
 | 23 File Size | `file:size` (File ext) | File ext |
 
-**YAML-only record fields (no Excel column):** `citation` → `datasets.json` `citation`; `gee_asset_id` (since 2026-09-23) → STAC item property `mosaic:gee_asset_id` (only when set) + `datasets.json` `gee_asset_id`. MOSAIC-local: the CDH standard has no Earth Engine field.
+**YAML-only record fields (no Excel column):** `citation` → `datasets.json` `citation`; `gee_asset_id` (since 2026-09-23) → STAC item property `mosaic:gee_asset_id` (only when set) + `datasets.json` `gee_asset_id`. MOSAIC-local: the CDH has no Earth Engine field and plans none (CDH issue #34, 2026-09-28). It puts the Earth Engine REST URL (`https://earthengine.googleapis.com/v1/<gee_asset_id>`) in a data location, and MOSAIC adds that same URL as an `earth-engine` asset once an asset is public.
 
 **Not in registry, set by exporter:** `encoding: "stac"` (all spatial rows; a non-spatial document row → `"ogc-records"`), `mosaic_schema_version`, `extent.spatial.bbox` (from `bbox_lookup.json` until real geometries exist), `proj:code`/`proj:epsg` (CRS — absent in registry, leave null + FLAG). **Official STAC 1.0.0 schema conformance** since 2026-09-28 (MOSAIC STAC extension 0.3.0: `mosaic:access_note`, `mosaic:last_updated`, `mosaic:datetime_note`); `validate.py` enforces RFC 3339 dates and non-empty asset hrefs.
 
