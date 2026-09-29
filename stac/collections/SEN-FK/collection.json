@@ -7,7 +7,7 @@
   ],
   "id": "SEN-FK",
   "title": "Fatick Department",
-  "description": "Datasets registered under the 'Fatick Department' Living Landscape (8 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the boundary geometry is not redistributed here because its licence does not allow it; the 'boundary-source' asset names the source. National-coverage member items can widen the extent beyond the boundary.",
+  "description": "Datasets registered under the 'Fatick Department' Living Landscape (8 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the simplified boundary is published as this collection's 'boundary' asset. National-coverage member items can widen the extent beyond the boundary.",
   "license": "other",
   "extent": {
     "spatial": {
@@ -131,17 +131,17 @@
     "Senegal"
   ],
   "assets": {
-    "boundary-source": {
-      "href": "https://gadm.org",
-      "type": "text/html",
-      "title": "Source of the landscape boundary (geometry not redistributed by MOSAIC)",
+    "boundary": {
+      "href": "https://mosaic-mfl.github.io/catalog/stac/boundaries/SEN-FK.geojson",
+      "type": "application/geo+json",
+      "title": "Landscape boundary (canonical delineation, simplified, EPSG:4326)",
       "roles": [
-        "metadata"
+        "data"
       ],
       "license": "other",
       "mosaic:license_url": "https://gadm.org/license.html",
       "mosaic:source": "GADM: level 2 unit Fatick departement (GADM v2 attribute schema; geometry identical to GADM 3.6 and 4.1 SEN.3.1_1).",
-      "mosaic:attribution": "Departement boundary: GADM (gadm.org). Not redistributed by MOSAIC: GADM allows no redistribution without permission."
+      "mosaic:attribution": "Departement boundary: GADM (gadm.org)."
     }
   }
 }
