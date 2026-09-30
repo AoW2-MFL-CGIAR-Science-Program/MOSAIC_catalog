@@ -7,7 +7,7 @@
   ],
   "id": "KEN-LVB",
   "title": "Lake Victoria Basin (Kenya)",
-  "description": "Datasets registered under the 'Lake Victoria Basin (Kenya)' Living Landscape (2 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the simplified boundary is published as this collection's 'boundary' asset. National-coverage member items can widen the extent beyond the boundary.",
+  "description": "Datasets registered under the 'Lake Victoria Basin (Kenya)' Living Landscape (10 item(s)). Spatial extent derives from the canonical landscape delineation (2026-07-21); the simplified boundary is published as this collection's 'boundary' asset. National-coverage member items can widen the extent beyond the boundary.",
   "license": "other",
   "extent": {
     "spatial": {
@@ -24,14 +24,18 @@
       "interval": [
         [
           "2017-01-01T00:00:00Z",
-          "2025-12-31T23:59:59Z"
+          "2026-12-31T23:59:59Z"
         ]
       ]
     }
   },
   "keywords": [
     "Decision-support outputs",
-    "Ecosystem condition"
+    "Degradation / land health",
+    "Ecosystem condition",
+    "Ecosystem services",
+    "Pressures / drivers",
+    "Socio-economic / livelihoods"
   ],
   "providers": [
     {
@@ -45,15 +49,26 @@
       "roles": [
         "producer"
       ]
+    },
+    {
+      "name": "ILRI",
+      "roles": [
+        "producer"
+      ]
     }
   ],
   "summaries": {
     "mosaic:access_level": [
-      "Open"
+      "Open",
+      "Restricted"
     ],
     "mosaic:theme": [
       "Decision-support outputs",
-      "Ecosystem condition"
+      "Degradation / land health",
+      "Ecosystem condition",
+      "Ecosystem services",
+      "Pressures / drivers",
+      "Socio-economic / livelihoods"
     ]
   },
   "cgiar-cdh:geography": [
@@ -62,7 +77,7 @@
   "mosaic:living_landscape": "KEN-LVB",
   "mosaic:bbox_approximate": false,
   "mosaic:bbox_note": "Bbox derived from the canonical delineation shapefile (dissolved, EPSG:4326), union-ed with member-item locator boxes.",
-  "mosaic:item_count": 2,
+  "mosaic:item_count": 10,
   "links": [
     {
       "rel": "root",
@@ -90,6 +105,54 @@
       "href": "./items/MFL-2026-083.json",
       "type": "application/json",
       "title": "Crop type map"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-085.json",
+      "type": "application/json",
+      "title": "Landscape Resources"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-086.json",
+      "type": "application/json",
+      "title": "Resource change"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-087.json",
+      "type": "application/json",
+      "title": "Environmental challenges"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-088.json",
+      "type": "application/json",
+      "title": "Climate risks"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-089.json",
+      "type": "application/json",
+      "title": "Livelihood resources"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-090.json",
+      "type": "application/json",
+      "title": "Conflicts"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-091.json",
+      "type": "application/json",
+      "title": "Drivers of change"
+    },
+    {
+      "rel": "item",
+      "href": "./items/MFL-2026-092.json",
+      "type": "application/json",
+      "title": "Restoration opportunities"
     }
   ],
   "mosaic:landscape_system": "East-South Africa Highland-Lowland-Rift Valley System",

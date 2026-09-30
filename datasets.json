@@ -2347,5 +2347,237 @@
     "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/CIV-NZ/items/MFL-2026-084.json",
     "citation": null,
     "gee_asset_id": null
+  },
+  {
+    "id": "MFL-2026-085",
+    "title": "Landscape Resources",
+    "country": "Kenya",
+    "living_landscape": "KEN-LVB",
+    "landscape_name": "Lake Victoria Basin (Kenya)",
+    "coverage": "landscape",
+    "centroid": [
+      34.5623,
+      0.0264
+    ],
+    "mfl_theme": "Ecosystem services",
+    "data_type": "Vector",
+    "spatial_resolution": "Basin level",
+    "temporal_coverage": "2026",
+    "source": "ILRI",
+    "contact": "a.paliwal@cgiar.org",
+    "access_level": "Restricted",
+    "license": "Restricted — contact data owner",
+    "readiness_status": "Raw",
+    "formats": [
+      "Shapefile"
+    ],
+    "description": "Key natural resources and the ecosystem services they provide to local communities.",
+    "download_url": null,
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/KEN-LVB/items/MFL-2026-085.json",
+    "citation": null,
+    "gee_asset_id": null
+  },
+  {
+    "id": "MFL-2026-086",
+    "title": "Resource change",
+    "country": "Kenya",
+    "living_landscape": "KEN-LVB",
+    "landscape_name": "Lake Victoria Basin (Kenya)",
+    "coverage": "landscape",
+    "centroid": [
+      34.5623,
+      0.0264
+    ],
+    "mfl_theme": "Ecosystem condition",
+    "data_type": "Vector",
+    "spatial_resolution": "Basin level",
+    "temporal_coverage": "2026",
+    "source": "ILRI",
+    "contact": "a.paliwal@cgiar.org",
+    "access_level": "Restricted",
+    "license": "Restricted — contact data owner",
+    "readiness_status": "Raw",
+    "formats": [
+      "Shapefile"
+    ],
+    "description": "Changes in the condition and availability of key resources over time.",
+    "download_url": null,
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/KEN-LVB/items/MFL-2026-086.json",
+    "citation": null,
+    "gee_asset_id": null
+  },
+  {
+    "id": "MFL-2026-087",
+    "title": "Environmental challenges",
+    "country": "Kenya",
+    "living_landscape": "KEN-LVB",
+    "landscape_name": "Lake Victoria Basin (Kenya)",
+    "coverage": "landscape",
+    "centroid": [
+      34.5623,
+      0.0264
+    ],
+    "mfl_theme": "Degradation / land health",
+    "data_type": "Vector",
+    "spatial_resolution": "Basin level",
+    "temporal_coverage": "2026",
+    "source": "ILRI",
+    "contact": "a.paliwal@cgiar.org",
+    "access_level": "Restricted",
+    "license": "Restricted — contact data owner",
+    "readiness_status": "Raw",
+    "formats": [
+      "Shapefile"
+    ],
+    "description": "Areas affected by environmental degradation and land-health challenges.",
+    "download_url": null,
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/KEN-LVB/items/MFL-2026-087.json",
+    "citation": null,
+    "gee_asset_id": null
+  },
+  {
+    "id": "MFL-2026-088",
+    "title": "Climate risks",
+    "country": "Kenya",
+    "living_landscape": "KEN-LVB",
+    "landscape_name": "Lake Victoria Basin (Kenya)",
+    "coverage": "landscape",
+    "centroid": [
+      34.5623,
+      0.0264
+    ],
+    "mfl_theme": "Ecosystem condition",
+    "data_type": "Vector",
+    "spatial_resolution": "Basin level",
+    "temporal_coverage": "2026",
+    "source": "ILRI",
+    "contact": "a.paliwal@cgiar.org",
+    "access_level": "Restricted",
+    "license": "Restricted — contact data owner",
+    "readiness_status": "Raw",
+    "formats": [
+      "Shapefile"
+    ],
+    "description": "Areas exposed to climate-related environmental risks and stress.",
+    "download_url": null,
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/KEN-LVB/items/MFL-2026-088.json",
+    "citation": null,
+    "gee_asset_id": null
+  },
+  {
+    "id": "MFL-2026-089",
+    "title": "Livelihood resources",
+    "country": "Kenya",
+    "living_landscape": "KEN-LVB",
+    "landscape_name": "Lake Victoria Basin (Kenya)",
+    "coverage": "landscape",
+    "centroid": [
+      34.5623,
+      0.0264
+    ],
+    "mfl_theme": "Socio-economic / livelihoods",
+    "data_type": "Vector",
+    "spatial_resolution": "Basin level",
+    "temporal_coverage": "2026",
+    "source": "ILRI",
+    "contact": "a.paliwal@cgiar.org",
+    "access_level": "Restricted",
+    "license": "Restricted — contact data owner",
+    "readiness_status": "Raw",
+    "formats": [
+      "Shapefile"
+    ],
+    "description": "Resources and infrastructure that support local livelihoods and economic activities.",
+    "download_url": null,
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/KEN-LVB/items/MFL-2026-089.json",
+    "citation": null,
+    "gee_asset_id": null
+  },
+  {
+    "id": "MFL-2026-090",
+    "title": "Conflicts",
+    "country": "Kenya",
+    "living_landscape": "KEN-LVB",
+    "landscape_name": "Lake Victoria Basin (Kenya)",
+    "coverage": "landscape",
+    "centroid": [
+      34.5623,
+      0.0264
+    ],
+    "mfl_theme": "Socio-economic / livelihoods",
+    "data_type": "Vector",
+    "spatial_resolution": "Basin level",
+    "temporal_coverage": "2026",
+    "source": "ILRI",
+    "contact": "a.paliwal@cgiar.org",
+    "access_level": "Restricted",
+    "license": "Restricted — contact data owner",
+    "readiness_status": "Raw",
+    "formats": [
+      "Shapefile"
+    ],
+    "description": "Locations and resources affected by conflicts and competing uses",
+    "download_url": null,
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/KEN-LVB/items/MFL-2026-090.json",
+    "citation": null,
+    "gee_asset_id": null
+  },
+  {
+    "id": "MFL-2026-091",
+    "title": "Drivers of change",
+    "country": "Kenya",
+    "living_landscape": "KEN-LVB",
+    "landscape_name": "Lake Victoria Basin (Kenya)",
+    "coverage": "landscape",
+    "centroid": [
+      34.5623,
+      0.0264
+    ],
+    "mfl_theme": "Pressures / drivers",
+    "data_type": "Vector",
+    "spatial_resolution": "Basin level",
+    "temporal_coverage": "2026",
+    "source": "ILRI",
+    "contact": "a.paliwal@cgiar.org",
+    "access_level": "Restricted",
+    "license": "Restricted — contact data owner",
+    "readiness_status": "Raw",
+    "formats": [
+      "Shapefile"
+    ],
+    "description": "Key human and environmental drivers influencing landscape change.",
+    "download_url": null,
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/KEN-LVB/items/MFL-2026-091.json",
+    "citation": null,
+    "gee_asset_id": null
+  },
+  {
+    "id": "MFL-2026-092",
+    "title": "Restoration opportunities",
+    "country": "Kenya",
+    "living_landscape": "KEN-LVB",
+    "landscape_name": "Lake Victoria Basin (Kenya)",
+    "coverage": "landscape",
+    "centroid": [
+      34.5623,
+      0.0264
+    ],
+    "mfl_theme": "Decision-support outputs",
+    "data_type": "Vector",
+    "spatial_resolution": "Basin level",
+    "temporal_coverage": "2026",
+    "source": "ILRI",
+    "contact": "a.paliwal@cgiar.org",
+    "access_level": "Restricted",
+    "license": "Restricted — contact data owner",
+    "readiness_status": "Raw",
+    "formats": [
+      "Shapefile"
+    ],
+    "description": "Priority areas and opportunities for restoration and targeted investment.",
+    "download_url": null,
+    "metadata_url": "https://mosaic-mfl.github.io/catalog/stac/collections/KEN-LVB/items/MFL-2026-092.json",
+    "citation": null,
+    "gee_asset_id": null
   }
 ]
